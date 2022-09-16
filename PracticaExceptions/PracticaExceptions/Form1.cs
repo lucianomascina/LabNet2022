@@ -17,34 +17,28 @@ namespace PracticaExceptions
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                decimal num1 = numericUpDown1.Value;
-                decimal num2 = numericUpDown2.Value;
-                decimal result;
+                decimal n1 = numericUpDown1.Value;
+                decimal n2 = numericUpDown2.Value;
 
-                result = MyExceptions.Division(num1,num2);
-                lblResult.Text = Convert.ToString(result);
+                MyExceptions.Division1(n1, n2);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                lblFin.Text = "";
             }
             finally
             {
-                lblFin.Text = "operacion finalizada";
+                MessageBox.Show("operacion finalizada");
             }
-       
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
-        
     }
 }
