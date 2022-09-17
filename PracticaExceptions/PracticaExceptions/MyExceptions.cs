@@ -24,13 +24,25 @@ namespace PracticaExceptions
                 throw ex;
             }
         }
-        public static decimal Division2(decimal n1, decimal n2)
+        public static decimal Division2(string n1, string n2)
         {
             try
             {
-                
-                decimal result = n1 / n2;
+                decimal temp1 = 0;
+                decimal temp2 = 0;
+
+                if ((String.IsNullOrEmpty(n1) || String.IsNullOrEmpty(n2))
+                    || (!decimal.TryParse(n1, out temp1) || !decimal.TryParse(n2, out temp2)))
+                {
+                    throw new ArgumentException("Seguro Ingreso una letra o no ingreso nada!");
+                }
+
+                decimal result = Convert.ToDecimal(n1) / Convert.ToDecimal(n2);
                 return result;
+            }
+            catch(ArgumentException ex)
+            {
+                throw ex;
             }
             catch(DivideByZeroException ex)
             {
@@ -40,8 +52,8 @@ namespace PracticaExceptions
             {
                 throw ex;
             }
+          
         }
-        
         public static void ThrowCustom()
         {
             throw new CustomException("Excepción personalizada ejercicio 4");

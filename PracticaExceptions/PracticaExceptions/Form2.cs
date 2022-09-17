@@ -21,13 +21,16 @@ namespace PracticaExceptions
         {
             try
             {
-                decimal num1 = Convert.ToDecimal(textBox1.Text);
-                decimal num2 = Convert.ToDecimal(textBox2.Text);
-                decimal result;
+                decimal result = MyExceptions.Division2(textBox1.Text, textBox2.Text);
+                
+                lblResult.Text = Convert.ToString(result);
 
-                result = MyExceptions.Division2(num1,num2);
             }
-            catch(Exception ex)
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (DivideByZeroException ex)
             {
                 MessageBox.Show(ex.Message);
                 
@@ -36,12 +39,6 @@ namespace PracticaExceptions
             {
                 
             }
-       
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
 
         }
 
