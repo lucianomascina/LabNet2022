@@ -16,5 +16,18 @@ namespace PracticaExceptions
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Logic.Lanzar();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Mensaje: {ex.Message} " +
+                    $"Tipo de excepción: {ex.GetType()} ");
+            }
+        }
     }
 }
