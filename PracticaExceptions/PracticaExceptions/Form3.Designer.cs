@@ -47,7 +47,7 @@ namespace PracticaExceptions
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 169);
+            this.label1.Location = new System.Drawing.Point(33, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace PracticaExceptions
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 198);
+            this.label2.Location = new System.Drawing.Point(22, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 2;

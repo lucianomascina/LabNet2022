@@ -28,11 +28,7 @@ namespace PracticaExceptions
         {
             try
             {
-                decimal temp1 = 0;
-                decimal temp2 = 0;
-
-                if ((String.IsNullOrEmpty(n1) || String.IsNullOrEmpty(n2))
-                    || (!decimal.TryParse(n1, out temp1) || !decimal.TryParse(n2, out temp2)))
+                if (MyExtensions.EmptyOrLetter(n1,n2))
                 {
                     throw new ArgumentException("Seguro Ingreso una letra o no ingreso nada!");
                 }

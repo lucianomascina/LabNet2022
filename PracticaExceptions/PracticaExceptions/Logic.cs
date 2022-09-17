@@ -10,7 +10,7 @@ namespace PracticaExceptions
     {
         public static void Lanzar()
         {
-            throw new ArgumentNullException();
+            throw new UnauthorizedAccessException();
         }
     }
 }

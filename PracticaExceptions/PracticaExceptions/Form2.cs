@@ -52,5 +52,10 @@ namespace PracticaExceptions
             lblResult.Text = "";
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
