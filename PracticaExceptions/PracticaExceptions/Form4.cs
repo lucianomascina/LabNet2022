@@ -16,5 +16,17 @@ namespace PracticaExceptions
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MyExceptions.ThrowCustom();
+            }
+            catch(Exception ex)
+            {
+                textBox1.Text = ex.Message;
+            }
+        }
     }
 }

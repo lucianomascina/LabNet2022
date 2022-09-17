@@ -8,7 +8,6 @@ namespace PracticaExceptions
 {
     public class MyExceptions
     {
-
         public static void Division1(decimal n1, decimal n2)
         {
             try
@@ -27,7 +26,6 @@ namespace PracticaExceptions
         }
         public static decimal Division2(decimal n1, decimal n2)
         {
-
             try
             {
                 
@@ -42,9 +40,11 @@ namespace PracticaExceptions
             {
                 throw ex;
             }
-
         }
         
-
+        public static void ThrowCustom()
+        {
+            throw new CustomException("Excepción personalizada ejercicio 4");
+        }
     }
 }

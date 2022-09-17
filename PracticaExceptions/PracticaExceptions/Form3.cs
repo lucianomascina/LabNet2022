@@ -23,10 +23,10 @@ namespace PracticaExceptions
             {
                 Logic.Lanzar();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Mensaje: {ex.Message} " +
-                    $"Tipo de excepción: {ex.GetType()} ");
+                label1.Text = $"Mensaje: {ex.Message}";
+                label2.Text = $"Tipo de excepción: {ex.GetType()}";
             }
         }
     }
