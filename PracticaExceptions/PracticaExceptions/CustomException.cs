@@ -8,10 +8,10 @@ namespace PracticaExceptions
 {
     public class CustomException : Exception
     {
-        public CustomException(string message) : base("Excepción personalizada")
+        public CustomException(string message) : base(String.Format($"Excepción personalizada: {message}"))
         {
-
+            
         }
-        
+      
     }
 }

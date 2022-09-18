@@ -52,7 +52,7 @@ namespace PracticaExceptions
         }
         public static void ThrowCustom()
         {
-            throw new CustomException("");
+            throw new CustomException("excepción ejercicio 4");
         }
     }
 }

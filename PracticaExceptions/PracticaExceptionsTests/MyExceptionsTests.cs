@@ -13,7 +13,7 @@ namespace PracticaExceptions.Tests
     {
         [TestMethod()]
         [ExpectedException(typeof(DivideByZeroException))]
-        public void Division1Test()
+        public void Division1ExceptionTest()
         {
             decimal n1 = 24;
             decimal n2 = 0;

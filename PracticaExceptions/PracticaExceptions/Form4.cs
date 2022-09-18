@@ -29,7 +29,7 @@ namespace PracticaExceptions
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
             finally
             {

@@ -15,12 +15,36 @@ namespace PracticaExceptions.Tests
         public void EmptyOrLetterTest()
         {
             string n1 = "s";
-            string n2 = "1";
+            string n2 = "";
             bool esperado = true;
 
             var res = MyExtensions.EmptyOrLetter(n1, n2);
 
             Assert.AreEqual(esperado,res);
+        }
+
+        [TestMethod()]
+        public void AllEmptyTest()
+        {
+            string n1 = "";
+            string n2 = "";
+            bool esperado = true;
+
+            var res = MyExtensions.EmptyOrLetter(n1, n2);
+
+            Assert.AreEqual(esperado, res);
+        }
+
+        [TestMethod()]
+        public void AllLettersTest()
+        {
+            string n1 = "s";
+            string n2 = "a";
+            bool esperado = true;
+
+            var res = MyExtensions.EmptyOrLetter(n1, n2);
+
+            Assert.AreEqual(esperado, res);
         }
     }
 }
