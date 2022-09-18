@@ -23,10 +23,24 @@ namespace PracticaExceptions
             {
                 MyExceptions.ThrowCustom();
             }
-            catch(Exception ex)
+            catch(CustomException ex)
             {
                 textBox1.Text = ex.Message;
             }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

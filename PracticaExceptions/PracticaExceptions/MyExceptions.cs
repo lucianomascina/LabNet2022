@@ -8,12 +8,12 @@ namespace PracticaExceptions
 {
     public class MyExceptions
     {
-        public static void Division1(decimal n1, decimal n2)
+        public static decimal Division1(decimal n1, decimal n2)
         {
             try
             {
                 decimal result = n1 / n2;
-                
+                return result;
             }
             catch(DivideByZeroException ex)
             {
@@ -52,7 +52,7 @@ namespace PracticaExceptions
         }
         public static void ThrowCustom()
         {
-            throw new CustomException("Excepción personalizada ejercicio 4");
+            throw new CustomException("");
         }
     }
 }

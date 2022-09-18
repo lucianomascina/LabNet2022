@@ -24,7 +24,8 @@ namespace PracticaExceptions
                 decimal n1 = numericUpDown1.Value;
                 decimal n2 = numericUpDown2.Value;
 
-                MyExceptions.Division1(n1, n2);
+                decimal res = MyExceptions.Division1(n1, n2);
+                labelRes.Text = $"RESULTADO: {res}";
             }
             catch(Exception ex)
             {
@@ -33,6 +34,7 @@ namespace PracticaExceptions
             finally
             {
                 MessageBox.Show("operacion finalizada");
+                labelRes.Text = "";
             }
         }
 
