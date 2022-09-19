@@ -12,29 +12,30 @@ namespace EjercicioPoo
 {
     public partial class FormShow : Form
     {
-        List<PublicTransport> Transports = new List<PublicTransport>();
-        public FormShow(List<PublicTransport> transports)
+        List<Taxi> Taxis = new List<Taxi>();
+        List<Bus> Buses = new List<Bus>();
+        public FormShow(List<Taxi> taxis, List<Bus> buses)
         {
             InitializeComponent();
-            this.Transports = transports;
+            this.Buses = buses;
+            this.Taxis = taxis;
         }
 
         private void FormShow_Load(object sender, EventArgs e)
         {
-            labelBus1.Text = $"{Transports[0].Passengers}  pasajeros";
-            labelBus2.Text = $"{Transports[1].Passengers}  pasajeros";
-            labelBus3.Text = $"{Transports[2].Passengers}  pasajeros";
-            labelBus4.Text = $"{Transports[3].Passengers}  pasajeros";
-            labelBus5.Text = $"{Transports[4].Passengers}  pasajeros";
-
-            labelTaxi1.Text = $"{Transports[5].Passengers}  pasajeros";
-            labelTaxi2.Text = $"{Transports[6].Passengers}  pasajeros";
-            labelTaxi3.Text = $"{Transports[7].Passengers}  pasajeros";
-            labelTaxi4.Text = $"{Transports[8].Passengers}  pasajeros";
-            labelTaxi5.Text = $"{Transports[9].Passengers}  pasajeros";
+            dataGridBus.DataSource = Buses;
+            dataGridTaxi.DataSource = Taxis;
 
         }
 
-     
+        private void buttonVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace EjercicioPoo
 {
     public class Taxi : PublicTransport
     {
-        public Taxi (int Passengers) : base(Passengers)
+        public Taxi (int passengers) : base(passengers)
         {
 
         }
