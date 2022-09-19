@@ -12,39 +12,37 @@ namespace PracticaExceptions.Tests
     public class MyExtensionsTests
     {
         [TestMethod()]
-        public void EmptyOrLetterTest()
+        public void EmptyTest()
         {
-            string n1 = "s";
-            string n2 = "";
+            string str = "";
             bool esperado = true;
 
-            var res = MyExtensions.EmptyOrLetter(n1, n2);
+            var res = str.EmptyOrLetter();
 
             Assert.AreEqual(esperado,res);
         }
 
         [TestMethod()]
-        public void AllEmptyTest()
+        public void LetterTest()
         {
-            string n1 = "";
-            string n2 = "";
+            string str = "s";
             bool esperado = true;
 
-            var res = MyExtensions.EmptyOrLetter(n1, n2);
+            var res = str.EmptyOrLetter();
 
             Assert.AreEqual(esperado, res);
         }
 
         [TestMethod()]
-        public void AllLettersTest()
+        public void FailTest()
         {
-            string n1 = "s";
-            string n2 = "a";
-            bool esperado = true;
+            string str = "35";
+            bool esperado = false;
 
-            var res = MyExtensions.EmptyOrLetter(n1, n2);
+            var res = str.EmptyOrLetter();
 
             Assert.AreEqual(esperado, res);
         }
+
     }
 }

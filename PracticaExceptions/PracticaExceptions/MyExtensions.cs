@@ -8,14 +8,12 @@ namespace PracticaExceptions
 {
     public static class MyExtensions
     {
-        public static bool EmptyOrLetter(string n1, string n2)
+        public static bool EmptyOrLetter(this string str)
         {
-            decimal temp1 = 0;
-            decimal temp2 = 0;
+            decimal temp = 0;
             bool res = false;
 
-            if (String.IsNullOrEmpty(n1) || String.IsNullOrEmpty(n2) ||
-                !decimal.TryParse(n1, out temp1) || !decimal.TryParse(n2, out temp2))
+            if (String.IsNullOrEmpty(str) || !decimal.TryParse(str, out temp))
             {
                 res = true;
             }

@@ -28,6 +28,15 @@ namespace PracticaExceptions
                 label1.Text = $"Mensaje: {ex.Message}";
                 label2.Text = $"Tipo de excepción: {ex.GetType()}";
             }
+            finally
+            {
+
+            }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

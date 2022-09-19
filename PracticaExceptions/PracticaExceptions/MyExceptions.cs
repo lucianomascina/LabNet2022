@@ -24,16 +24,16 @@ namespace PracticaExceptions
                 throw ex;
             }
         }
-        public static decimal Division2(string n1, string n2)
+        public static decimal Division2(string s1, string s2)
         {
             try
             {
-                if (MyExtensions.EmptyOrLetter(n1,n2))
+                if (s1.EmptyOrLetter() || s2.EmptyOrLetter())
                 {
                     throw new ArgumentException("Seguro Ingreso una letra o no ingreso nada!");
                 }
 
-                decimal result = Convert.ToDecimal(n1) / Convert.ToDecimal(n2);
+                decimal result = Convert.ToDecimal(s1) / Convert.ToDecimal(s2);
                 return result;
             }
             catch(ArgumentException ex)
