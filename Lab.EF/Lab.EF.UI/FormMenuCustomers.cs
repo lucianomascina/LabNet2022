@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Lab.EF.UI
 {
-    public partial class Form1 : Form
+    public partial class FormMenuCustomers : Form
     {
-        public Form1()
+        public FormMenuCustomers()
         {
             InitializeComponent();
+        }
+
+        private void buttonMostrar_Click(object sender, EventArgs e)
+        {
+            FormShowCustomers formShowCustomers = new FormShowCustomers();
+            formShowCustomers.ShowDialog();
         }
     }
 }

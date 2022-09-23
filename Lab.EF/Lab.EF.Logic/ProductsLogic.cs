@@ -2,6 +2,7 @@
 using Lab.EF.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,9 @@ namespace Lab.EF.Logic
 {
     public class ProductsLogic : BaseLogic, IABMLogic<Products>
     {
-        public List<Products> GetAll()
+        public async Task<List<Products>> GetAll()
         {
-            return context.Products.ToList();
+            return await context.Products.ToListAsync();
         }
         public void Add(Products product)
         {
@@ -22,21 +23,25 @@ namespace Lab.EF.Logic
         }
         public void Delete(int id)
         {
-            var productoAEliminar = context.Products.Find(id);
+            var productToDelete = context.Products.Find(id);
 
-            context.Products.Remove(productoAEliminar);
+            context.Products.Remove(productToDelete);
 
             context.SaveChanges();
         }
         public void Update(Products product)
         {
-            var productUpdate = context.Products.Find(product.ProductID);
+            var productToUpdate = context.Products.Find(product.ProductID);
 
-            productUpdate.ProductName = product.ProductName;
+            productToUpdate.ProductName = product.ProductName;
 
             context.SaveChanges();
 
         }
-    
+        public async Task<Products> GetById(int id)
+        {
+            return await context.Products.FindAsync(id);
+        }
+
     }
 }

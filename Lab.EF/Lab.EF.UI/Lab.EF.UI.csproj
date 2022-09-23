@@ -53,14 +53,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormMenuCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMenuCustomers.Designer.cs">
+      <DependentUpon>FormMenuCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowCustomers.Designer.cs">
+      <DependentUpon>FormShowCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateEmployee.Designer.cs">
+      <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteEmployee.Designer.cs">
+      <DependentUpon>FormDeleteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateEmployee.Designer.cs">
+      <DependentUpon>FormCreateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuEmployees.Designer.cs">
+      <DependentUpon>FormMenuEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowEmployees.Designer.cs">
+      <DependentUpon>FormShowEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDeleteEmployee.resx">
+      <DependentUpon>FormDeleteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateEmployee.resx">
+      <DependentUpon>FormCreateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuCustomers.resx">
+      <DependentUpon>FormMenuCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuEmployees.resx">
+      <DependentUpon>FormMenuEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowCustomers.resx">
+      <DependentUpon>FormShowCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowEmployees.resx">
+      <DependentUpon>FormShowEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateEmployee.resx">
+      <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
