@@ -40,5 +40,10 @@ namespace Lab.EF.UI
             FormCreateEmployee formCrearEmpleado = new FormCreateEmployee();
             formCrearEmpleado.ShowDialog();
         }
+
+        private void FormMenuEmployees_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

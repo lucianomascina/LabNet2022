@@ -79,9 +79,9 @@ namespace Lab.EF.UI
             // 
             this.buttonVerTodos.Location = new System.Drawing.Point(103, 303);
             this.buttonVerTodos.Name = "buttonVerTodos";
-            this.buttonVerTodos.Size = new System.Drawing.Size(94, 42);
+            this.buttonVerTodos.Size = new System.Drawing.Size(94, 52);
             this.buttonVerTodos.TabIndex = 4;
-            this.buttonVerTodos.Text = "Ver todos";
+            this.buttonVerTodos.Text = "Mostrar todos";
             this.buttonVerTodos.UseVisualStyleBackColor = true;
             this.buttonVerTodos.Click += new System.EventHandler(this.buttonVerTodos_Click);
             // 
@@ -98,6 +98,7 @@ namespace Lab.EF.UI
             this.Name = "FormMenuEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmpleados";
+            this.Load += new System.EventHandler(this.FormMenuEmployees_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

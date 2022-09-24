@@ -11,9 +11,9 @@ namespace Lab.EF.Logic
 {
     public class ProductsLogic : BaseLogic, IABMLogic<Products>
     {
-        public async Task<List<Products>> GetAll()
+        public List<Products> GetAll()
         {
-            return await context.Products.ToListAsync();
+            return  context.Products.ToList();
         }
         public void Add(Products product)
         {
@@ -38,9 +38,9 @@ namespace Lab.EF.Logic
             context.SaveChanges();
 
         }
-        public async Task<Products> GetById(int id)
+        public Products GetById(int id)
         {
-            return await context.Products.FindAsync(id);
+            return  context.Products.Find(id);
         }
 
     }

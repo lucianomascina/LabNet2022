@@ -10,9 +10,9 @@ namespace Lab.EF.Logic
 {
     public class CustomersLogic : BaseLogic, IABMLogic<Customers>
     {
-        public async Task<List<Customers>> GetAll()
+        public List<Customers> GetAll()
         {
-            return await context.Customers.ToListAsync();
+            return context.Customers.ToList();
         }
         public void Add(Customers customer)
         {
@@ -37,9 +37,9 @@ namespace Lab.EF.Logic
             context.SaveChanges();
 
         }
-        public async Task<Customers> GetById(int id)
+        public Customers GetById(int id)
         {
-            return await context.Customers.FindAsync(id);
+            return  context.Customers.Find(id);
         }
 
 

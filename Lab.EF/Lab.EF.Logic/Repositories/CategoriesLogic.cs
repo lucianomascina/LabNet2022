@@ -10,9 +10,9 @@ namespace Lab.EF.Logic
 {
     public class CategoriesLogic : BaseLogic, IABMLogic<Categories>
     {
-        public async Task<List<Categories>> GetAll()
+        public List<Categories> GetAll()
         {
-            return await context.Categories.ToListAsync();
+            return  context.Categories.ToList();
         }
         public void Add(Categories category)
         {
@@ -37,9 +37,9 @@ namespace Lab.EF.Logic
             context.SaveChanges();
 
         }
-        public async Task<Categories> GetById(int id)
+        public Categories GetById(int id)
         {
-            return await context.Categories.FindAsync(id);
+            return  context.Categories.Find(id);
         }
     }
 }

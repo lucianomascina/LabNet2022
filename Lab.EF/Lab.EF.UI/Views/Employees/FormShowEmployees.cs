@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Lab.EF.UI
         public FormShowEmployees()
         {
             InitializeComponent();
+        }
+
+        private EmployeeController _employeeController = new EmployeeController();
+        private void FormShowEmployees_Load(object sender, EventArgs e)
+        {
+            dataGridViewEmployees.DataSource = null;
+            dataGridViewEmployees.DataSource = _employeeController.GetAll();
         }
     }
 }

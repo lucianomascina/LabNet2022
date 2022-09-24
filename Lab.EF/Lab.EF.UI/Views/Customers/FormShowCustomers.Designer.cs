@@ -1,7 +1,7 @@
 ﻿
 namespace Lab.EF.UI
 {
-    partial class FormShowEmployees
+    partial class FormShowCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,35 @@ namespace Lab.EF.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridCustomers = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridCustomers
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(110, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(506, 245);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCustomers.Location = new System.Drawing.Point(12, 21);
+            this.dataGridCustomers.Name = "dataGridCustomers";
+            this.dataGridCustomers.Size = new System.Drawing.Size(793, 402);
+            this.dataGridCustomers.TabIndex = 0;
             // 
-            // FormMostrarEmpleados
+            // FormShowCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "FormMostrarEmpleados";
+            this.ClientSize = new System.Drawing.Size(817, 463);
+            this.Controls.Add(this.dataGridCustomers);
+            this.Name = "FormShowCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMostrarEmpleados";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "FormShowCustomers";
+            this.Load += new System.EventHandler(this.FormShowCustomers_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridCustomers;
     }
 }

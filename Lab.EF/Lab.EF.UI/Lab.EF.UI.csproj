@@ -53,78 +53,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMenuCustomers.cs">
+    <Compile Include="Views\Customers\FormMenuCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenuCustomers.Designer.cs">
+    <Compile Include="Views\Customers\FormMenuCustomers.Designer.cs">
       <DependentUpon>FormMenuCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShowCustomers.cs">
+    <Compile Include="Views\Customers\FormShowCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShowCustomers.Designer.cs">
+    <Compile Include="Views\Customers\FormShowCustomers.Designer.cs">
       <DependentUpon>FormShowCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUpdateEmployee.cs">
+    <Compile Include="Views\Employees\FormUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUpdateEmployee.Designer.cs">
+    <Compile Include="Views\Employees\FormUpdateEmployee.Designer.cs">
       <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDeleteEmployee.cs">
+    <Compile Include="Views\Employees\FormDeleteEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDeleteEmployee.Designer.cs">
+    <Compile Include="Views\Employees\FormDeleteEmployee.Designer.cs">
       <DependentUpon>FormDeleteEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCreateEmployee.cs">
+    <Compile Include="Views\Employees\FormCreateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCreateEmployee.Designer.cs">
+    <Compile Include="Views\Employees\FormCreateEmployee.Designer.cs">
       <DependentUpon>FormCreateEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuEmployees.cs">
+    <Compile Include="Views\Employees\FormMenuEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenuEmployees.Designer.cs">
+    <Compile Include="Views\Employees\FormMenuEmployees.Designer.cs">
       <DependentUpon>FormMenuEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu.cs">
+    <Compile Include="Views\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu.Designer.cs">
+    <Compile Include="Views\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormShowEmployees.cs">
+    <Compile Include="Views\Employees\FormShowEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormShowEmployees.Designer.cs">
+    <Compile Include="Views\Employees\FormShowEmployees.Designer.cs">
       <DependentUpon>FormShowEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormDeleteEmployee.resx">
+    <EmbeddedResource Include="Views\Employees\FormDeleteEmployee.resx">
       <DependentUpon>FormDeleteEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCreateEmployee.resx">
+    <EmbeddedResource Include="Views\Employees\FormCreateEmployee.resx">
       <DependentUpon>FormCreateEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuCustomers.resx">
+    <EmbeddedResource Include="Views\Customers\FormMenuCustomers.resx">
       <DependentUpon>FormMenuCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuEmployees.resx">
+    <EmbeddedResource Include="Views\Employees\FormMenuEmployees.resx">
       <DependentUpon>FormMenuEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu.resx">
+    <EmbeddedResource Include="Views\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShowCustomers.resx">
+    <EmbeddedResource Include="Views\Customers\FormShowCustomers.resx">
       <DependentUpon>FormShowCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormShowEmployees.resx">
+    <EmbeddedResource Include="Views\Employees\FormShowEmployees.resx">
       <DependentUpon>FormShowEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUpdateEmployee.resx">
+    <EmbeddedResource Include="Views\Employees\FormUpdateEmployee.resx">
       <DependentUpon>FormUpdateEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -149,6 +149,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab.EF.Entities\Lab.EF.Entities.csproj">
+      <Project>{7AB76F86-CC2A-4F1A-891A-26BB1DEA3358}</Project>
+      <Name>Lab.EF.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab.EF.Logic\Lab.EF.Logic.csproj">
+      <Project>{1F28CAC5-E9A6-48FC-A4D0-734D0A8B6106}</Project>
+      <Name>Lab.EF.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

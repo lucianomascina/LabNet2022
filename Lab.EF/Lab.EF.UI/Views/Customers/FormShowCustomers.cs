@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,14 @@ namespace Lab.EF.UI
         {
             InitializeComponent();
         }
+
+        private CustomerController _customerController = new CustomerController();
+        private void FormShowCustomers_Load(object sender, EventArgs e)
+        {
+            dataGridCustomers.DataSource = null;
+            dataGridCustomers.DataSource = _customerController.GetAll();
+        }
+
+
     }
 }

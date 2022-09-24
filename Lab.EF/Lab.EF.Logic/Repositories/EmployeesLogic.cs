@@ -10,9 +10,9 @@ namespace Lab.EF.Logic
 {
     public class EmployeesLogic : BaseLogic, IABMLogic<Employees>
     {
-        public async Task<List<Employees>> GetAll()
+        public List<Employees> GetAll()
         {
-            return await context.Employees.ToListAsync();
+            return  context.Employees.ToList();
         }
         public void Add(Employees employee)
         {
@@ -37,9 +37,9 @@ namespace Lab.EF.Logic
             context.SaveChanges();
 
         }
-        public async Task<Employees> GetById(int id)
+        public Employees GetById(int id)
         {
-            return await context.Employees.FindAsync(id);
+            return  context.Employees.Find(id);
         }
     }
 }

@@ -8,11 +8,11 @@ namespace Lab.EF.Logic
 {
     public interface IABMLogic<TEntity> 
     {
-        Task<List<TEntity>> GetAll();
+        List<TEntity> GetAll();
         void Add(TEntity entity);
         void Delete(int id);
         void Update(TEntity entity);
-        Task<TEntity> GetById(int id);
+        TEntity GetById(int id);
         
     }
 }
