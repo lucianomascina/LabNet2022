@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,23 @@ namespace Lab.EF.UI.Views.OrderDetails
         public FormOrderDetails()
         {
             InitializeComponent();
+        }
+
+        private OrderDetailsController _OrderDetailsController = new OrderDetailsController();
+
+        private void FormOrderDetails_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = _OrderDetailsController.GetAll();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

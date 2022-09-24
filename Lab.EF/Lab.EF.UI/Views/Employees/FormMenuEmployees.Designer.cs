@@ -72,7 +72,7 @@ namespace Lab.EF.UI
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 83);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(820, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 433);
             this.dataGridView1.TabIndex = 4;
             // 
             // buttonSalir
@@ -89,7 +89,7 @@ namespace Lab.EF.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 505);
+            this.ClientSize = new System.Drawing.Size(887, 528);
             this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonBorrar);

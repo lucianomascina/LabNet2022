@@ -172,6 +172,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\OrderDetails\FormOrderDetails.resx">
+      <DependentUpon>FormOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Orders\FormOrders.resx">
+      <DependentUpon>FormOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Shippers\FormShippers.resx">
+      <DependentUpon>FormShippers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Suppliers\FormSuppliers.resx">
+      <DependentUpon>FormSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Territories\FormTerritories.resx">
+      <DependentUpon>FormTerritories.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

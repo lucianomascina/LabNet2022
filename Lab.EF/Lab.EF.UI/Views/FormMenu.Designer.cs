@@ -42,9 +42,9 @@ namespace Lab.EF.UI
             // 
             // buttonEmpleados
             // 
-            this.buttonEmpleados.Location = new System.Drawing.Point(39, 36);
+            this.buttonEmpleados.Location = new System.Drawing.Point(81, 38);
             this.buttonEmpleados.Name = "buttonEmpleados";
-            this.buttonEmpleados.Size = new System.Drawing.Size(150, 55);
+            this.buttonEmpleados.Size = new System.Drawing.Size(176, 69);
             this.buttonEmpleados.TabIndex = 0;
             this.buttonEmpleados.Text = "EMPLEADOS";
             this.buttonEmpleados.UseVisualStyleBackColor = true;
@@ -52,9 +52,9 @@ namespace Lab.EF.UI
             // 
             // buttonClientes
             // 
-            this.buttonClientes.Location = new System.Drawing.Point(232, 36);
+            this.buttonClientes.Location = new System.Drawing.Point(310, 39);
             this.buttonClientes.Name = "buttonClientes";
-            this.buttonClientes.Size = new System.Drawing.Size(148, 55);
+            this.buttonClientes.Size = new System.Drawing.Size(174, 68);
             this.buttonClientes.TabIndex = 1;
             this.buttonClientes.Text = "CLIENTES";
             this.buttonClientes.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@ namespace Lab.EF.UI
             // 
             // buttonCATEGORIAS
             // 
-            this.buttonCATEGORIAS.Location = new System.Drawing.Point(39, 123);
+            this.buttonCATEGORIAS.Location = new System.Drawing.Point(81, 133);
             this.buttonCATEGORIAS.Name = "buttonCATEGORIAS";
-            this.buttonCATEGORIAS.Size = new System.Drawing.Size(150, 53);
+            this.buttonCATEGORIAS.Size = new System.Drawing.Size(176, 60);
             this.buttonCATEGORIAS.TabIndex = 2;
             this.buttonCATEGORIAS.Text = "CATEGORIAS";
             this.buttonCATEGORIAS.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@ namespace Lab.EF.UI
             // 
             // buttonCUSTOMERDEMOGRAPHICS
             // 
-            this.buttonCUSTOMERDEMOGRAPHICS.Location = new System.Drawing.Point(232, 123);
+            this.buttonCUSTOMERDEMOGRAPHICS.Location = new System.Drawing.Point(310, 130);
             this.buttonCUSTOMERDEMOGRAPHICS.Name = "buttonCUSTOMERDEMOGRAPHICS";
-            this.buttonCUSTOMERDEMOGRAPHICS.Size = new System.Drawing.Size(148, 53);
+            this.buttonCUSTOMERDEMOGRAPHICS.Size = new System.Drawing.Size(174, 63);
             this.buttonCUSTOMERDEMOGRAPHICS.TabIndex = 3;
             this.buttonCUSTOMERDEMOGRAPHICS.Text = "CUSTOMER DEMOGRAPHICS";
             this.buttonCUSTOMERDEMOGRAPHICS.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@ namespace Lab.EF.UI
             // 
             // buttonORDERDETAILS
             // 
-            this.buttonORDERDETAILS.Location = new System.Drawing.Point(39, 211);
+            this.buttonORDERDETAILS.Location = new System.Drawing.Point(81, 216);
             this.buttonORDERDETAILS.Name = "buttonORDERDETAILS";
-            this.buttonORDERDETAILS.Size = new System.Drawing.Size(150, 53);
+            this.buttonORDERDETAILS.Size = new System.Drawing.Size(176, 64);
             this.buttonORDERDETAILS.TabIndex = 4;
             this.buttonORDERDETAILS.Text = "ORDER DETAILS";
             this.buttonORDERDETAILS.UseVisualStyleBackColor = true;
@@ -92,9 +92,9 @@ namespace Lab.EF.UI
             // 
             // buttonORDERS
             // 
-            this.buttonORDERS.Location = new System.Drawing.Point(232, 211);
+            this.buttonORDERS.Location = new System.Drawing.Point(310, 216);
             this.buttonORDERS.Name = "buttonORDERS";
-            this.buttonORDERS.Size = new System.Drawing.Size(148, 53);
+            this.buttonORDERS.Size = new System.Drawing.Size(174, 64);
             this.buttonORDERS.TabIndex = 5;
             this.buttonORDERS.Text = "ORDERS";
             this.buttonORDERS.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@ namespace Lab.EF.UI
             // 
             // buttonSHIPPERS
             // 
-            this.buttonSHIPPERS.Location = new System.Drawing.Point(39, 293);
+            this.buttonSHIPPERS.Location = new System.Drawing.Point(81, 317);
             this.buttonSHIPPERS.Name = "buttonSHIPPERS";
-            this.buttonSHIPPERS.Size = new System.Drawing.Size(150, 55);
+            this.buttonSHIPPERS.Size = new System.Drawing.Size(176, 65);
             this.buttonSHIPPERS.TabIndex = 6;
             this.buttonSHIPPERS.Text = "SHIPPERS";
             this.buttonSHIPPERS.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@ namespace Lab.EF.UI
             // 
             // buttonSUPPLIERS
             // 
-            this.buttonSUPPLIERS.Location = new System.Drawing.Point(232, 293);
+            this.buttonSUPPLIERS.Location = new System.Drawing.Point(310, 318);
             this.buttonSUPPLIERS.Name = "buttonSUPPLIERS";
-            this.buttonSUPPLIERS.Size = new System.Drawing.Size(148, 55);
+            this.buttonSUPPLIERS.Size = new System.Drawing.Size(174, 64);
             this.buttonSUPPLIERS.TabIndex = 7;
             this.buttonSUPPLIERS.Text = "SUPPLIERS";
             this.buttonSUPPLIERS.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@ namespace Lab.EF.UI
             // 
             // buttonTERRITORIES
             // 
-            this.buttonTERRITORIES.Location = new System.Drawing.Point(39, 380);
+            this.buttonTERRITORIES.Location = new System.Drawing.Point(81, 420);
             this.buttonTERRITORIES.Name = "buttonTERRITORIES";
-            this.buttonTERRITORIES.Size = new System.Drawing.Size(139, 59);
+            this.buttonTERRITORIES.Size = new System.Drawing.Size(176, 70);
             this.buttonTERRITORIES.TabIndex = 8;
             this.buttonTERRITORIES.Text = "TERRITORIES";
             this.buttonTERRITORIES.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@ namespace Lab.EF.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 561);
+            this.ClientSize = new System.Drawing.Size(587, 549);
             this.Controls.Add(this.buttonTERRITORIES);
             this.Controls.Add(this.buttonSUPPLIERS);
             this.Controls.Add(this.buttonSHIPPERS);

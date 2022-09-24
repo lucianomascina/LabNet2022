@@ -25,6 +25,8 @@ namespace Lab.EF.UI.Views.Categories
             {
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = _categoriesController.GetAll();
+                dataGridView1.Columns["Picture"].Visible = false;
+                dataGridView1.Columns["Products"].Visible = false;
             }
             catch(Exception ex)
             {

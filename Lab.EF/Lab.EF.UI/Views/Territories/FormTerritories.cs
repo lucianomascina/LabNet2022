@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace Lab.EF.UI.Views.Territories
         public FormTerritories()
         {
             InitializeComponent();
+        }
+
+        private TerritoriesController _territoriescontroller = new TerritoriesController();
+        private void FormTerritories_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = _territoriescontroller.GetAll();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

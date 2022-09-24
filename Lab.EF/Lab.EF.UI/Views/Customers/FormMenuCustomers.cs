@@ -27,6 +27,7 @@ namespace Lab.EF.UI
         private void FormMenuCustomers_Load(object sender, EventArgs e)
         {
             Fill();
+            
         }
 
         private void Fill()
