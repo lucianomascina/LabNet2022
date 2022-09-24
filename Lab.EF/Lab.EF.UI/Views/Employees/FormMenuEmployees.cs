@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,33 +18,63 @@ namespace Lab.EF.UI
             InitializeComponent();
         }
 
-        private void buttonVerTodos_Click(object sender, EventArgs e)
+        private EmployeeController _employeeController = new EmployeeController();
+        
+        private int? getid()
         {
-            FormShowEmployees formMostrarEmpleados = new FormShowEmployees();
-            formMostrarEmpleados.ShowDialog();
+            try
+            {
+                return int.Parse(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+            }
+            catch
+            {
+                return null;
+            }
+            
         }
-
         private void buttonBorrar_Click(object sender, EventArgs e)
         {
-            FormDeleteEmployee formBorrarEmpleado = new FormDeleteEmployee();
-            formBorrarEmpleado.ShowDialog();
+            int? id = getid();
+            if(id != null)
+            {
+                FormDeleteEmployee formDeleteEmployee = new FormDeleteEmployee((int)id);
+                formDeleteEmployee.ShowDialog();
+            }
+         
         }
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            FormUpdateEmployee formActualizarEmpleado = new FormUpdateEmployee();
-            formActualizarEmpleado.ShowDialog();
+           
         }
 
         private void buttonCrear_Click(object sender, EventArgs e)
         {
-            FormCreateEmployee formCrearEmpleado = new FormCreateEmployee();
-            formCrearEmpleado.ShowDialog();
+           
         }
 
         private void FormMenuEmployees_Load(object sender, EventArgs e)
         {
+            try
+            {
+                Fill();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
 
+        private void Fill()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _employeeController.GetAll();
+        }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

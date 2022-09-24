@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,26 @@ namespace Lab.EF.UI
             InitializeComponent();
         }
 
+        private CustomerController _customerController = new CustomerController();
         private void buttonMostrar_Click(object sender, EventArgs e)
         {
-            FormShowCustomers formShowCustomers = new FormShowCustomers();
-            formShowCustomers.ShowDialog();
+           
+        }
+
+        private void FormMenuCustomers_Load(object sender, EventArgs e)
+        {
+            Fill();
+        }
+
+        private void Fill()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _customerController.GetAll();
+        }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

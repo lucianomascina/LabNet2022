@@ -16,5 +16,10 @@ namespace Lab.EF.UI
         {
             InitializeComponent();
         }
+
+        private void FormCreateEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -24,5 +24,38 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
+
+        public string Delete(int id)
+        {
+            string message = string.Empty;
+            
+            try
+            {
+     
+                _employeesLogic.Delete(id);
+
+                message = "el cliente se borro correctamente";
+
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+            }
+            return message;
+        }
+
+        public Employees GetById(int id)
+        {
+            try
+            {
+                var employee = _employeesLogic.GetById(id);
+
+                return (employee);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

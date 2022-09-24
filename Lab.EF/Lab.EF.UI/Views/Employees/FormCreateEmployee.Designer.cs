@@ -31,14 +31,15 @@ namespace Lab.EF.UI
         {
             this.SuspendLayout();
             // 
-            // FormCrearEmpleado
+            // FormCreateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormCrearEmpleado";
+            this.Name = "FormCreateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCrearEmpleado";
+            this.Load += new System.EventHandler(this.FormCreateEmployee_Load);
             this.ResumeLayout(false);
 
         }

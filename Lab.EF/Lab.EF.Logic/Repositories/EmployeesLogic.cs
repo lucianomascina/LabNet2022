@@ -12,6 +12,7 @@ namespace Lab.EF.Logic
     {
         public List<Employees> GetAll()
         {
+           
             return  context.Employees.ToList();
         }
         public void Add(Employees employee)
@@ -22,6 +23,22 @@ namespace Lab.EF.Logic
         }
         public void Delete(int id)
         {
+            /// Encuentra la PRIMER ocurrencia que coincida con la expresión entre paréntesis, si no 
+            /// se encuentra valor arroja una excepción.
+            //var employeeToDelete = context.Employees.First(e => e.EmployeeID == id);   
+
+            /// Encuentra la PRIMER ocurrencia que coincida con la expresión entre paréntesis, si no 
+            /// se encuentra valor devuelve un valor default (correspondiente al tipo de dato solicitado)
+            //regionAEliminar = context.Region.FirstOrDefault(r => r.RegionID == id);
+
+            /// Encuentra la UNICA ocurrencia que coincida con la expresión entre paréntesis, si no 
+            /// se encuentra valor arroja una excepción. Si se encuentra más de un valor arroja una excepción.
+            //regionAEliminar = context.Region.Single(r => r.RegionID == id);
+
+            /// Encuentra la UNICA ocurrencia que coincida con la expresión entre paréntesis, si no 
+            /// se encuentra valor devuelve un valor default (correspondiente al tipo de dato solicitado). Si se encuentra más de un valor arroja una excepción.
+            //regionAEliminar = context.Region.SingleOrDefault(r => r.RegionID == id);
+            
             var employeeToDelete = context.Employees.Find(id);
 
             context.Employees.Remove(employeeToDelete);
@@ -32,8 +49,10 @@ namespace Lab.EF.Logic
         {
             var employeeToUpdate = context.Employees.Find(employee.EmployeeID);
 
-            employeeToUpdate.LastName = employeeToUpdate.LastName;
+            employee.LastName = employeeToUpdate.LastName;
 
+            context.Employees.Attach(employee);
+            context.Entry(employee).State = EntityState.Modified;
             context.SaveChanges();
 
         }

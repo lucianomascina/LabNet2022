@@ -59,12 +59,6 @@
     <Compile Include="Views\Customers\FormMenuCustomers.Designer.cs">
       <DependentUpon>FormMenuCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Customers\FormShowCustomers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Customers\FormShowCustomers.Designer.cs">
-      <DependentUpon>FormShowCustomers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Employees\FormUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +111,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Customers\FormShowCustomers.resx">
-      <DependentUpon>FormShowCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Employees\FormShowEmployees.resx">
       <DependentUpon>FormShowEmployees.cs</DependentUpon>

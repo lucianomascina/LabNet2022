@@ -51,6 +51,8 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\IController.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="ExtensionsMethods.cs" />
     <Compile Include="Repositories\BaseLogic.cs" />
     <Compile Include="Repositories\CategoriesLogic.cs" />
     <Compile Include="Repositories\CustomersDemographicsLogic.cs" />

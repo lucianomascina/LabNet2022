@@ -11,6 +11,14 @@ namespace Lab.EF.Logic.Controllers
     {
         private CustomersLogic _customersLogic = new CustomersLogic();
 
+      
+      
+
+        public string Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Customers> GetAll()
         {
             List<Customers> customersList = null;
@@ -24,6 +32,11 @@ namespace Lab.EF.Logic.Controllers
             {
                 throw ex;
             }
+        }
+
+        public Customers GetById(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

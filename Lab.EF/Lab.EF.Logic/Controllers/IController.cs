@@ -9,5 +9,7 @@ namespace Lab.EF.Logic.Controllers
     public interface IController<TEntity>
     {
         List<TEntity> GetAll();
+        string Delete(int id);
+        TEntity GetById(int id);
     }
 }
