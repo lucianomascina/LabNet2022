@@ -18,7 +18,7 @@ namespace Lab.EF.UI
             InitializeComponent();
         }
 
-        private EmployeeController _employeeController = new EmployeeController();
+        private EmployeesController _employeeController = new EmployeesController();
         
         private int? getid()
         {

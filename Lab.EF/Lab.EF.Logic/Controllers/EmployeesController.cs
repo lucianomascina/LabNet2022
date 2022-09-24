@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic.Controllers
 {
-    public class EmployeeController : IController<Employees>
+    public class EmployeesController : IController<Employees>
     {
         private EmployeesLogic _employeesLogic = new EmployeesLogic();
         public List<Employees> GetAll()
@@ -24,7 +24,14 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
-
+        public string Add(Employees entity)
+        {
+            throw new NotImplementedException();
+        }
+        public string Update(Employees entity)
+        {
+            throw new NotImplementedException();
+        }
         public string Delete(int id)
         {
             string message = string.Empty;
@@ -43,7 +50,6 @@ namespace Lab.EF.Logic.Controllers
             }
             return message;
         }
-
         public Employees GetById(int id)
         {
             try
@@ -57,5 +63,6 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
+     
     }
 }

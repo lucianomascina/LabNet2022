@@ -44,7 +44,7 @@ namespace Lab.EF.UI
             // 
             this.buttonEmpleados.Location = new System.Drawing.Point(39, 36);
             this.buttonEmpleados.Name = "buttonEmpleados";
-            this.buttonEmpleados.Size = new System.Drawing.Size(139, 39);
+            this.buttonEmpleados.Size = new System.Drawing.Size(150, 55);
             this.buttonEmpleados.TabIndex = 0;
             this.buttonEmpleados.Text = "EMPLEADOS";
             this.buttonEmpleados.UseVisualStyleBackColor = true;
@@ -54,7 +54,7 @@ namespace Lab.EF.UI
             // 
             this.buttonClientes.Location = new System.Drawing.Point(232, 36);
             this.buttonClientes.Name = "buttonClientes";
-            this.buttonClientes.Size = new System.Drawing.Size(139, 39);
+            this.buttonClientes.Size = new System.Drawing.Size(148, 55);
             this.buttonClientes.TabIndex = 1;
             this.buttonClientes.Text = "CLIENTES";
             this.buttonClientes.UseVisualStyleBackColor = true;
@@ -64,64 +64,71 @@ namespace Lab.EF.UI
             // 
             this.buttonCATEGORIAS.Location = new System.Drawing.Point(39, 123);
             this.buttonCATEGORIAS.Name = "buttonCATEGORIAS";
-            this.buttonCATEGORIAS.Size = new System.Drawing.Size(139, 35);
+            this.buttonCATEGORIAS.Size = new System.Drawing.Size(150, 53);
             this.buttonCATEGORIAS.TabIndex = 2;
             this.buttonCATEGORIAS.Text = "CATEGORIAS";
             this.buttonCATEGORIAS.UseVisualStyleBackColor = true;
+            this.buttonCATEGORIAS.Click += new System.EventHandler(this.buttonCATEGORIAS_Click);
             // 
             // buttonCUSTOMERDEMOGRAPHICS
             // 
             this.buttonCUSTOMERDEMOGRAPHICS.Location = new System.Drawing.Point(232, 123);
             this.buttonCUSTOMERDEMOGRAPHICS.Name = "buttonCUSTOMERDEMOGRAPHICS";
-            this.buttonCUSTOMERDEMOGRAPHICS.Size = new System.Drawing.Size(139, 38);
+            this.buttonCUSTOMERDEMOGRAPHICS.Size = new System.Drawing.Size(148, 53);
             this.buttonCUSTOMERDEMOGRAPHICS.TabIndex = 3;
             this.buttonCUSTOMERDEMOGRAPHICS.Text = "CUSTOMER DEMOGRAPHICS";
             this.buttonCUSTOMERDEMOGRAPHICS.UseVisualStyleBackColor = true;
+            this.buttonCUSTOMERDEMOGRAPHICS.Click += new System.EventHandler(this.buttonCUSTOMERDEMOGRAPHICS_Click);
             // 
             // buttonORDERDETAILS
             // 
             this.buttonORDERDETAILS.Location = new System.Drawing.Point(39, 211);
             this.buttonORDERDETAILS.Name = "buttonORDERDETAILS";
-            this.buttonORDERDETAILS.Size = new System.Drawing.Size(139, 38);
+            this.buttonORDERDETAILS.Size = new System.Drawing.Size(150, 53);
             this.buttonORDERDETAILS.TabIndex = 4;
             this.buttonORDERDETAILS.Text = "ORDER DETAILS";
             this.buttonORDERDETAILS.UseVisualStyleBackColor = true;
+            this.buttonORDERDETAILS.Click += new System.EventHandler(this.buttonORDERDETAILS_Click);
             // 
             // buttonORDERS
             // 
             this.buttonORDERS.Location = new System.Drawing.Point(232, 211);
             this.buttonORDERS.Name = "buttonORDERS";
-            this.buttonORDERS.Size = new System.Drawing.Size(139, 40);
+            this.buttonORDERS.Size = new System.Drawing.Size(148, 53);
             this.buttonORDERS.TabIndex = 5;
             this.buttonORDERS.Text = "ORDERS";
             this.buttonORDERS.UseVisualStyleBackColor = true;
+            this.buttonORDERS.Click += new System.EventHandler(this.buttonORDERS_Click);
             // 
             // buttonSHIPPERS
             // 
             this.buttonSHIPPERS.Location = new System.Drawing.Point(39, 293);
             this.buttonSHIPPERS.Name = "buttonSHIPPERS";
-            this.buttonSHIPPERS.Size = new System.Drawing.Size(139, 38);
+            this.buttonSHIPPERS.Size = new System.Drawing.Size(150, 55);
             this.buttonSHIPPERS.TabIndex = 6;
             this.buttonSHIPPERS.Text = "SHIPPERS";
             this.buttonSHIPPERS.UseVisualStyleBackColor = true;
+            this.buttonSHIPPERS.Click += new System.EventHandler(this.buttonSHIPPERS_Click);
             // 
             // buttonSUPPLIERS
             // 
             this.buttonSUPPLIERS.Location = new System.Drawing.Point(232, 293);
             this.buttonSUPPLIERS.Name = "buttonSUPPLIERS";
-            this.buttonSUPPLIERS.Size = new System.Drawing.Size(139, 38);
+            this.buttonSUPPLIERS.Size = new System.Drawing.Size(148, 55);
             this.buttonSUPPLIERS.TabIndex = 7;
             this.buttonSUPPLIERS.Text = "SUPPLIERS";
             this.buttonSUPPLIERS.UseVisualStyleBackColor = true;
+            this.buttonSUPPLIERS.Click += new System.EventHandler(this.buttonSUPPLIERS_Click);
             // 
             // buttonTERRITORIES
             // 
-            this.buttonTERRITORIES.Location = new System.Drawing.Point(39, 365);
+            this.buttonTERRITORIES.Location = new System.Drawing.Point(39, 380);
             this.buttonTERRITORIES.Name = "buttonTERRITORIES";
-            this.buttonTERRITORIES.Size = new System.Drawing.Size(139, 47);
+            this.buttonTERRITORIES.Size = new System.Drawing.Size(139, 59);
             this.buttonTERRITORIES.TabIndex = 8;
             this.buttonTERRITORIES.Text = "TERRITORIES";
             this.buttonTERRITORIES.UseVisualStyleBackColor = true;
+            this.buttonTERRITORIES.Click += new System.EventHandler(this.buttonTERRITORIES_Click);
             // 
             // FormMenu
             // 

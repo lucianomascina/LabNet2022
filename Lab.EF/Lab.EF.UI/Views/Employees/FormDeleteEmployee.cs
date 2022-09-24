@@ -13,7 +13,7 @@ namespace Lab.EF.UI
 {
     public partial class FormDeleteEmployee : Form
     {
-        private EmployeeController _employeeController = new EmployeeController();
+        private EmployeesController _employeeController = new EmployeesController();
 
         public int id;
         public FormDeleteEmployee(int id )

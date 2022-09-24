@@ -18,7 +18,7 @@ namespace Lab.EF.UI
             InitializeComponent();
         }
 
-        private CustomerController _customerController = new CustomerController();
+        private CustomersController _customerController = new CustomersController();
         private void buttonMostrar_Click(object sender, EventArgs e)
         {
            
