@@ -13,13 +13,13 @@ namespace Lab.EF.Logic
         public List<Employees> GetAll()
         {
            
-            return  context.Employees.ToList();
+            return  _context.Employees.ToList();
         }
         public void Add(Employees employee)
         {
-            context.Employees.Add(employee);
+            _context.Employees.Add(employee);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Delete(int id)
         {
@@ -39,26 +39,26 @@ namespace Lab.EF.Logic
             /// se encuentra valor devuelve un valor default (correspondiente al tipo de dato solicitado). Si se encuentra más de un valor arroja una excepción.
             //regionAEliminar = context.Region.SingleOrDefault(r => r.RegionID == id);
             
-            var employeeToDelete = context.Employees.Find(id);
+            var employeeToDelete = _context.Employees.Find(id);
 
-            context.Employees.Remove(employeeToDelete);
+            _context.Employees.Remove(employeeToDelete);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Update(Employees employee)
         {
-            var employeeToUpdate = context.Employees.Find(employee.EmployeeID);
+            var employeeToUpdate = _context.Employees.Find(employee.EmployeeID);
 
-            employee.LastName = employeeToUpdate.LastName;
+            employeeToUpdate.LastName = employee.LastName;
+            employeeToUpdate.FirstName = employee.FirstName;
 
-            context.Employees.Attach(employee);
-            context.Entry(employee).State = EntityState.Modified;
-            context.SaveChanges();
+         
+            _context.SaveChanges();
 
         }
         public Employees GetById(int id)
         {
-            return  context.Employees.Find(id);
+            return  _context.Employees.Find(id);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Lab.EF.Logic
         public List<Suppliers> GetAll()
         {
 
-            return context.Suppliers.ToList();
+            return _context.Suppliers.ToList();
         }
 
         public Suppliers GetById(int id)

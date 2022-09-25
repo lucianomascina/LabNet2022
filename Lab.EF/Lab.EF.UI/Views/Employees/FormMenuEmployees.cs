@@ -45,8 +45,13 @@ namespace Lab.EF.UI
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-            FormUpdateEmployee formUpdateEmployee = new FormUpdateEmployee();
-            formUpdateEmployee.ShowDialog();
+            int? id = GetId();
+            if(id != null)
+            {
+                FormUpdateEmployee formUpdateEmployee = new FormUpdateEmployee((int)id);
+                formUpdateEmployee.ShowDialog();
+            }
+           
         }
 
         private void buttonCrear_Click(object sender, EventArgs e)
@@ -80,9 +85,6 @@ namespace Lab.EF.UI
             dataGridView1.Columns["Territories"].Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FillDataGrid();
-        }
+    
     }
 }

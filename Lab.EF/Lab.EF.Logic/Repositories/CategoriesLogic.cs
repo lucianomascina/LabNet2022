@@ -12,34 +12,34 @@ namespace Lab.EF.Logic
     {
         public List<Categories> GetAll()
         {
-            return  context.Categories.ToList();
+            return  _context.Categories.ToList();
         }
         public void Add(Categories category)
         {
-            context.Categories.Add(category);
+            _context.Categories.Add(category);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Delete(int id)
         {
-            var categoryToDelete = context.Categories.Find(id);
+            var categoryToDelete = _context.Categories.Find(id);
 
-            context.Categories.Remove(categoryToDelete);
+            _context.Categories.Remove(categoryToDelete);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Update(Categories category)
         {
-            var categoryToUpdate = context.Categories.Find(category.CategoryID);
+            var categoryToUpdate = _context.Categories.Find(category.CategoryID);
 
             categoryToUpdate.CategoryName = category.CategoryName;
 
-            context.SaveChanges();
+            _context.SaveChanges();
 
         }
         public Categories GetById(int id)
         {
-            return  context.Categories.Find(id);
+            return  _context.Categories.Find(id);
         }
     }
 }

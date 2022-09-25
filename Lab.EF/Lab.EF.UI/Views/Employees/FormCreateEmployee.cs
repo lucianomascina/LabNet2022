@@ -19,7 +19,7 @@ namespace Lab.EF.UI
             InitializeComponent();
         }
 
-        private EmployeesController _employeecontroller = new EmployeesController();
+        private EmployeesController _employeeController = new EmployeesController();
         private void FormCreateEmployee_Load(object sender, EventArgs e)
         {
 
@@ -51,7 +51,7 @@ namespace Lab.EF.UI
                                      hireDate,address,city,region,postalCode,country,homePhone,
                                      extension,photo,notes,reportsTo,photoPath);*/
                 Employees employee = new Employees(firstName,lastName);
-                string message = _employeecontroller.Add(employee);
+                string message = _employeeController.Add(employee);
                 MessageBox.Show(message);
               
               

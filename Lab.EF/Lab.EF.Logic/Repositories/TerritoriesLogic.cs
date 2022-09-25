@@ -23,7 +23,7 @@ namespace Lab.EF.Logic
         public List<Territories> GetAll()
         {
 
-            return context.Territories.ToList();
+            return _context.Territories.ToList();
         }
 
         public Territories GetById(int id)

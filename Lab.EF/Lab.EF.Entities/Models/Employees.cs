@@ -22,6 +22,13 @@ namespace Lab.EF.Entities
             LastName = lastName;
         }
 
+        public Employees(int id, string firstName, string lastName)
+        {
+            EmployeeID = id;
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
         [Key]
         public int EmployeeID { get; set; }
 

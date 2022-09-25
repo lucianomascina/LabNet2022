@@ -32,7 +32,7 @@ namespace Lab.EF.Logic.Controllers
             {
                 _employeesLogic.Add(entity);
               
-                 message = "el empleado se agrego correctamente";
+                 message = "empleado agregado correctamente";
              
             }
             catch (Exception ex)
@@ -44,7 +44,21 @@ namespace Lab.EF.Logic.Controllers
         }
         public string Update(Employees entity)
         {
-            throw new NotImplementedException();
+            string message = string.Empty;
+
+            try
+            {
+                _employeesLogic.Update(entity);
+
+                message = "empleado modificado correctamente";
+
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+            }
+            return message;
+
         }
         public string Delete(int id)
         {
@@ -55,7 +69,7 @@ namespace Lab.EF.Logic.Controllers
      
                 _employeesLogic.Delete(id);
 
-                message = "el cliente se borro correctamente";
+                message = "empleado borrado correctamente";
 
             }
             catch (Exception ex)

@@ -9,10 +9,10 @@ namespace Lab.EF.Logic
 {
     public class BaseLogic
     {
-        protected readonly NorthwindContext context;
+        protected readonly NorthwindContext _context;
         public BaseLogic()
         {
-            context = new NorthwindContext();
+            _context = new NorthwindContext();
         }
     }
 }

@@ -12,34 +12,34 @@ namespace Lab.EF.Logic
     {
         public List<Customers> GetAll()
         {
-            return context.Customers.ToList();
+            return _context.Customers.ToList();
         }
         public void Add(Customers customer)
         {
-            context.Customers.Add(customer);
+            _context.Customers.Add(customer);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Delete(int id)
         {
-            var customerToDelete = context.Customers.Find(id);
+            var customerToDelete = _context.Customers.Find(id);
 
-            context.Customers.Remove(customerToDelete);
+            _context.Customers.Remove(customerToDelete);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Update(Customers customer)
         {
-            var customerToUpdate = context.Customers.Find(customer.CustomerID);
+            var customerToUpdate = _context.Customers.Find(customer.CustomerID);
 
             customerToUpdate.ContactName = customerToUpdate.ContactName;
 
-            context.SaveChanges();
+            _context.SaveChanges();
 
         }
         public Customers GetById(int id)
         {
-            return  context.Customers.Find(id);
+            return  _context.Customers.Find(id);
         }
 
 

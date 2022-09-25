@@ -12,34 +12,34 @@ namespace Lab.EF.Logic
     {
         public List<CustomerDemographics> GetAll()
         {
-            return  context.CustomerDemographics.ToList();
+            return  _context.CustomerDemographics.ToList();
         }
         public void Add(CustomerDemographics customerDemographic)
         {
-            context.CustomerDemographics.Add(customerDemographic);
+            _context.CustomerDemographics.Add(customerDemographic);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Delete(int id)
         {
-            var customerDemographicToDelete = context.CustomerDemographics.Find(id);
+            var customerDemographicToDelete = _context.CustomerDemographics.Find(id);
 
-            context.CustomerDemographics.Remove(customerDemographicToDelete);
+            _context.CustomerDemographics.Remove(customerDemographicToDelete);
 
-            context.SaveChanges();
+            _context.SaveChanges();
         }
         public void Update(CustomerDemographics customerDemographic)
         {
-            var customerDemographicToUpdate = context.CustomerDemographics.Find(customerDemographic.CustomerTypeID);
+            var customerDemographicToUpdate = _context.CustomerDemographics.Find(customerDemographic.CustomerTypeID);
 
             customerDemographicToUpdate.CustomerDesc = customerDemographic.CustomerDesc;
 
-            context.SaveChanges();
+            _context.SaveChanges();
 
         }
         public CustomerDemographics GetById(int id)
         {
-            return  context.CustomerDemographics.Find(id);
+            return  _context.CustomerDemographics.Find(id);
         }
     }
 }
