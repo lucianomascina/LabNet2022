@@ -101,12 +101,6 @@
     <Compile Include="Views\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Employees\FormShowEmployees.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Employees\FormShowEmployees.Designer.cs">
-      <DependentUpon>FormShowEmployees.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\OrderDetails\FormOrderDetails.cs">
@@ -142,6 +136,9 @@
     <EmbeddedResource Include="Views\Categories\FormCategories.resx">
       <DependentUpon>FormCategories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerDemographics\FormCustomerDemographics.resx">
+      <DependentUpon>FormCustomerDemographics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Employees\FormDeleteEmployee.resx">
       <DependentUpon>FormDeleteEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Employees\FormShowEmployees.resx">
-      <DependentUpon>FormShowEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Employees\FormUpdateEmployee.resx">
       <DependentUpon>FormUpdateEmployee.cs</DependentUpon>

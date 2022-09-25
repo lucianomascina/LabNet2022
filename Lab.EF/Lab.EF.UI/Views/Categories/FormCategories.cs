@@ -23,16 +23,22 @@ namespace Lab.EF.UI.Views.Categories
         {
             try
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = _categoriesController.GetAll();
-                dataGridView1.Columns["Picture"].Visible = false;
-                dataGridView1.Columns["Products"].Visible = false;
+                FillDataGrid();
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        
+        }
+
+        private void FillDataGrid()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _categoriesController.GetAll();
+            dataGridView1.Columns["Picture"].Visible = false;
+            dataGridView1.Columns["Products"].Visible = false;
+            dataGridView1.Columns[2].Width = 300;
         }
 
     }

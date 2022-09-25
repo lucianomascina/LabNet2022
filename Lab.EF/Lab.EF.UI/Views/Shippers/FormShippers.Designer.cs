@@ -38,14 +38,14 @@ namespace Lab.EF.UI.Views.Shippers
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(42, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(746, 394);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 369);
             this.dataGridView1.TabIndex = 0;
             // 
             // FormShippers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 479);
+            this.ClientSize = new System.Drawing.Size(574, 455);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormShippers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

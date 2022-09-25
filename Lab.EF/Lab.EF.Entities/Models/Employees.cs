@@ -16,6 +16,12 @@ namespace Lab.EF.Entities
             Territories = new HashSet<Territories>();
         }
 
+        public Employees(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
         [Key]
         public int EmployeeID { get; set; }
 
@@ -79,5 +85,6 @@ namespace Lab.EF.Entities
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Territories> Territories { get; set; }
+       
     }
 }

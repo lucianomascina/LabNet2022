@@ -38,14 +38,14 @@ namespace Lab.EF.UI.Views.Categories
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 38);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(567, 383);
+            this.dataGridView1.Size = new System.Drawing.Size(655, 404);
             this.dataGridView1.TabIndex = 0;
             // 
             // FormCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 473);
+            this.ClientSize = new System.Drawing.Size(695, 481);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

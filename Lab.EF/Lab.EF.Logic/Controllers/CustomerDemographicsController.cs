@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic.Controllers
 {
-    class CustomerDemographicsController : IController<CustomerDemographics>
+    public class CustomerDemographicsController : IController<CustomerDemographics>
     {
         private CustomersDemographicsLogic _customerDemographicsLogic = new CustomersDemographicsLogic();
         public List<CustomerDemographics> GetAll()

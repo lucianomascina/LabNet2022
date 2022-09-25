@@ -33,37 +33,36 @@ namespace Lab.EF.UI
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCrear
             // 
-            this.buttonCrear.Location = new System.Drawing.Point(252, 23);
+            this.buttonCrear.Location = new System.Drawing.Point(129, 21);
             this.buttonCrear.Name = "buttonCrear";
             this.buttonCrear.Size = new System.Drawing.Size(96, 37);
             this.buttonCrear.TabIndex = 1;
-            this.buttonCrear.Text = "CREAR";
+            this.buttonCrear.Text = "CREATE";
             this.buttonCrear.UseVisualStyleBackColor = true;
             this.buttonCrear.Click += new System.EventHandler(this.buttonCrear_Click);
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(409, 23);
+            this.buttonActualizar.Location = new System.Drawing.Point(311, 22);
             this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.Size = new System.Drawing.Size(98, 37);
+            this.buttonActualizar.Size = new System.Drawing.Size(93, 36);
             this.buttonActualizar.TabIndex = 2;
-            this.buttonActualizar.Text = "ACTUALIZAR";
+            this.buttonActualizar.Text = "UPDATE";
             this.buttonActualizar.UseVisualStyleBackColor = true;
             this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
             // 
             // buttonBorrar
             // 
-            this.buttonBorrar.Location = new System.Drawing.Point(575, 22);
+            this.buttonBorrar.Location = new System.Drawing.Point(472, 21);
             this.buttonBorrar.Name = "buttonBorrar";
-            this.buttonBorrar.Size = new System.Drawing.Size(94, 36);
+            this.buttonBorrar.Size = new System.Drawing.Size(92, 37);
             this.buttonBorrar.TabIndex = 3;
-            this.buttonBorrar.Text = "BORRAR";
+            this.buttonBorrar.Text = "DELETE";
             this.buttonBorrar.UseVisualStyleBackColor = true;
             this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
             // 
@@ -75,22 +74,11 @@ namespace Lab.EF.UI
             this.dataGridView1.Size = new System.Drawing.Size(854, 433);
             this.dataGridView1.TabIndex = 4;
             // 
-            // buttonSalir
-            // 
-            this.buttonSalir.Location = new System.Drawing.Point(40, 23);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(88, 37);
-            this.buttonSalir.TabIndex = 5;
-            this.buttonSalir.Text = "SALIR";
-            this.buttonSalir.UseVisualStyleBackColor = true;
-            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
-            // 
             // FormMenuEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 528);
-            this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.buttonActualizar);
@@ -109,6 +97,5 @@ namespace Lab.EF.UI
         private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.Button buttonBorrar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonSalir;
     }
 }

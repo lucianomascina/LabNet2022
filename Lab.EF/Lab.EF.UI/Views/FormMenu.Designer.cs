@@ -46,7 +46,7 @@ namespace Lab.EF.UI
             this.buttonEmpleados.Name = "buttonEmpleados";
             this.buttonEmpleados.Size = new System.Drawing.Size(176, 69);
             this.buttonEmpleados.TabIndex = 0;
-            this.buttonEmpleados.Text = "EMPLEADOS";
+            this.buttonEmpleados.Text = "EMPLOYEES";
             this.buttonEmpleados.UseVisualStyleBackColor = true;
             this.buttonEmpleados.Click += new System.EventHandler(this.buttonEmpleados_Click);
             // 
@@ -56,7 +56,7 @@ namespace Lab.EF.UI
             this.buttonClientes.Name = "buttonClientes";
             this.buttonClientes.Size = new System.Drawing.Size(174, 68);
             this.buttonClientes.TabIndex = 1;
-            this.buttonClientes.Text = "CLIENTES";
+            this.buttonClientes.Text = "CUSTOMERS";
             this.buttonClientes.UseVisualStyleBackColor = true;
             this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
             // 
@@ -66,7 +66,7 @@ namespace Lab.EF.UI
             this.buttonCATEGORIAS.Name = "buttonCATEGORIAS";
             this.buttonCATEGORIAS.Size = new System.Drawing.Size(176, 60);
             this.buttonCATEGORIAS.TabIndex = 2;
-            this.buttonCATEGORIAS.Text = "CATEGORIAS";
+            this.buttonCATEGORIAS.Text = "CATEGORIES";
             this.buttonCATEGORIAS.UseVisualStyleBackColor = true;
             this.buttonCATEGORIAS.Click += new System.EventHandler(this.buttonCATEGORIAS_Click);
             // 

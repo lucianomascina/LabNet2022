@@ -23,14 +23,21 @@ namespace Lab.EF.UI.Views.Shippers
         {
             try
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = _shipperscontroller.GetAll();
+                FillDataGrid();
               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FillDataGrid()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _shipperscontroller.GetAll();
+            dataGridView1.Columns["Orders"].Visible = false;
+
         }
     }
 }

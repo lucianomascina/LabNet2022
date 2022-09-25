@@ -23,14 +23,22 @@ namespace Lab.EF.UI.Views.Territories
         {
             try
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = _territoriescontroller.GetAll();
-                
+                FillDataGrid();
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FillDataGrid()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _territoriescontroller.GetAll();
+            dataGridView1.Columns["Region"].Visible = false;
+            dataGridView1.Columns["Employees"].Visible = false;
         }
     }
 }

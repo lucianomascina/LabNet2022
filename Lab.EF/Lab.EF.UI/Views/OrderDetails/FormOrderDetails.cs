@@ -24,14 +24,21 @@ namespace Lab.EF.UI.Views.OrderDetails
         {
             try
             {
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = _OrderDetailsController.GetAll();
+                FillDataGrid();
                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+        private void FillDataGrid()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _OrderDetailsController.GetAll();
+            dataGridView1.Columns["Orders"].Visible = false;
+            dataGridView1.Columns["Products"].Visible = false;
 
         }
     }

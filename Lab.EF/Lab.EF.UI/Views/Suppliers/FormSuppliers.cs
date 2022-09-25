@@ -32,5 +32,13 @@ namespace Lab.EF.UI.Views.Suppliers
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FillDataGrid()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _supplierscontroller.GetAll();
+
+
+        }
     }
 }

@@ -27,7 +27,9 @@ namespace Lab.EF.UI
         private void FormMenuCustomers_Load(object sender, EventArgs e)
         {
             Fill();
-            
+            dataGridView1.Columns["Orders"].Visible = false;
+           
+
         }
 
         private void Fill()

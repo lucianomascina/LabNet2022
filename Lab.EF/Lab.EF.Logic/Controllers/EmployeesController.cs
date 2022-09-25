@@ -26,7 +26,21 @@ namespace Lab.EF.Logic.Controllers
         }
         public string Add(Employees entity)
         {
-            throw new NotImplementedException();
+            string message = string.Empty;
+          
+            try
+            {
+                _employeesLogic.Add(entity);
+              
+                 message = "el empleado se agrego correctamente";
+             
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+            }
+            return message;
+
         }
         public string Update(Employees entity)
         {

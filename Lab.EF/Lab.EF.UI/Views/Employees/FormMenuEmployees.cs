@@ -60,18 +60,6 @@ namespace Lab.EF.UI
             try
             {
                 Fill();
-                dataGridView1.Columns["Region"].Visible = false;
-                dataGridView1.Columns["PostalCode"].Visible = false;
-                dataGridView1.Columns["Extension"].Visible = false;
-                dataGridView1.Columns["Photo"].Visible = false;
-                dataGridView1.Columns["Notes"].Visible = false;
-                dataGridView1.Columns["ReportsTo"].Visible = false;
-                dataGridView1.Columns["PhotoPath"].Visible = false;
-                dataGridView1.Columns["Employees1"].Visible = false;
-                dataGridView1.Columns["Employees2"].Visible = false;
-                dataGridView1.Columns["Orders"].Visible = false;
-                dataGridView1.Columns["Territories"].Visible = false;
-                dataGridView1.Columns["TitleOfCourtesy"].Visible = false;
 
             }
             catch(Exception ex)
@@ -85,6 +73,11 @@ namespace Lab.EF.UI
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = _employeeController.GetAll();
+            dataGridView1.Columns["Photo"].Visible = false;
+            dataGridView1.Columns["Employees1"].Visible = false;
+            dataGridView1.Columns["Employees2"].Visible = false;
+            dataGridView1.Columns["Orders"].Visible = false;
+            dataGridView1.Columns["Territories"].Visible = false;
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)
