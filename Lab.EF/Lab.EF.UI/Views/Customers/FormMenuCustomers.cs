@@ -26,21 +26,18 @@ namespace Lab.EF.UI
 
         private void FormMenuCustomers_Load(object sender, EventArgs e)
         {
-            Fill();
+            FillDataGrid();
             dataGridView1.Columns["Orders"].Visible = false;
            
 
         }
 
-        private void Fill()
+        private void FillDataGrid()
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = _customerController.GetAll();
         }
 
-        private void buttonSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+   
     }
 }

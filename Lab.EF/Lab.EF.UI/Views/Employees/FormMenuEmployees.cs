@@ -20,7 +20,7 @@ namespace Lab.EF.UI
 
         private EmployeesController _employeeController = new EmployeesController();
         
-        private int? getid()
+        private int? GetId()
         {
             try
             {
@@ -34,7 +34,7 @@ namespace Lab.EF.UI
         }
         private void buttonBorrar_Click(object sender, EventArgs e)
         {
-            int? id = getid();
+            int? id = GetId();
             if(id != null)
             {
                 FormDeleteEmployee formDeleteEmployee = new FormDeleteEmployee((int)id);
@@ -59,7 +59,7 @@ namespace Lab.EF.UI
         {
             try
             {
-                Fill();
+                FillDataGrid();
 
             }
             catch(Exception ex)
@@ -69,7 +69,7 @@ namespace Lab.EF.UI
             
         }
 
-        private void Fill()
+        public void FillDataGrid()
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = _employeeController.GetAll();
@@ -80,9 +80,9 @@ namespace Lab.EF.UI
             dataGridView1.Columns["Territories"].Visible = false;
         }
 
-        private void buttonSalir_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FillDataGrid();
         }
     }
 }

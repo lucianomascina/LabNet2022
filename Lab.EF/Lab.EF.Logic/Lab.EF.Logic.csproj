@@ -58,7 +58,6 @@
     <Compile Include="Controllers\ShippersController.cs" />
     <Compile Include="Controllers\SuppliersController.cs" />
     <Compile Include="Controllers\TerritoriesController.cs" />
-    <Compile Include="Exceptions.cs" />
     <Compile Include="ExtensionsMethods.cs" />
     <Compile Include="Repositories\BaseLogic.cs" />
     <Compile Include="Repositories\CategoriesLogic.cs" />

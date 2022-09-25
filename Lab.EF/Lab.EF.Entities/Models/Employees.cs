@@ -16,9 +16,9 @@ namespace Lab.EF.Entities
             Territories = new HashSet<Territories>();
         }
 
-        public Employees(string firstName, string lastName)
+        public Employees(string name, string lastName)
         {
-            FirstName = firstName;
+            FirstName = name;            
             LastName = lastName;
         }
 

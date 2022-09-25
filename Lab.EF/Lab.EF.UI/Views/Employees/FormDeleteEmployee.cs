@@ -25,10 +25,12 @@ namespace Lab.EF.UI
         private void Fill() 
         {
             var employee = _employeeController.GetById(id);
-            textBox1.Text = Convert.ToString(employee.EmployeeID);
-            textBox2.Text = employee.LastName;
-            textBox3.Text = employee.Country;
-            textBox4.Text = Convert.ToString(employee.HireDate);
+            labelID.Text = Convert.ToString(employee.EmployeeID);
+            labelLASTNAME.Text = employee.LastName;
+            labelFIRSTNAME.Text = employee.FirstName;
+            labelBIRTHDATE.Text = Convert.ToString(employee.BirthDate);
+            labelHIREDATE.Text = Convert.ToString(employee.HireDate);
+            
         }
         
         private void FormDeleteEmployee_Load(object sender, EventArgs e)
