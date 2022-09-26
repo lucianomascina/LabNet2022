@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Entities;
+using Lab.EF.Logic;
 using Lab.EF.Logic.Controllers;
 using Lab.EF.Logic.Exceptions;
 using System;
@@ -25,7 +26,7 @@ namespace Lab.EF.UI
         {
 
         }
-
+      
         private void buttonCrear_Click(object sender, EventArgs e)
         {
             try
@@ -33,7 +34,7 @@ namespace Lab.EF.UI
                 
                 string firstName = textBoxFIRSTNAME.Text;
                 string lastName = textBoxLASTNAME.Text;
-                //string title = textBoxTITLE.Text;
+                string title = textBoxTITLE.Text;
                 //string titleOfCourtesy = textBoxTITLEOFCOURTESY.Text;
                 //DateTime birthDate = dateTimePickerBIRTH.Value;
                 //DateTime hireDate = dateTimePickerHire.Value;
@@ -49,15 +50,14 @@ namespace Lab.EF.UI
                 //int reportsTo = Convert.ToInt32(textBoxREPORTSTO.Text);
                 //string photoPath = textBoxPHOTOPATH.Text;
 
-                Exceptions.ValidateFirstName(firstName);
-                Exceptions.ValidateLastName(lastName);
-                Employees employee = new Employees(firstName,lastName);
+                Exceptions.ValidateForm(firstName,lastName,title);
+
+                Employees employee = new Employees(firstName,lastName,title);
                 string message = _employeeController.Add(employee);
                 MessageBox.Show(message);
                 
-              
             }
-            catch(ArgumentNullException ex)
+            catch(ArgumentException ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -68,9 +68,10 @@ namespace Lab.EF.UI
 
         }
 
-        
-
-      
+        private void FormCreateEmployee_Shown(object sender, EventArgs e)
+        {
+            textBoxFIRSTNAME.Focus();
+        }
     }
 }
 

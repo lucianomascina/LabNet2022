@@ -16,11 +16,11 @@ namespace Lab.EF.Entities
             Territories = new HashSet<Territories>();
         }
 
-        public Employees(string firstName, string lastName)
+        public Employees(string firstName, string lastName, string title)
         {
             FirstName = firstName;            
             LastName = lastName;
-            
+            Title = title;
 
         }
 
@@ -34,11 +34,11 @@ namespace Lab.EF.Entities
         [Key]
         public int EmployeeID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "debe ingresar un apellido")]
         [StringLength(20)]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "debe ingresar un nombre")]
         [StringLength(10)]
         public string FirstName { get; set; }
 

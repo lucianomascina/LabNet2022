@@ -37,7 +37,7 @@ namespace Lab.EF.Logic.Controllers
             }
             catch (Exception ex)
             {
-                message = ex.Message;
+                throw ex;
             }
             return message;
 

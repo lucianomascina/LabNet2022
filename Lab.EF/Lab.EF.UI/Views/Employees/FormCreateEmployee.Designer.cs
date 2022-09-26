@@ -29,6 +29,7 @@ namespace Lab.EF.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonCrear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,6 +65,8 @@ namespace Lab.EF.UI
             this.textBoxNOTES = new System.Windows.Forms.TextBox();
             this.textBoxREPORTSTO = new System.Windows.Forms.TextBox();
             this.textBoxPHOTOPATH = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCrear
@@ -79,7 +82,7 @@ namespace Lab.EF.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 41);
+            this.label1.Location = new System.Drawing.Point(42, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 1;
@@ -88,7 +91,7 @@ namespace Lab.EF.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 92);
+            this.label2.Location = new System.Drawing.Point(43, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 2;
@@ -123,14 +126,14 @@ namespace Lab.EF.UI
             // 
             // textBoxLASTNAME
             // 
-            this.textBoxLASTNAME.Location = new System.Drawing.Point(137, 34);
+            this.textBoxLASTNAME.Location = new System.Drawing.Point(137, 88);
             this.textBoxLASTNAME.Name = "textBoxLASTNAME";
             this.textBoxLASTNAME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLASTNAME.TabIndex = 14;
             // 
             // textBoxFIRSTNAME
             // 
-            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(137, 85);
+            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(137, 41);
             this.textBoxFIRSTNAME.Name = "textBoxFIRSTNAME";
             this.textBoxFIRSTNAME.Size = new System.Drawing.Size(100, 20);
             this.textBoxFIRSTNAME.TabIndex = 15;
@@ -348,6 +351,10 @@ namespace Lab.EF.UI
             this.textBoxPHOTOPATH.Size = new System.Drawing.Size(100, 20);
             this.textBoxPHOTOPATH.TabIndex = 44;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormCreateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,8 +398,9 @@ namespace Lab.EF.UI
             this.Name = "FormCreateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCrearEmpleado";
-           
             this.Load += new System.EventHandler(this.FormCreateEmployee_Load);
+            this.Shown += new System.EventHandler(this.FormCreateEmployee_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +443,6 @@ namespace Lab.EF.UI
         private System.Windows.Forms.TextBox textBoxNOTES;
         private System.Windows.Forms.TextBox textBoxREPORTSTO;
         private System.Windows.Forms.TextBox textBoxPHOTOPATH;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

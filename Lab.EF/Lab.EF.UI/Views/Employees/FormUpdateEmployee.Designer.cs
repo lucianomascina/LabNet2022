@@ -282,14 +282,14 @@ namespace Lab.EF.UI
             // 
             // textBoxFIRSTNAME
             // 
-            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(184, 134);
+            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(184, 78);
             this.textBoxFIRSTNAME.Name = "textBoxFIRSTNAME";
             this.textBoxFIRSTNAME.Size = new System.Drawing.Size(100, 20);
             this.textBoxFIRSTNAME.TabIndex = 51;
             // 
             // textBoxLASTNAME
             // 
-            this.textBoxLASTNAME.Location = new System.Drawing.Point(184, 83);
+            this.textBoxLASTNAME.Location = new System.Drawing.Point(184, 126);
             this.textBoxLASTNAME.Name = "textBoxLASTNAME";
             this.textBoxLASTNAME.Size = new System.Drawing.Size(100, 20);
             this.textBoxLASTNAME.TabIndex = 50;
@@ -324,7 +324,7 @@ namespace Lab.EF.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 141);
+            this.label2.Location = new System.Drawing.Point(90, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 46;
@@ -333,7 +333,7 @@ namespace Lab.EF.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 90);
+            this.label1.Location = new System.Drawing.Point(85, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 45;
@@ -403,6 +403,7 @@ namespace Lab.EF.UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormActualizarEmpleado";
             this.Load += new System.EventHandler(this.FormUpdateEmployee_Load);
+            this.Shown += new System.EventHandler(this.FormUpdateEmployee_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

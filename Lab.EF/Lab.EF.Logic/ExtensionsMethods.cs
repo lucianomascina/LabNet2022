@@ -21,7 +21,18 @@ namespace Lab.EF.Logic
             return res;
         }
 
+        public static bool IsNumber(this string str)
+        {
+            int temp = 0;
+            bool res = false;
 
+            if (int.TryParse(str, out temp))
+            {
+                res = true;
+            }
+
+            return res;
+        }
 
     }
 }

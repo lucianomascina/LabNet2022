@@ -8,28 +8,18 @@ namespace Lab.EF.Logic.Exceptions
 {
     public class Exceptions
     {
-        public static void ValidateFirstName(string firstName)
+        public static void ValidateForm(string firstName,string lastNAME,string title)
         {
-            try
-            {
-                if (firstName.EmptyOrNumber())
-                {
-                    throw new ArgumentNullException("debe ingresar un nombre");
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public static void ValidateLastName(string lastName)
-        {
-            if (lastName.EmptyOrNumber())
-            {
-                throw new ArgumentNullException("debe ingresar un apellido");
-            }
+            if(firstName.EmptyOrNumber())
+                throw new ArgumentException("debe ingresar un nombre");
+            if(lastNAME.EmptyOrNumber())
+                throw new ArgumentException("debe ingresar un apellido");
+            if (title.IsNumber())
+                throw new ArgumentException("el titulo no debe contener numeros");
 
         }
+
+     
+        
     }            
 }
