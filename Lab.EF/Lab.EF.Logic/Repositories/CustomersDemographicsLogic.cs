@@ -32,7 +32,7 @@ namespace Lab.EF.Logic
         {
             var customerDemographicToUpdate = _context.CustomerDemographics.Find(customerDemographic.CustomerTypeID);
 
-            customerDemographicToUpdate.CustomerDesc = customerDemographic.CustomerDesc;
+        
 
             _context.SaveChanges();
 

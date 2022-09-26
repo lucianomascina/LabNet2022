@@ -16,10 +16,12 @@ namespace Lab.EF.Entities
             Territories = new HashSet<Territories>();
         }
 
-        public Employees(string name, string lastName)
+        public Employees(string firstName, string lastName)
         {
-            FirstName = name;            
+            FirstName = firstName;            
             LastName = lastName;
+            
+
         }
 
         public Employees(int id, string firstName, string lastName)
@@ -28,7 +30,7 @@ namespace Lab.EF.Entities
             FirstName = firstName;
             LastName = lastName;
         }
-
+     
         [Key]
         public int EmployeeID { get; set; }
 

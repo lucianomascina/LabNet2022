@@ -1,5 +1,6 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic.Controllers;
+using Lab.EF.Logic.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,32 +30,36 @@ namespace Lab.EF.UI
         {
             try
             {
+                
                 string firstName = textBoxFIRSTNAME.Text;
                 string lastName = textBoxLASTNAME.Text;
-                /*string title = textBoxTITLE.Text;
-                string titleOfCourtesy = textBoxTITLEOFCOURTESY.Text;
-                DateTime birthDate = dateTimePickerBIRTH.Value;
-                DateTime hireDate = dateTimePickerHire.Value;
-                string address = textBoxADDRESS.Text;
-                string city = textBoxCITY.Text;
-                string region = textBoxREGION.Text;
-                string postalCode = textBoxPOSTALCODE.Text;
-                string country = textBoxCOUNTRY.Text;
-                string homePhone = textBoxHOMEPHONE.Text;
-                string extension = textBoxEXTENSION.Text;
-                Byte photo = Convert.ToByte(textBoxPHOTO.Text);
-                string notes = textBoxNOTES.Text;
-                string reportsTo = textBoxREPORTSTO.Text;
-                string photoPath = textBoxPHOTOPATH.Text;*/
+                //string title = textBoxTITLE.Text;
+                //string titleOfCourtesy = textBoxTITLEOFCOURTESY.Text;
+                //DateTime birthDate = dateTimePickerBIRTH.Value;
+                //DateTime hireDate = dateTimePickerHire.Value;
+                //string address = textBoxADDRESS.Text;
+                //string city = textBoxCITY.Text;
+                //string region = textBoxREGION.Text;
+                //string postalCode = textBoxPOSTALCODE.Text;
+                //string country = textBoxCOUNTRY.Text;
+                //string homePhone = textBoxHOMEPHONE.Text;
+                //string extension = textBoxEXTENSION.Text;
+                //Byte[] photo = Convert.ToByte(textBoxPHOTO.Text);
+                //string notes = textBoxNOTES.Text;
+                //int reportsTo = Convert.ToInt32(textBoxREPORTSTO.Text);
+                //string photoPath = textBoxPHOTOPATH.Text;
 
-                /*Employees employee = new Employees(name,lastName,title,titleOfCourtesy,birthDate,
-                                     hireDate,address,city,region,postalCode,country,homePhone,
-                                     extension,photo,notes,reportsTo,photoPath);*/
+                Exceptions.ValidateFirstName(firstName);
+                Exceptions.ValidateLastName(lastName);
                 Employees employee = new Employees(firstName,lastName);
                 string message = _employeeController.Add(employee);
                 MessageBox.Show(message);
+                
               
-              
+            }
+            catch(ArgumentNullException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             catch (Exception ex)
             {
@@ -63,10 +68,9 @@ namespace Lab.EF.UI
 
         }
 
-        private void FormCreateEmployee_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
+        
+
+      
     }
 }
 

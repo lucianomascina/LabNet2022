@@ -39,6 +39,7 @@ namespace Lab.EF.UI
             {
                 FormDeleteEmployee formDeleteEmployee = new FormDeleteEmployee((int)id);
                 formDeleteEmployee.ShowDialog();
+                FillDataGrid();
             }
          
         }
@@ -50,6 +51,7 @@ namespace Lab.EF.UI
             {
                 FormUpdateEmployee formUpdateEmployee = new FormUpdateEmployee((int)id);
                 formUpdateEmployee.ShowDialog();
+                FillDataGrid();
             }
            
         }
@@ -58,6 +60,7 @@ namespace Lab.EF.UI
         {
             FormCreateEmployee formCreateEmployee = new FormCreateEmployee();
             formCreateEmployee.ShowDialog();
+            FillDataGrid();
         }
 
         private void FormMenuEmployees_Load(object sender, EventArgs e)

@@ -26,12 +26,16 @@ namespace Lab.EF.UI
         public int id;
         private void FormUpdateEmployee_Load(object sender, EventArgs e)
         {
-            var employee = _employeeController.GetById(id);
-            labelID.Text = "ID:  " + Convert.ToString( employee.EmployeeID);
-
-
+            Fill();
+  
         }
 
+        private void Fill()
+        {
+            var employee = _employeeController.GetById(id);
+            labelID.Text = "ID:  " + Convert.ToString(employee.EmployeeID);
+
+        }
         private void buttonSAVE_Click(object sender, EventArgs e)
         {
             try

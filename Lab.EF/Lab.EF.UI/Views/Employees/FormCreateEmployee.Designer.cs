@@ -391,7 +391,7 @@ namespace Lab.EF.UI
             this.Name = "FormCreateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCrearEmpleado";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormCreateEmployee_FormClosed);
+           
             this.Load += new System.EventHandler(this.FormCreateEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

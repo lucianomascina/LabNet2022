@@ -52,7 +52,6 @@ namespace Lab.EF.Logic
             employeeToUpdate.LastName = employee.LastName;
             employeeToUpdate.FirstName = employee.FirstName;
 
-         
             _context.SaveChanges();
 
         }

@@ -32,7 +32,7 @@ namespace Lab.EF.Logic
         {
             var categoryToUpdate = _context.Categories.Find(category.CategoryID);
 
-            categoryToUpdate.CategoryName = category.CategoryName;
+       
 
             _context.SaveChanges();
 

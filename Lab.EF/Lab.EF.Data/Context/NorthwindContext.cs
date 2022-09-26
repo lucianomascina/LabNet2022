@@ -43,7 +43,8 @@ namespace Lab.EF.Data
             modelBuilder.Entity<Employees>()
                 .HasMany(e => e.Employees1)
                 .WithOptional(e => e.Employees2)
-                .HasForeignKey(e => e.ReportsTo);
+                .HasForeignKey(e => e.ReportsTo)
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Employees>()
                 .HasMany(e => e.Territories)
