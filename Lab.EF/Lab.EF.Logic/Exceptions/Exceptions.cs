@@ -8,7 +8,8 @@ namespace Lab.EF.Logic.Exceptions
 {
     public class Exceptions
     {
-        public static void ValidateForm(string firstName,string lastNAME,string title)
+        public static void ValidateForm(string firstName,string lastNAME,string title,
+                                        string titleOfCourtesy)
         {
             if(firstName.EmptyOrNumber())
                 throw new ArgumentException("debe ingresar un nombre");
@@ -16,10 +17,13 @@ namespace Lab.EF.Logic.Exceptions
                 throw new ArgumentException("debe ingresar un apellido");
             if (title.IsNumber())
                 throw new ArgumentException("el titulo no debe contener numeros");
+            if(titleOfCourtesy.IsNumber())
+                throw new ArgumentException("el titulo de cortesia no debe contener numeros");
+
 
         }
 
-     
+        
         
     }            
 }

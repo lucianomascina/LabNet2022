@@ -273,7 +273,7 @@ namespace Lab.EF.UI
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(373, 380);
+            this.label16.Location = new System.Drawing.Point(408, 432);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(80, 13);
             this.label16.TabIndex = 34;
@@ -282,7 +282,7 @@ namespace Lab.EF.UI
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(373, 423);
+            this.label17.Location = new System.Drawing.Point(418, 481);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(80, 13);
             this.label17.TabIndex = 35;
@@ -332,21 +332,22 @@ namespace Lab.EF.UI
             // 
             // textBoxNOTES
             // 
-            this.textBoxNOTES.Location = new System.Drawing.Point(481, 329);
+            this.textBoxNOTES.Location = new System.Drawing.Point(459, 329);
+            this.textBoxNOTES.Multiline = true;
             this.textBoxNOTES.Name = "textBoxNOTES";
-            this.textBoxNOTES.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNOTES.Size = new System.Drawing.Size(172, 78);
             this.textBoxNOTES.TabIndex = 42;
             // 
             // textBoxREPORTSTO
             // 
-            this.textBoxREPORTSTO.Location = new System.Drawing.Point(481, 373);
+            this.textBoxREPORTSTO.Location = new System.Drawing.Point(519, 425);
             this.textBoxREPORTSTO.Name = "textBoxREPORTSTO";
             this.textBoxREPORTSTO.Size = new System.Drawing.Size(100, 20);
             this.textBoxREPORTSTO.TabIndex = 43;
             // 
             // textBoxPHOTOPATH
             // 
-            this.textBoxPHOTOPATH.Location = new System.Drawing.Point(481, 416);
+            this.textBoxPHOTOPATH.Location = new System.Drawing.Point(519, 474);
             this.textBoxPHOTOPATH.Name = "textBoxPHOTOPATH";
             this.textBoxPHOTOPATH.Size = new System.Drawing.Size(100, 20);
             this.textBoxPHOTOPATH.TabIndex = 44;

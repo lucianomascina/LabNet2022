@@ -69,23 +69,24 @@ namespace Lab.EF.UI
             // 
             // textBoxPHOTOPATH
             // 
-            this.textBoxPHOTOPATH.Location = new System.Drawing.Point(531, 426);
+            this.textBoxPHOTOPATH.Location = new System.Drawing.Point(570, 513);
             this.textBoxPHOTOPATH.Name = "textBoxPHOTOPATH";
             this.textBoxPHOTOPATH.Size = new System.Drawing.Size(100, 20);
             this.textBoxPHOTOPATH.TabIndex = 78;
             // 
             // textBoxREPORTSTO
             // 
-            this.textBoxREPORTSTO.Location = new System.Drawing.Point(531, 383);
+            this.textBoxREPORTSTO.Location = new System.Drawing.Point(570, 459);
             this.textBoxREPORTSTO.Name = "textBoxREPORTSTO";
             this.textBoxREPORTSTO.Size = new System.Drawing.Size(100, 20);
             this.textBoxREPORTSTO.TabIndex = 77;
             // 
             // textBoxNOTES
             // 
-            this.textBoxNOTES.Location = new System.Drawing.Point(531, 339);
+            this.textBoxNOTES.Location = new System.Drawing.Point(509, 338);
+            this.textBoxNOTES.Multiline = true;
             this.textBoxNOTES.Name = "textBoxNOTES";
-            this.textBoxNOTES.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNOTES.Size = new System.Drawing.Size(186, 93);
             this.textBoxNOTES.TabIndex = 76;
             // 
             // textBoxPHOTO
@@ -133,7 +134,7 @@ namespace Lab.EF.UI
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(423, 433);
+            this.label17.Location = new System.Drawing.Point(484, 520);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(80, 13);
             this.label17.TabIndex = 69;
@@ -142,7 +143,7 @@ namespace Lab.EF.UI
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(423, 390);
+            this.label16.Location = new System.Drawing.Point(484, 462);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(80, 13);
             this.label16.TabIndex = 68;
@@ -341,7 +342,7 @@ namespace Lab.EF.UI
             // 
             // buttonSAVE
             // 
-            this.buttonSAVE.Location = new System.Drawing.Point(258, 486);
+            this.buttonSAVE.Location = new System.Drawing.Point(272, 513);
             this.buttonSAVE.Name = "buttonSAVE";
             this.buttonSAVE.Size = new System.Drawing.Size(112, 53);
             this.buttonSAVE.TabIndex = 79;
@@ -362,7 +363,7 @@ namespace Lab.EF.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 576);
+            this.ClientSize = new System.Drawing.Size(707, 605);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.buttonSAVE);
             this.Controls.Add(this.textBoxPHOTOPATH);

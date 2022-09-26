@@ -51,6 +51,19 @@ namespace Lab.EF.Logic
 
             employeeToUpdate.LastName = employee.LastName;
             employeeToUpdate.FirstName = employee.FirstName;
+            employeeToUpdate.Title = employee.Title;
+            employeeToUpdate.TitleOfCourtesy = employee.TitleOfCourtesy;
+            employeeToUpdate.BirthDate = employee.BirthDate;
+            employeeToUpdate.HireDate = employee.HireDate;
+            employeeToUpdate.Address = employee.Address;
+            employeeToUpdate.City = employee.City;
+            employeeToUpdate.Region = employee.Region;
+            employeeToUpdate.PostalCode = employee.PostalCode;
+            employeeToUpdate.Country = employee.Country;
+            employeeToUpdate.HomePhone = employee.HomePhone;
+            employeeToUpdate.Extension = employee.Extension;
+            employeeToUpdate.Notes = employee.Notes;
+            
 
             _context.SaveChanges();
 
