@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,7 +56,7 @@ namespace Lab.EF.Logic.Controllers
             }
             catch (Exception ex)
             {
-                message = ex.Message;
+                throw ex;
             }
             return message;
 
@@ -72,9 +73,13 @@ namespace Lab.EF.Logic.Controllers
                 message = "empleado borrado correctamente";
 
             }
+            catch(DbUpdateException ex)
+            {
+                message = "no es posible eliminar el empleado ya que se encuentra asociado a otra entidad";
+            }
             catch (Exception ex)
             {
-                message = ex.Message;
+                throw ex;
             }
             return message;
         }

@@ -52,7 +52,7 @@ namespace Lab.EF.UI
             // 
             // buttonClientes
             // 
-            this.buttonClientes.Location = new System.Drawing.Point(310, 39);
+            this.buttonClientes.Location = new System.Drawing.Point(81, 130);
             this.buttonClientes.Name = "buttonClientes";
             this.buttonClientes.Size = new System.Drawing.Size(174, 68);
             this.buttonClientes.TabIndex = 1;
@@ -62,9 +62,9 @@ namespace Lab.EF.UI
             // 
             // buttonCATEGORIAS
             // 
-            this.buttonCATEGORIAS.Location = new System.Drawing.Point(81, 133);
+            this.buttonCATEGORIAS.Location = new System.Drawing.Point(308, 38);
             this.buttonCATEGORIAS.Name = "buttonCATEGORIAS";
-            this.buttonCATEGORIAS.Size = new System.Drawing.Size(176, 60);
+            this.buttonCATEGORIAS.Size = new System.Drawing.Size(176, 69);
             this.buttonCATEGORIAS.TabIndex = 2;
             this.buttonCATEGORIAS.Text = "CATEGORIES";
             this.buttonCATEGORIAS.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@ namespace Lab.EF.UI
             // 
             this.buttonCUSTOMERDEMOGRAPHICS.Location = new System.Drawing.Point(310, 130);
             this.buttonCUSTOMERDEMOGRAPHICS.Name = "buttonCUSTOMERDEMOGRAPHICS";
-            this.buttonCUSTOMERDEMOGRAPHICS.Size = new System.Drawing.Size(174, 63);
+            this.buttonCUSTOMERDEMOGRAPHICS.Size = new System.Drawing.Size(174, 68);
             this.buttonCUSTOMERDEMOGRAPHICS.TabIndex = 3;
             this.buttonCUSTOMERDEMOGRAPHICS.Text = "CUSTOMER DEMOGRAPHICS";
             this.buttonCUSTOMERDEMOGRAPHICS.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@ namespace Lab.EF.UI
             // 
             // buttonSHIPPERS
             // 
-            this.buttonSHIPPERS.Location = new System.Drawing.Point(81, 317);
+            this.buttonSHIPPERS.Location = new System.Drawing.Point(81, 306);
             this.buttonSHIPPERS.Name = "buttonSHIPPERS";
-            this.buttonSHIPPERS.Size = new System.Drawing.Size(176, 65);
+            this.buttonSHIPPERS.Size = new System.Drawing.Size(176, 76);
             this.buttonSHIPPERS.TabIndex = 6;
             this.buttonSHIPPERS.Text = "SHIPPERS";
             this.buttonSHIPPERS.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@ namespace Lab.EF.UI
             // 
             // buttonSUPPLIERS
             // 
-            this.buttonSUPPLIERS.Location = new System.Drawing.Point(310, 318);
+            this.buttonSUPPLIERS.Location = new System.Drawing.Point(310, 306);
             this.buttonSUPPLIERS.Name = "buttonSUPPLIERS";
-            this.buttonSUPPLIERS.Size = new System.Drawing.Size(174, 64);
+            this.buttonSUPPLIERS.Size = new System.Drawing.Size(174, 76);
             this.buttonSUPPLIERS.TabIndex = 7;
             this.buttonSUPPLIERS.Text = "SUPPLIERS";
             this.buttonSUPPLIERS.UseVisualStyleBackColor = true;

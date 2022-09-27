@@ -1,7 +1,7 @@
 ﻿using Lab.EF.Entities;
+using Lab.EF.Common.Exceptions;
 using Lab.EF.Logic;
 using Lab.EF.Logic.Controllers;
-using Lab.EF.Logic.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +41,7 @@ namespace Lab.EF.UI
                 string city = textBoxCITY.Text;
                 string homePhone = textBoxHOMEPHONE.Text;
 
-                //Exceptions.ValidateForm(firstName,lastName,title);
+                EmployeeExceptions.ValidateEmployee(firstName,lastName,title);
 
                 Employees employee = new Employees(firstName,lastName,title,
                                         birthDate,hireDate,address,city, homePhone);

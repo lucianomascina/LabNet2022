@@ -32,6 +32,18 @@ namespace Lab.EF.UI.Views.Categories
             }
         }
 
+        private int? GetId()
+        {
+            try
+            {
+                return int.Parse(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
         private void FillDataGrid()
         {
             dataGridView1.DataSource = null;
@@ -41,5 +53,25 @@ namespace Lab.EF.UI.Views.Categories
             dataGridView1.Columns[2].Width = 300;
         }
 
+        private void buttonCrear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBorrar_Click(object sender, EventArgs e)
+        {
+            int? id = GetId();
+            if (id != null)
+            {
+                FormDeleteCategories formDeleteCategories = new FormDeleteCategories((int)id);
+                formDeleteCategories.ShowDialog();
+                FillDataGrid();
+            }
+        }
     }
 }

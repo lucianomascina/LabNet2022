@@ -59,6 +59,24 @@
     <Compile Include="Views\Categories\FormCategories.Designer.cs">
       <DependentUpon>FormCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Categories\FormCreateCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Categories\FormCreateCategories.Designer.cs">
+      <DependentUpon>FormCreateCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Categories\FormDeleteCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Categories\FormDeleteCategories.Designer.cs">
+      <DependentUpon>FormDeleteCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Categories\FormUpdateCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Categories\FormUpdateCategories.Designer.cs">
+      <DependentUpon>FormUpdateCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomerDemographics\FormCustomerDemographics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +154,9 @@
     <EmbeddedResource Include="Views\Categories\FormCategories.resx">
       <DependentUpon>FormCategories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Categories\FormDeleteCategories.resx">
+      <DependentUpon>FormDeleteCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerDemographics\FormCustomerDemographics.resx">
       <DependentUpon>FormCustomerDemographics.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +217,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Lab.EF.Common\Lab.EF.Common.csproj">
+      <Project>{18179a15-fa00-4345-9987-d993f1f8e622}</Project>
+      <Name>Lab.EF.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lab.EF.Entities\Lab.EF.Entities.csproj">
       <Project>{7AB76F86-CC2A-4F1A-891A-26BB1DEA3358}</Project>
       <Name>Lab.EF.Entities</Name>

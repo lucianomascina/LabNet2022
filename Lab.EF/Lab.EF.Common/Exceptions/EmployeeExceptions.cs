@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Common.Exceptions
 {
-    class EmployeeExceptions
+    public class EmployeeExceptions
     {
-        public static void ValidateCreateEmployee(string firstName, string lastNAME, string title)
+        public static void ValidateEmployee(string firstName, string lastNAME, string title)
         {
             if (firstName.EmptyOrNumber())
                 throw new ArgumentException("debe ingresar un nombre");
@@ -19,9 +19,6 @@ namespace Lab.EF.Common.Exceptions
 
         }
 
-        public static void ThrowDeleteException()
-        {
-            //throw new ;
-        }
+       
     }
 }

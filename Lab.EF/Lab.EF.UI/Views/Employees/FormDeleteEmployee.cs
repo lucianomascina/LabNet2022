@@ -55,11 +55,6 @@ namespace Lab.EF.UI
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-   
+       
     }
 }
