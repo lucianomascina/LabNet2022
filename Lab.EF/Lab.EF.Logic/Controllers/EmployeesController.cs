@@ -73,7 +73,7 @@ namespace Lab.EF.Logic.Controllers
                 message = "empleado borrado correctamente";
 
             }
-            catch(DbUpdateException ex)
+            catch(DbUpdateException)
             {
                 message = "no es posible eliminar el empleado, ya que se encuentra asociado a otra entidad";
             }

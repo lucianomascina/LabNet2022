@@ -18,7 +18,7 @@ namespace Lab.EF.Logic.Tests
         [TestMethod()]
         public void GetAllTest()
         {
-          /*  var data = new List<Categories>
+            var data = new List<Categories>
             {
                 new Categories { CategoryName = "calzado"},
                 new Categories { CategoryName = "indumentaria"},
@@ -62,7 +62,7 @@ namespace Lab.EF.Logic.Tests
             });
 
             mockSet.Verify(m => m.Add(It.IsAny<Categories>()), Times.Once());
-            mockContext.Verify(m => m.SaveChanges(), Times.Once());*/
+            mockContext.Verify(m => m.SaveChanges(), Times.Once());
         }
     }
 }

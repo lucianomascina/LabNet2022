@@ -45,7 +45,20 @@ namespace Lab.EF.Logic.Controllers
         }
         public string Update(Categories entity)
         {
-            throw new NotImplementedException();
+            string message = string.Empty;
+
+            try
+            {
+                _categoriesLogic.Update(entity);
+
+                message = "categoria modificada correctamente";
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return message;
         }
         public string Delete(int id)
         {

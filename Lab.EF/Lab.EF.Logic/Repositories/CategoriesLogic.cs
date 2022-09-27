@@ -1,4 +1,5 @@
-﻿using Lab.EF.Entities;
+﻿using Lab.EF.Data;
+using Lab.EF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -32,8 +33,8 @@ namespace Lab.EF.Logic
         {
             var categoryToUpdate = _context.Categories.Find(category.CategoryID);
 
-       
-
+            categoryToUpdate.CategoryName = category.CategoryName;
+            categoryToUpdate.Description = category.Description;
             _context.SaveChanges();
 
         }

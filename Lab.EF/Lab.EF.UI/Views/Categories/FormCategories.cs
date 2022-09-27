@@ -51,7 +51,7 @@ namespace Lab.EF.UI.Views.Categories
             dataGridView1.DataSource = _categoriesController.GetAll();
             dataGridView1.Columns["Picture"].Visible = false;
             dataGridView1.Columns["Products"].Visible = false;
-            dataGridView1.Columns[2].Width = 300;
+            dataGridView1.Columns[2].Width = 350;
         }
 
         private void buttonCrear_Click(object sender, EventArgs e)
@@ -63,7 +63,13 @@ namespace Lab.EF.UI.Views.Categories
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
-
+            int? id = GetId();
+            if (id != null)
+            {
+                FormUpdateCategories formUpdateCategories = new FormUpdateCategories((int)id);
+                formUpdateCategories.ShowDialog();
+                FillDataGrid();
+            }
         }
 
         private void buttonBorrar_Click(object sender, EventArgs e)

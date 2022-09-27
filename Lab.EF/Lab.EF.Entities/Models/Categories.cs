@@ -20,6 +20,13 @@ namespace Lab.EF.Entities
             Description = description;
         }
 
+        public Categories(int id,string name, string description)
+        {
+            CategoryID = id;
+            CategoryName = name;
+            Description = description;
+        }
+
         [Key]
         public int CategoryID { get; set; }
 
