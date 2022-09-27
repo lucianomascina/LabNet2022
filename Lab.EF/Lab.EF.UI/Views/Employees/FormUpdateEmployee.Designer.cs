@@ -52,8 +52,9 @@ namespace Lab.EF.UI
             // textBoxHOMEPHONE
             // 
             this.textBoxHOMEPHONE.Location = new System.Drawing.Point(174, 422);
+            this.textBoxHOMEPHONE.MaxLength = 24;
             this.textBoxHOMEPHONE.Name = "textBoxHOMEPHONE";
-            this.textBoxHOMEPHONE.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHOMEPHONE.Size = new System.Drawing.Size(200, 20);
             this.textBoxHOMEPHONE.TabIndex = 73;
             // 
             // label12
@@ -68,8 +69,9 @@ namespace Lab.EF.UI
             // textBoxCITY
             // 
             this.textBoxCITY.Location = new System.Drawing.Point(174, 371);
+            this.textBoxCITY.MaxLength = 15;
             this.textBoxCITY.Name = "textBoxCITY";
-            this.textBoxCITY.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCITY.Size = new System.Drawing.Size(200, 20);
             this.textBoxCITY.TabIndex = 60;
             // 
             // label6
@@ -93,8 +95,9 @@ namespace Lab.EF.UI
             // textBoxADDRESS
             // 
             this.textBoxADDRESS.Location = new System.Drawing.Point(174, 334);
+            this.textBoxADDRESS.MaxLength = 60;
             this.textBoxADDRESS.Name = "textBoxADDRESS";
-            this.textBoxADDRESS.Size = new System.Drawing.Size(100, 20);
+            this.textBoxADDRESS.Size = new System.Drawing.Size(200, 20);
             this.textBoxADDRESS.TabIndex = 57;
             // 
             // dateTimePickerHire
@@ -122,23 +125,26 @@ namespace Lab.EF.UI
             // 
             // textBoxTITLE
             // 
-            this.textBoxTITLE.Location = new System.Drawing.Point(184, 183);
+            this.textBoxTITLE.Location = new System.Drawing.Point(174, 183);
+            this.textBoxTITLE.MaxLength = 30;
             this.textBoxTITLE.Name = "textBoxTITLE";
-            this.textBoxTITLE.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTITLE.Size = new System.Drawing.Size(200, 20);
             this.textBoxTITLE.TabIndex = 52;
             // 
             // textBoxFIRSTNAME
             // 
-            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(184, 78);
+            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(174, 78);
+            this.textBoxFIRSTNAME.MaxLength = 10;
             this.textBoxFIRSTNAME.Name = "textBoxFIRSTNAME";
-            this.textBoxFIRSTNAME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFIRSTNAME.Size = new System.Drawing.Size(200, 20);
             this.textBoxFIRSTNAME.TabIndex = 51;
             // 
             // textBoxLASTNAME
             // 
-            this.textBoxLASTNAME.Location = new System.Drawing.Point(184, 126);
+            this.textBoxLASTNAME.Location = new System.Drawing.Point(174, 126);
+            this.textBoxLASTNAME.MaxLength = 20;
             this.textBoxLASTNAME.Name = "textBoxLASTNAME";
-            this.textBoxLASTNAME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLASTNAME.Size = new System.Drawing.Size(200, 20);
             this.textBoxLASTNAME.TabIndex = 50;
             // 
             // label10
@@ -200,7 +206,7 @@ namespace Lab.EF.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 613);
+            this.ClientSize = new System.Drawing.Size(470, 605);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.buttonSAVE);
             this.Controls.Add(this.textBoxHOMEPHONE);

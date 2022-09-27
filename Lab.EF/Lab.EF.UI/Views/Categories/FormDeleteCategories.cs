@@ -25,9 +25,12 @@ namespace Lab.EF.UI.Views.Categories
         private void Fill()
         {
             var category = _categoriesController.GetById(id);
-            
 
+            labelID.Text = Convert.ToString( category.CategoryID);
+            labelNAME.Text = category.CategoryName;
+            labelDESCRIPT.Text = category.Description;
         }
+      
 
         private void FormDeleteCategories_Load(object sender, EventArgs e)
         {
@@ -45,7 +48,6 @@ namespace Lab.EF.UI.Views.Categories
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
     }
 }

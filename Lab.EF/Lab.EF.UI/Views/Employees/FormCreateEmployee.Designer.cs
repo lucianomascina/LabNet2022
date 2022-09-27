@@ -29,7 +29,6 @@ namespace Lab.EF.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.buttonCrear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,8 +46,6 @@ namespace Lab.EF.UI
             this.textBoxCITY = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxHOMEPHONE = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCrear
@@ -99,24 +96,30 @@ namespace Lab.EF.UI
             // 
             // textBoxLASTNAME
             // 
-            this.textBoxLASTNAME.Location = new System.Drawing.Point(137, 88);
+            this.textBoxLASTNAME.Location = new System.Drawing.Point(127, 88);
+            this.textBoxLASTNAME.MaxLength = 20;
             this.textBoxLASTNAME.Name = "textBoxLASTNAME";
-            this.textBoxLASTNAME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLASTNAME.Size = new System.Drawing.Size(200, 20);
             this.textBoxLASTNAME.TabIndex = 14;
+            this.textBoxLASTNAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxFIRSTNAME
             // 
-            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(137, 41);
+            this.textBoxFIRSTNAME.Location = new System.Drawing.Point(127, 41);
+            this.textBoxFIRSTNAME.MaxLength = 10;
             this.textBoxFIRSTNAME.Name = "textBoxFIRSTNAME";
-            this.textBoxFIRSTNAME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFIRSTNAME.Size = new System.Drawing.Size(200, 20);
             this.textBoxFIRSTNAME.TabIndex = 15;
+            this.textBoxFIRSTNAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxTITLE
             // 
-            this.textBoxTITLE.Location = new System.Drawing.Point(137, 134);
+            this.textBoxTITLE.Location = new System.Drawing.Point(127, 134);
+            this.textBoxTITLE.MaxLength = 30;
             this.textBoxTITLE.Name = "textBoxTITLE";
-            this.textBoxTITLE.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTITLE.Size = new System.Drawing.Size(200, 20);
             this.textBoxTITLE.TabIndex = 16;
+            this.textBoxTITLE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dateTimePickerBIRTH
             // 
@@ -144,8 +147,9 @@ namespace Lab.EF.UI
             // textBoxADDRESS
             // 
             this.textBoxADDRESS.Location = new System.Drawing.Point(127, 284);
+            this.textBoxADDRESS.MaxLength = 60;
             this.textBoxADDRESS.Name = "textBoxADDRESS";
-            this.textBoxADDRESS.Size = new System.Drawing.Size(100, 20);
+            this.textBoxADDRESS.Size = new System.Drawing.Size(200, 20);
             this.textBoxADDRESS.TabIndex = 23;
             // 
             // label5
@@ -169,8 +173,9 @@ namespace Lab.EF.UI
             // textBoxCITY
             // 
             this.textBoxCITY.Location = new System.Drawing.Point(127, 321);
+            this.textBoxCITY.MaxLength = 15;
             this.textBoxCITY.Name = "textBoxCITY";
-            this.textBoxCITY.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCITY.Size = new System.Drawing.Size(200, 20);
             this.textBoxCITY.TabIndex = 26;
             // 
             // label12
@@ -185,13 +190,11 @@ namespace Lab.EF.UI
             // textBoxHOMEPHONE
             // 
             this.textBoxHOMEPHONE.Location = new System.Drawing.Point(127, 369);
+            this.textBoxHOMEPHONE.MaxLength = 24;
             this.textBoxHOMEPHONE.Name = "textBoxHOMEPHONE";
-            this.textBoxHOMEPHONE.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHOMEPHONE.Size = new System.Drawing.Size(200, 20);
             this.textBoxHOMEPHONE.TabIndex = 39;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
+            this.textBoxHOMEPHONE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FormCreateEmployee
             // 
@@ -220,7 +223,6 @@ namespace Lab.EF.UI
             this.Text = "FormCrearEmpleado";
             this.Load += new System.EventHandler(this.FormCreateEmployee_Load);
             this.Shown += new System.EventHandler(this.FormCreateEmployee_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +247,5 @@ namespace Lab.EF.UI
         private System.Windows.Forms.TextBox textBoxCITY;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxHOMEPHONE;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

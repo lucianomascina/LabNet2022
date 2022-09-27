@@ -62,7 +62,7 @@ namespace Lab.EF.UI
                 string city = textBoxCITY.Text;
                 string homePhone = textBoxHOMEPHONE.Text;
 
-                EmployeeExceptions.ValidateEmployee(firstName, lastName, title);
+                EmployeeExceptions.ValidateCreateEmployee(firstName, lastName, title, city, homePhone);
                 Employees employee = new Employees(id,firstName, lastName, title, 
                                         birthDate, hireDate, address, city, homePhone);
 

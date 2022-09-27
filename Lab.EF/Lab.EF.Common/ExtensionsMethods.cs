@@ -34,5 +34,17 @@ namespace Lab.EF.Common
             return res;
         }
 
+        public static bool IsNotNumber(this string str)
+        {
+            int temp = 0;
+            bool res = true;
+
+            if (int.TryParse(str, out temp) || String.IsNullOrEmpty(str))
+            {
+                res = false;
+            }
+
+            return res;
+        }
     }
 }

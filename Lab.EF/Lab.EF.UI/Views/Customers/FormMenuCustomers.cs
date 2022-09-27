@@ -28,7 +28,12 @@ namespace Lab.EF.UI
         {
             FillDataGrid();
             dataGridView1.Columns["Orders"].Visible = false;
-           
+            dataGridView1.Columns["Fax"].Visible = false;
+            dataGridView1.Columns["PostalCode"].Visible = false;
+            dataGridView1.Columns["ContactTitle"].Visible = false;
+            dataGridView1.Columns["CutomerDemographics"].Visible = false;
+
+
 
         }
 
