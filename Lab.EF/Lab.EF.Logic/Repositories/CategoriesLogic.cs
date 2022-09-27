@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-    public class CategoriesLogic : BaseLogic, IABMLogic<Categories>
+    public class CategoriesLogic : BaseLogic<Categories>
     {
-        public List<Categories> GetAll()
+        public override List<Categories> GetAll()
         {
             return  _context.Categories.ToList();
         }
-        public void Add(Categories category)
+        public override void Add(Categories category)
         {
             _context.Categories.Add(category);
 
             _context.SaveChanges();
         }
-        public void Delete(int id)
+        public override void Delete(int id)
         {
             var categoryToDelete = _context.Categories.Find(id);
 
@@ -28,7 +28,7 @@ namespace Lab.EF.Logic
 
             _context.SaveChanges();
         }
-        public void Update(Categories category)
+        public override void Update(Categories category)
         {
             var categoryToUpdate = _context.Categories.Find(category.CategoryID);
 
@@ -37,7 +37,7 @@ namespace Lab.EF.Logic
             _context.SaveChanges();
 
         }
-        public Categories GetById(int id)
+        public override Categories GetById(int id)
         {
             return  _context.Categories.Find(id);
         }

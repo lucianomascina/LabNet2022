@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class OrderDetailsController : IController<Order_Details>
     {
-        private OrderDetailsLogic _orderDetailsLogic = new OrderDetailsLogic();
+        private ILogic<Order_Details> _orderDetailsLogic = new OrderDetailsLogic();
 
         public List<Order_Details> GetAll()
         {

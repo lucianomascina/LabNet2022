@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class TerritoriesController : IController<Territories>
     {
-        private TerritoriesLogic _territoriesLogic = new TerritoriesLogic();
+        private ILogic<Territories> _territoriesLogic = new TerritoriesLogic();
 
         public List<Territories> GetAll()
         {

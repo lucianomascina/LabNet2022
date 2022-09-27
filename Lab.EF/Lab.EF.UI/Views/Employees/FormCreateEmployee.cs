@@ -35,26 +35,17 @@ namespace Lab.EF.UI
                 string firstName = textBoxFIRSTNAME.Text;
                 string lastName = textBoxLASTNAME.Text;
                 string title = textBoxTITLE.Text;
-                string titleOfCourtesy = textBoxTITLEOFCOURTESY.Text;
                 DateTime birthDate = dateTimePickerBIRTH.Value;
                 DateTime hireDate = dateTimePickerHire.Value;
                 string address = textBoxADDRESS.Text;
                 string city = textBoxCITY.Text;
-                string region = textBoxREGION.Text;
-                string postalCode = textBoxPOSTALCODE.Text;
-                string country = textBoxCOUNTRY.Text;
                 string homePhone = textBoxHOMEPHONE.Text;
-                string extension = textBoxEXTENSION.Text;
-                //Byte[] photo = Convert.ToByte(textBoxPHOTO.Text);
-                string notes = textBoxNOTES.Text;
-                //int reportsTo = Convert.ToInt32(textBoxREPORTSTO.Text);
-                //string photoPath = textBoxPHOTOPATH.Text;
 
-                Exceptions.ValidateForm(firstName,lastName,title,titleOfCourtesy);
+                //Exceptions.ValidateForm(firstName,lastName,title);
 
-                Employees employee = new Employees(firstName,lastName,title,titleOfCourtesy,
-                                        birthDate,hireDate,address,city,region,postalCode,
-                                        country,homePhone,extension,notes);
+                Employees employee = new Employees(firstName,lastName,title,
+                                        birthDate,hireDate,address,city, homePhone);
+
                 string message = _employeeController.Add(employee);
                 MessageBox.Show(message);
                 

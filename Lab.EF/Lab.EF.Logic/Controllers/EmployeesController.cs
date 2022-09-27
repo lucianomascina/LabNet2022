@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class EmployeesController : IController<Employees>
     {
-        private EmployeesLogic _employeesLogic = new EmployeesLogic();
+        private ILogic<Employees> _employeesLogic = new EmployeesLogic();
         public List<Employees> GetAll()
         {
             List<Employees> employeesList = null;

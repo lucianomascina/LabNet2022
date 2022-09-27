@@ -8,30 +8,30 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-    public class SuppliersLogic : BaseLogic, IABMLogic<Suppliers>
+    public class SuppliersLogic : BaseLogic<Suppliers>
     {
-        public void Add(Suppliers entity)
+        public override void Add(Suppliers entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(int id)
+        public override void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Suppliers> GetAll()
+        public override List<Suppliers> GetAll()
         {
 
             return _context.Suppliers.ToList();
         }
 
-        public Suppliers GetById(int id)
+        public override Suppliers GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Suppliers entity)
+        public override void Update(Suppliers entity)
         {
             throw new NotImplementedException();
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab.EF.Logic
+namespace Lab.EF.Common
 {
     public static class ExtensionsMethods
     {

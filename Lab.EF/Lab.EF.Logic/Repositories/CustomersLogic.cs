@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-    public class CustomersLogic : BaseLogic, IABMLogic<Customers>
+    public class CustomersLogic : BaseLogic<Customers>
     {
-        public List<Customers> GetAll()
+        public override List<Customers> GetAll()
         {
             return _context.Customers.ToList();
         }
-        public void Add(Customers customer)
+        public override void Add(Customers customer)
         {
             _context.Customers.Add(customer);
 
             _context.SaveChanges();
         }
-        public void Delete(int id)
+        public override void Delete(int id)
         {
             var customerToDelete = _context.Customers.Find(id);
 
@@ -28,7 +28,7 @@ namespace Lab.EF.Logic
 
             _context.SaveChanges();
         }
-        public void Update(Customers customer)
+        public override void Update(Customers customer)
         {
             var customerToUpdate = _context.Customers.Find(customer.CustomerID);
 
@@ -37,7 +37,7 @@ namespace Lab.EF.Logic
             _context.SaveChanges();
 
         }
-        public Customers GetById(int id)
+        public override Customers GetById(int id)
         {
             return  _context.Customers.Find(id);
         }

@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class ShippersController : IController<Shippers>
     {
-        private ShippersLogic _shippersLogic = new ShippersLogic();
+        private ILogic<Shippers> _shippersLogic = new ShippersLogic();
 
         public List<Shippers> GetAll()
         {

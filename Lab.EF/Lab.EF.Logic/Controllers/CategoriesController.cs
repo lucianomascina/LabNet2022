@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class CategoriesController : IController<Categories>
     {
-        private CategoriesLogic _categoriesLogic = new CategoriesLogic();
+        private ILogic<Categories> _categoriesLogic = new CategoriesLogic();
 
         public List<Categories> GetAll()
         {

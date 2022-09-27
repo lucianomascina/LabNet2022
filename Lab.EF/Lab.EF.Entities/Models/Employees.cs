@@ -16,47 +16,31 @@ namespace Lab.EF.Entities
             Territories = new HashSet<Territories>();
         }
 
-        public Employees(string firstName, string lastName, string title,string titleOfCourtesy,
-                        DateTime birthDate,DateTime hireDate,string address,string city,
-                        string region,string postalCode,string country,string homePhone,
-                        string extension, string notes)
+        public Employees(string firstName, string lastName, string title,DateTime birthDate,
+                        DateTime hireDate,string address,string city,string homePhone)
         {
             FirstName = firstName;            
             LastName = lastName;
             Title = title;
-            TitleOfCourtesy = titleOfCourtesy;
             BirthDate = birthDate;
             HireDate = hireDate;
             Address = address;
             City = city;
-            Region = region;
-            PostalCode = postalCode;
-            Country = country;
             HomePhone = homePhone;
-            Extension = extension;
-            Notes = notes;
         }
 
-        public Employees(int id,string firstName, string lastName, string title, string titleOfCourtesy,
-                        DateTime birthDate, DateTime hireDate, string address, string city,
-                        string region, string postalCode, string country, string homePhone,
-                        string extension, string notes)
+        public Employees(int id,string firstName, string lastName, string title, DateTime birthDate,
+                        DateTime hireDate, string address, string city,string homePhone)
         {
             EmployeeID = id;
             FirstName = firstName;
             LastName = lastName;
             Title = title;
-            TitleOfCourtesy = titleOfCourtesy;
             BirthDate = birthDate;
             HireDate = hireDate;
             Address = address;
             City = city;
-            Region = region;
-            PostalCode = postalCode;
-            Country = country;
             HomePhone = homePhone;
-            Extension = extension;
-            Notes = notes;
         }
 
         [Key]

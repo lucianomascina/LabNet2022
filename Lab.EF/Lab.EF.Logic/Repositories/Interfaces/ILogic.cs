@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-    public interface IABMLogic<TEntity> 
+    public interface ILogic<TEntity> 
     {
         List<TEntity> GetAll();
         void Add(TEntity entity);

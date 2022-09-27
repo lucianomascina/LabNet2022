@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class SuppliersController : IController<Suppliers>
     {
-        private SuppliersLogic _suppliersLogic = new SuppliersLogic();
+        private ILogic<Suppliers> _suppliersLogic = new SuppliersLogic();
 
         public List<Suppliers> GetAll()
         {

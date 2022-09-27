@@ -38,7 +38,6 @@ namespace Lab.EF.UI
             textBoxFIRSTNAME.Text = employee.FirstName;
             textBoxLASTNAME.Text = employee.LastName;
             textBoxTITLE.Text = employee.Title;
-            textBoxTITLEOFCOURTESY.Text = employee.TitleOfCourtesy;
             
             if(employee.BirthDate != null)
                 dateTimePickerBIRTH.Value = (DateTime)employee.BirthDate;
@@ -48,13 +47,7 @@ namespace Lab.EF.UI
             
             textBoxADDRESS.Text = employee.Address;
             textBoxCITY.Text = employee.City;
-            textBoxREGION.Text = employee.Region;
-            textBoxPOSTALCODE.Text = employee.PostalCode;
-            textBoxCOUNTRY.Text = employee.Country;
             textBoxHOMEPHONE.Text = employee.HomePhone;
-            textBoxEXTENSION.Text = employee.Extension;
-            textBoxNOTES.Text = employee.Notes;
-
         }
         private void buttonSAVE_Click(object sender, EventArgs e)
         {
@@ -63,30 +56,19 @@ namespace Lab.EF.UI
                 string firstName = textBoxFIRSTNAME.Text;
                 string lastName = textBoxLASTNAME.Text;
                 string title = textBoxTITLE.Text;
-                string titleOfCourtesy = textBoxTITLEOFCOURTESY.Text;
                 DateTime birthDate = dateTimePickerBIRTH.Value;
                 DateTime hireDate = dateTimePickerHire.Value;
                 string address = textBoxADDRESS.Text;
                 string city = textBoxCITY.Text;
-                string region = textBoxREGION.Text;
-                string postalCode = textBoxPOSTALCODE.Text;
-                string country = textBoxCOUNTRY.Text;
                 string homePhone = textBoxHOMEPHONE.Text;
-                string extension = textBoxEXTENSION.Text;
-                //Byte[] photo = Convert.ToByte(textBoxPHOTO.Text);
-                string notes = textBoxNOTES.Text;
-                //int reportsTo = Convert.ToInt32(textBoxREPORTSTO.Text);
-                //string photoPath = textBoxPHOTOPATH.Text;
+            
+                //Exceptions.ValidateForm(firstName, lastName, title);
 
-                Exceptions.ValidateForm(firstName, lastName, title, titleOfCourtesy);
-
-                Employees employee = new Employees(id,firstName, lastName, title, titleOfCourtesy,
-                                        birthDate, hireDate, address, city, region, postalCode,
-                                        country, homePhone, extension, notes);
+                Employees employee = new Employees(id,firstName, lastName, title, 
+                                        birthDate, hireDate, address, city, homePhone);
 
                 string message = _employeeController.Update(employee);
                 MessageBox.Show(message);
-
 
             }
             catch (ArgumentException ex)

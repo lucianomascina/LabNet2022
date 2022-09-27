@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class CustomersController : IController<Customers>
     {
-        private CustomersLogic _customersLogic = new CustomersLogic();
+        private ILogic<Customers> _customersLogic = new CustomersLogic();
 
         public List<Customers> GetAll()
         {

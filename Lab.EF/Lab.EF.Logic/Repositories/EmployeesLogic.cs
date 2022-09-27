@@ -8,20 +8,19 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-    public class EmployeesLogic : BaseLogic, IABMLogic<Employees>
+    public class EmployeesLogic : BaseLogic<Employees>
     {
-        public List<Employees> GetAll()
+        public override List<Employees> GetAll()
         {
-           
             return  _context.Employees.ToList();
         }
-        public void Add(Employees employee)
+        public override void Add(Employees employee)
         {
             _context.Employees.Add(employee);
 
             _context.SaveChanges();
         }
-        public void Delete(int id)
+        public override void Delete(int id)
         {
             /// Encuentra la PRIMER ocurrencia que coincida con la expresión entre paréntesis, si no 
             /// se encuentra valor arroja una excepción.
@@ -45,30 +44,24 @@ namespace Lab.EF.Logic
 
             _context.SaveChanges();
         }
-        public void Update(Employees employee)
+        public override void Update(Employees employee)
         {
             var employeeToUpdate = _context.Employees.Find(employee.EmployeeID);
 
             employeeToUpdate.LastName = employee.LastName;
             employeeToUpdate.FirstName = employee.FirstName;
             employeeToUpdate.Title = employee.Title;
-            employeeToUpdate.TitleOfCourtesy = employee.TitleOfCourtesy;
             employeeToUpdate.BirthDate = employee.BirthDate;
             employeeToUpdate.HireDate = employee.HireDate;
             employeeToUpdate.Address = employee.Address;
             employeeToUpdate.City = employee.City;
-            employeeToUpdate.Region = employee.Region;
-            employeeToUpdate.PostalCode = employee.PostalCode;
-            employeeToUpdate.Country = employee.Country;
             employeeToUpdate.HomePhone = employee.HomePhone;
-            employeeToUpdate.Extension = employee.Extension;
-            employeeToUpdate.Notes = employee.Notes;
-            
-
+        
+ 
             _context.SaveChanges();
 
         }
-        public Employees GetById(int id)
+        public override Employees GetById(int id)
         {
             return  _context.Employees.Find(id);
         }
