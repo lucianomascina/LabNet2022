@@ -28,7 +28,20 @@ namespace Lab.EF.Logic.Controllers
         }
         public string Add(Categories entity)
         {
-            throw new NotImplementedException();
+            string message = string.Empty;
+
+            try
+            {
+                _categoriesLogic.Add(entity);
+
+                message = "categoria agregada correctamente";
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return message;
         }
         public string Update(Categories entity)
         {

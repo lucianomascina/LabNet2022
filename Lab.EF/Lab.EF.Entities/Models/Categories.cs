@@ -14,6 +14,12 @@ namespace Lab.EF.Entities
             Products = new HashSet<Products>();
         }
 
+        public Categories(string name,string description)
+        {
+            CategoryName = name;
+            Description = description;
+        }
+
         [Key]
         public int CategoryID { get; set; }
 

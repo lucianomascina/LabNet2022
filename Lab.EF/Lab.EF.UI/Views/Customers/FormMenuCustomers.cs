@@ -19,11 +19,7 @@ namespace Lab.EF.UI
         }
 
         private CustomersController _customerController = new CustomersController();
-        private void buttonMostrar_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+     
         private void FormMenuCustomers_Load(object sender, EventArgs e)
         {
             FillDataGrid();
@@ -31,10 +27,7 @@ namespace Lab.EF.UI
             dataGridView1.Columns["Fax"].Visible = false;
             dataGridView1.Columns["PostalCode"].Visible = false;
             dataGridView1.Columns["ContactTitle"].Visible = false;
-            dataGridView1.Columns["CutomerDemographics"].Visible = false;
-
-
-
+          
         }
 
         private void FillDataGrid()

@@ -154,6 +154,9 @@
     <EmbeddedResource Include="Views\Categories\FormCategories.resx">
       <DependentUpon>FormCategories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Categories\FormCreateCategories.resx">
+      <DependentUpon>FormCreateCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Categories\FormDeleteCategories.resx">
       <DependentUpon>FormDeleteCategories.cs</DependentUpon>
     </EmbeddedResource>

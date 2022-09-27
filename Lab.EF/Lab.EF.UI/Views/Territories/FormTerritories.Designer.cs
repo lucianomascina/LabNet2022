@@ -38,14 +38,14 @@ namespace Lab.EF.UI.Views.Territories
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 41);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(400, 444);
+            this.dataGridView1.Size = new System.Drawing.Size(582, 451);
             this.dataGridView1.TabIndex = 0;
             // 
             // FormTerritories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 520);
+            this.ClientSize = new System.Drawing.Size(645, 519);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormTerritories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

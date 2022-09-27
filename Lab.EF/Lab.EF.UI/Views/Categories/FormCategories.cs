@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Logic.Controllers;
+using Lab.EF.UI.Views.Category;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,7 +56,9 @@ namespace Lab.EF.UI.Views.Categories
 
         private void buttonCrear_Click(object sender, EventArgs e)
         {
-
+            FormCreateCategories formCreateCategories = new FormCreateCategories();
+            formCreateCategories.ShowDialog();
+            FillDataGrid();
         }
 
         private void buttonActualizar_Click(object sender, EventArgs e)
