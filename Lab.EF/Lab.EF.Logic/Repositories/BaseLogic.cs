@@ -9,7 +9,7 @@ namespace Lab.EF.Logic
 {
     public abstract class BaseLogic<T> : ILogic<T>
     {
-        protected readonly NorthwindContext _context;
+        protected NorthwindContext _context;
         public BaseLogic()
         {
             _context = new NorthwindContext();

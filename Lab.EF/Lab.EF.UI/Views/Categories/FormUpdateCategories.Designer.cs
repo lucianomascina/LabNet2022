@@ -104,6 +104,7 @@ namespace Lab.EF.UI.Views.Categories
             this.Name = "FormUpdateCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUpdateCategories";
+           
             this.Load += new System.EventHandler(this.FormUpdateCategories_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

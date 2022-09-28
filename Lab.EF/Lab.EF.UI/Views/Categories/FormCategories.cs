@@ -45,7 +45,7 @@ namespace Lab.EF.UI.Views.Categories
             }
 
         }
-        private void FillDataGrid()
+        public void FillDataGrid()
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = _categoriesController.GetAll();
@@ -82,5 +82,7 @@ namespace Lab.EF.UI.Views.Categories
                 FillDataGrid();
             }
         }
+
+      
     }
 }

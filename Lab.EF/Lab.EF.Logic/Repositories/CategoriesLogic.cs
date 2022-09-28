@@ -11,6 +11,16 @@ namespace Lab.EF.Logic
 {
     public class CategoriesLogic : BaseLogic<Categories>
     {
+        public CategoriesLogic(NorthwindContext context)
+        {
+            _context = context;
+        }
+
+        public CategoriesLogic()
+        {
+            
+        }
+
         public override List<Categories> GetAll()
         {
             return  _context.Categories.ToList();

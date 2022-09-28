@@ -86,6 +86,7 @@ namespace Lab.EF.UI.Views.Categories
             this.Name = "FormCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCategories";
+         
             this.Load += new System.EventHandler(this.FormCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

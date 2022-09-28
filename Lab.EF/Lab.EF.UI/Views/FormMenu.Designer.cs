@@ -46,7 +46,7 @@ namespace Lab.EF.UI
             this.buttonEmpleados.Name = "buttonEmpleados";
             this.buttonEmpleados.Size = new System.Drawing.Size(176, 69);
             this.buttonEmpleados.TabIndex = 0;
-            this.buttonEmpleados.Text = "EMPLOYEES";
+            this.buttonEmpleados.Text = "EMPLOYEES: CRUD";
             this.buttonEmpleados.UseVisualStyleBackColor = true;
             this.buttonEmpleados.Click += new System.EventHandler(this.buttonEmpleados_Click);
             // 
@@ -56,7 +56,7 @@ namespace Lab.EF.UI
             this.buttonClientes.Name = "buttonClientes";
             this.buttonClientes.Size = new System.Drawing.Size(174, 68);
             this.buttonClientes.TabIndex = 1;
-            this.buttonClientes.Text = "CUSTOMERS";
+            this.buttonClientes.Text = "CUSTOMERS: LIST";
             this.buttonClientes.UseVisualStyleBackColor = true;
             this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
             // 
@@ -66,7 +66,7 @@ namespace Lab.EF.UI
             this.buttonCATEGORIAS.Name = "buttonCATEGORIAS";
             this.buttonCATEGORIAS.Size = new System.Drawing.Size(176, 69);
             this.buttonCATEGORIAS.TabIndex = 2;
-            this.buttonCATEGORIAS.Text = "CATEGORIES";
+            this.buttonCATEGORIAS.Text = "CATEGORIES: CRUD";
             this.buttonCATEGORIAS.UseVisualStyleBackColor = true;
             this.buttonCATEGORIAS.Click += new System.EventHandler(this.buttonCATEGORIAS_Click);
             // 
@@ -76,7 +76,7 @@ namespace Lab.EF.UI
             this.buttonCUSTOMERDEMOGRAPHICS.Name = "buttonCUSTOMERDEMOGRAPHICS";
             this.buttonCUSTOMERDEMOGRAPHICS.Size = new System.Drawing.Size(174, 68);
             this.buttonCUSTOMERDEMOGRAPHICS.TabIndex = 3;
-            this.buttonCUSTOMERDEMOGRAPHICS.Text = "CUSTOMER DEMOGRAPHICS";
+            this.buttonCUSTOMERDEMOGRAPHICS.Text = "CUSTOMER DEMOGRAPHICS: LIST";
             this.buttonCUSTOMERDEMOGRAPHICS.UseVisualStyleBackColor = true;
             this.buttonCUSTOMERDEMOGRAPHICS.Click += new System.EventHandler(this.buttonCUSTOMERDEMOGRAPHICS_Click);
             // 
@@ -86,7 +86,7 @@ namespace Lab.EF.UI
             this.buttonORDERDETAILS.Name = "buttonORDERDETAILS";
             this.buttonORDERDETAILS.Size = new System.Drawing.Size(176, 64);
             this.buttonORDERDETAILS.TabIndex = 4;
-            this.buttonORDERDETAILS.Text = "ORDER DETAILS";
+            this.buttonORDERDETAILS.Text = "ORDER DETAILS: LIST";
             this.buttonORDERDETAILS.UseVisualStyleBackColor = true;
             this.buttonORDERDETAILS.Click += new System.EventHandler(this.buttonORDERDETAILS_Click);
             // 
@@ -96,7 +96,7 @@ namespace Lab.EF.UI
             this.buttonORDERS.Name = "buttonORDERS";
             this.buttonORDERS.Size = new System.Drawing.Size(174, 64);
             this.buttonORDERS.TabIndex = 5;
-            this.buttonORDERS.Text = "ORDERS";
+            this.buttonORDERS.Text = "ORDERS: LIST";
             this.buttonORDERS.UseVisualStyleBackColor = true;
             this.buttonORDERS.Click += new System.EventHandler(this.buttonORDERS_Click);
             // 
@@ -106,7 +106,7 @@ namespace Lab.EF.UI
             this.buttonSHIPPERS.Name = "buttonSHIPPERS";
             this.buttonSHIPPERS.Size = new System.Drawing.Size(176, 76);
             this.buttonSHIPPERS.TabIndex = 6;
-            this.buttonSHIPPERS.Text = "SHIPPERS";
+            this.buttonSHIPPERS.Text = "SHIPPERS: LIST";
             this.buttonSHIPPERS.UseVisualStyleBackColor = true;
             this.buttonSHIPPERS.Click += new System.EventHandler(this.buttonSHIPPERS_Click);
             // 
@@ -116,7 +116,7 @@ namespace Lab.EF.UI
             this.buttonSUPPLIERS.Name = "buttonSUPPLIERS";
             this.buttonSUPPLIERS.Size = new System.Drawing.Size(174, 76);
             this.buttonSUPPLIERS.TabIndex = 7;
-            this.buttonSUPPLIERS.Text = "SUPPLIERS";
+            this.buttonSUPPLIERS.Text = "SUPPLIERS: LIST";
             this.buttonSUPPLIERS.UseVisualStyleBackColor = true;
             this.buttonSUPPLIERS.Click += new System.EventHandler(this.buttonSUPPLIERS_Click);
             // 
@@ -126,7 +126,7 @@ namespace Lab.EF.UI
             this.buttonTERRITORIES.Name = "buttonTERRITORIES";
             this.buttonTERRITORIES.Size = new System.Drawing.Size(176, 70);
             this.buttonTERRITORIES.TabIndex = 8;
-            this.buttonTERRITORIES.Text = "TERRITORIES";
+            this.buttonTERRITORIES.Text = "TERRITORIES: LIST";
             this.buttonTERRITORIES.UseVisualStyleBackColor = true;
             this.buttonTERRITORIES.Click += new System.EventHandler(this.buttonTERRITORIES_Click);
             // 
