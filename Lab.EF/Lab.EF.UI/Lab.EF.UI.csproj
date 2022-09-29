@@ -127,6 +127,42 @@
     <Compile Include="Views\Linq\FormEJERCICIO1.Designer.cs">
       <DependentUpon>FormEJERCICIO1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO2.Designer.cs">
+      <DependentUpon>FormEJERCICIO2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO3.Designer.cs">
+      <DependentUpon>FormEJERCICIO3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO4.Designer.cs">
+      <DependentUpon>FormEJERCICIO4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO5.Designer.cs">
+      <DependentUpon>FormEJERCICIO5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO6.Designer.cs">
+      <DependentUpon>FormEJERCICIO6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO7.Designer.cs">
+      <DependentUpon>FormEJERCICIO7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\OrderDetails\FormOrderDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Linq\FormEJERCICIO1.resx">
       <DependentUpon>FormEJERCICIO1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO2.resx">
+      <DependentUpon>FormEJERCICIO2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\OrderDetails\FormOrderDetails.resx">
       <DependentUpon>FormOrderDetails.cs</DependentUpon>

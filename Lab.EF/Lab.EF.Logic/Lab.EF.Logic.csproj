@@ -55,6 +55,7 @@
     <Compile Include="Controllers\Interfaces\IController.cs" />
     <Compile Include="Controllers\OrderDetailsController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ShippersController.cs" />
     <Compile Include="Controllers\SuppliersController.cs" />
     <Compile Include="Controllers\TerritoriesController.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Repositories\OrderDetailsLogic.cs" />
     <Compile Include="Repositories\OrdersLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductsLogic.cs" />
     <Compile Include="Repositories\ShippersLogic.cs" />
     <Compile Include="Repositories\SuppliersLogic.cs" />
     <Compile Include="Repositories\TerritoriesLogic.cs" />

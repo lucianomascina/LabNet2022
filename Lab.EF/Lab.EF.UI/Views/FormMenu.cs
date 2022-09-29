@@ -89,5 +89,41 @@ namespace Lab.EF.UI
             FormEJERCICIO1 formEJERCICIO1 = new FormEJERCICIO1();
             formEJERCICIO1.ShowDialog();
         }
+
+        private void buttonEJERCICIO2_Click(object sender, EventArgs e)
+        {
+            FormEJERCICIO2 formEJERCICIO2 = new FormEJERCICIO2();
+            formEJERCICIO2.ShowDialog();
+        }
+
+        private void buttonEJERCICIO3_Click(object sender, EventArgs e)
+        {
+            FormEJERCICIO3 formEJERCICIO3 = new FormEJERCICIO3();
+            formEJERCICIO3.ShowDialog();
+        }
+
+        private void buttonEJERCICIO4_Click(object sender, EventArgs e)
+        {
+            FormEJERCICIO4 formEJERCICIO4 = new FormEJERCICIO4();
+            formEJERCICIO4.ShowDialog();
+        }
+
+        private void buttonEJERCICIO5_Click(object sender, EventArgs e)
+        {
+            FormEJERCICIO5 formEJERCICIO5 = new FormEJERCICIO5();
+            formEJERCICIO5.ShowDialog();
+        }
+
+        private void buttonEJERCICIO6_Click(object sender, EventArgs e)
+        {
+            FormEJERCICIO6 formEJERCICIO6 = new FormEJERCICIO6();
+            formEJERCICIO6.ShowDialog();
+        }
+
+        private void buttonEJERCICIO7_Click(object sender, EventArgs e)
+        {
+            FormEJERCICIO7 formEJERCICIO7 = new FormEJERCICIO7();
+            formEJERCICIO7.ShowDialog();
+        }
     }
 }
