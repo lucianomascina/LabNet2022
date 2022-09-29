@@ -1,5 +1,6 @@
 ﻿using Lab.EF.UI.Views.Categories;
 using Lab.EF.UI.Views.CustomerDemographics;
+using Lab.EF.UI.Views.Linq;
 using Lab.EF.UI.Views.OrderDetails;
 using Lab.EF.UI.Views.Orders;
 using Lab.EF.UI.Views.Shippers;
@@ -81,6 +82,12 @@ namespace Lab.EF.UI
         {
             FormTerritories formTerritories = new FormTerritories();
             formTerritories.ShowDialog();
+        }
+
+        private void buttonEJERCICIO1_Click(object sender, EventArgs e)
+        {
+            FormEJERCICIO1 formEJERCICIO1 = new FormEJERCICIO1();
+            formEJERCICIO1.ShowDialog();
         }
     }
 }

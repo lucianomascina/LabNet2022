@@ -63,6 +63,7 @@
     <Compile Include="Repositories\CustomersDemographicsLogic.cs" />
     <Compile Include="Repositories\CustomersLogic.cs" />
     <Compile Include="Repositories\EmployeesLogic.cs" />
+    <Compile Include="Repositories\Interfaces\ICustomersLogic.cs" />
     <Compile Include="Repositories\Interfaces\ILogic.cs" />
     <Compile Include="Repositories\OrderDetailsLogic.cs" />
     <Compile Include="Repositories\OrdersLogic.cs" />

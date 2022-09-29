@@ -9,7 +9,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class CustomersController : IController<Customers>
     {
-        private ILogic<Customers> _customersLogic = new CustomersLogic();
+        private CustomersLogic _customersLogic = new CustomersLogic();
 
         public List<Customers> GetAll()
         {
@@ -45,6 +45,23 @@ namespace Lab.EF.Logic.Controllers
                 var customer = _customersLogic.GetById(id);
 
                 return (customer);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Customers GetByIdString(string id)
+        {
+            try
+            {
+                var customer = _customersLogic.GetByIdString(id);
+
+                if(customer == null)
+                    throw new NullReferenceException("no existe customer con ese id");
+
+                return customer;
             }
             catch (Exception ex)
             {

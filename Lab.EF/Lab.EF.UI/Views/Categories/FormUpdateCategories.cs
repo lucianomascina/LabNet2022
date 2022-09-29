@@ -20,8 +20,6 @@ namespace Lab.EF.UI.Views.Categories
             this.id = id;
         }
 
-        FormCategories _owner;
-
         public int id;
 
         private CategoriesController _categoriesController = new CategoriesController();

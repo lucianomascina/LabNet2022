@@ -14,5 +14,6 @@ namespace Lab.EF.Logic
         void Update(TEntity entity);
         TEntity GetById(int id);
         
+
     }
 }

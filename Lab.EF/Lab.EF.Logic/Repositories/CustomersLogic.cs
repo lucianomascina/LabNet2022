@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Entities;
+using Lab.EF.Logic.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-    public class CustomersLogic : BaseLogic<Customers>
+    public class CustomersLogic : BaseLogic<Customers>,ICustomersLogic 
     {
         public override List<Customers> GetAll()
         {
@@ -42,6 +43,10 @@ namespace Lab.EF.Logic
             return  _context.Customers.Find(id);
         }
 
+        public Customers GetByIdString(string id)
+        {
+            return _context.Customers.Find(id);
+        }
 
     }
 }
