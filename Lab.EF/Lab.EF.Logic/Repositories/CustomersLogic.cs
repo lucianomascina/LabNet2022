@@ -48,5 +48,13 @@ namespace Lab.EF.Logic
             return _context.Customers.Find(id);
         }
 
+        public List<Customers> GetAllByRegionWA()
+        {
+            var query = from customers in _context.Customers
+                        where customers.Region == "WA"
+                        select customers;
+
+            return query.ToList();
+        }
     }
 }

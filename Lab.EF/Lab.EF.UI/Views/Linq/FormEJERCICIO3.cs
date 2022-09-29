@@ -30,8 +30,6 @@ namespace Lab.EF.UI.Views.Linq
                 MessageBox.Show(ex.Message);
             }
         }
-
-       
         public void FillDatGrid()
         {
             dataGridView1.DataSource = null;

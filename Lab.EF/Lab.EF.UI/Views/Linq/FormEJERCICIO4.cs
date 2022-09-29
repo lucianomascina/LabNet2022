@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,24 @@ namespace Lab.EF.UI.Views.Linq
         {
             InitializeComponent();
         }
+
+        private CustomersController _customersController = new CustomersController();  
+        private void FormEJERCICIO4_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                FillDatGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void FillDatGrid()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _customersController.GetAllByRegionWA();
+        }
+
     }
 }

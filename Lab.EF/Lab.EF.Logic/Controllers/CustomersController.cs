@@ -10,7 +10,6 @@ namespace Lab.EF.Logic.Controllers
     public class CustomersController : IController<Customers>
     {
         private CustomersLogic _customersLogic = new CustomersLogic();
-
         public List<Customers> GetAll()
         {
             List<Customers> customersList = null;
@@ -62,6 +61,21 @@ namespace Lab.EF.Logic.Controllers
                     throw new NullReferenceException("no existe customer con ese id");
 
                 return customer;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Customers> GetAllByRegionWA()
+        {
+            List<Customers> customersList = null;
+
+            try
+            {
+                customersList = _customersLogic.GetAllByRegionWA();
+                return customersList;
             }
             catch (Exception ex)
             {

@@ -52,5 +52,7 @@ namespace Lab.EF.Logic
         {
             return  _context.Categories.Find(id);
         }
+
+
     }
 }
