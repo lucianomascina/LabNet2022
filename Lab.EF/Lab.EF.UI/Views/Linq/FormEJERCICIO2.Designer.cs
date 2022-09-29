@@ -48,6 +48,7 @@ namespace Lab.EF.UI.Views.Linq
             this.ClientSize = new System.Drawing.Size(815, 498);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormEJERCICIO2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEJERCICIO2";
             this.Load += new System.EventHandler(this.FormEJERCICIO2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

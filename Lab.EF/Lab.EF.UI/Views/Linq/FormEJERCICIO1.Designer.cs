@@ -154,6 +154,7 @@ namespace Lab.EF.UI.Views.Linq
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label1);
             this.Name = "FormEJERCICIO1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEJERCICIO1";
             this.Load += new System.EventHandler(this.FormEJERCICIO1_Load);
             this.ResumeLayout(false);

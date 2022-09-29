@@ -241,6 +241,21 @@
     <EmbeddedResource Include="Views\Linq\FormEJERCICIO2.resx">
       <DependentUpon>FormEJERCICIO2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO3.resx">
+      <DependentUpon>FormEJERCICIO3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO4.resx">
+      <DependentUpon>FormEJERCICIO4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO5.resx">
+      <DependentUpon>FormEJERCICIO5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO6.resx">
+      <DependentUpon>FormEJERCICIO6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO7.resx">
+      <DependentUpon>FormEJERCICIO7.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\OrderDetails\FormOrderDetails.resx">
       <DependentUpon>FormOrderDetails.cs</DependentUpon>
     </EmbeddedResource>

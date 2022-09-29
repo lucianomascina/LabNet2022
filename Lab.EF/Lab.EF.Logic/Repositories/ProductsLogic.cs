@@ -49,5 +49,11 @@ namespace Lab.EF.Logic.Repositories
 
             return query.ToList();
         }
+
+        public List<Products> GetAllWithStock()
+        {
+            var query = _context.Products.Where(p => p.UnitsInStock > 0 && p.UnitPrice > 3).ToList();
+            return query;
+        }
     }
 }

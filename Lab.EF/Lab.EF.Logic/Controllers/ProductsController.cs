@@ -52,6 +52,20 @@ namespace Lab.EF.Logic.Controllers
             }
         }
 
+        public List<Products> GetAllWithStock()
+        {
+            List<Products> productsList = null;
+
+            try
+            {
+                productsList = _productsLogic.GetAllWithStock();
+                return productsList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
 }
