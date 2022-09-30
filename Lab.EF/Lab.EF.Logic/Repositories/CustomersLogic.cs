@@ -65,5 +65,12 @@ namespace Lab.EF.Logic
 
             return query.ToList();
         }
+
+        public List<Customers> GetTop3RegionWA()
+        {
+            var query = _context.Customers.Where(c => c.Region == "WA").Take(3).ToList();
+
+            return query;
+        }
     }
 }

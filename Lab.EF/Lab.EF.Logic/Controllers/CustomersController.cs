@@ -96,5 +96,20 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
+
+        public List<Customers> GetTop3RegionWA()
+        {
+            List<Customers> customersList = null;
+
+            try
+            {
+                customersList = _customersLogic.GetTop3RegionWA();
+                return customersList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

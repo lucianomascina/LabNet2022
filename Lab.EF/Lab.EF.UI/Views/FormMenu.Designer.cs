@@ -45,6 +45,12 @@ namespace Lab.EF.UI
             this.buttonEJERCICIO5 = new System.Windows.Forms.Button();
             this.buttonEJERCICIO6 = new System.Windows.Forms.Button();
             this.buttonEJERCICIO7 = new System.Windows.Forms.Button();
+            this.buttonEJERCICIO8 = new System.Windows.Forms.Button();
+            this.buttonEJERCICIO9 = new System.Windows.Forms.Button();
+            this.buttonEJERCICIO10 = new System.Windows.Forms.Button();
+            this.buttonEJERCICIO11 = new System.Windows.Forms.Button();
+            this.buttonEJERCICIO12 = new System.Windows.Forms.Button();
+            this.buttonEJERCICIO13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonEmpleados
@@ -139,7 +145,7 @@ namespace Lab.EF.UI
             // 
             // buttonEJERCICIO1
             // 
-            this.buttonEJERCICIO1.Location = new System.Drawing.Point(30, 224);
+            this.buttonEJERCICIO1.Location = new System.Drawing.Point(42, 225);
             this.buttonEJERCICIO1.Name = "buttonEJERCICIO1";
             this.buttonEJERCICIO1.Size = new System.Drawing.Size(81, 41);
             this.buttonEJERCICIO1.TabIndex = 9;
@@ -149,7 +155,7 @@ namespace Lab.EF.UI
             // 
             // buttonEJERCICIO2
             // 
-            this.buttonEJERCICIO2.Location = new System.Drawing.Point(138, 223);
+            this.buttonEJERCICIO2.Location = new System.Drawing.Point(169, 225);
             this.buttonEJERCICIO2.Name = "buttonEJERCICIO2";
             this.buttonEJERCICIO2.Size = new System.Drawing.Size(82, 41);
             this.buttonEJERCICIO2.TabIndex = 10;
@@ -159,7 +165,7 @@ namespace Lab.EF.UI
             // 
             // buttonEJERCICIO3
             // 
-            this.buttonEJERCICIO3.Location = new System.Drawing.Point(246, 224);
+            this.buttonEJERCICIO3.Location = new System.Drawing.Point(292, 225);
             this.buttonEJERCICIO3.Name = "buttonEJERCICIO3";
             this.buttonEJERCICIO3.Size = new System.Drawing.Size(84, 40);
             this.buttonEJERCICIO3.TabIndex = 11;
@@ -169,7 +175,7 @@ namespace Lab.EF.UI
             // 
             // buttonEJERCICIO4
             // 
-            this.buttonEJERCICIO4.Location = new System.Drawing.Point(360, 223);
+            this.buttonEJERCICIO4.Location = new System.Drawing.Point(433, 224);
             this.buttonEJERCICIO4.Name = "buttonEJERCICIO4";
             this.buttonEJERCICIO4.Size = new System.Drawing.Size(94, 41);
             this.buttonEJERCICIO4.TabIndex = 12;
@@ -179,7 +185,7 @@ namespace Lab.EF.UI
             // 
             // buttonEJERCICIO5
             // 
-            this.buttonEJERCICIO5.Location = new System.Drawing.Point(487, 223);
+            this.buttonEJERCICIO5.Location = new System.Drawing.Point(580, 223);
             this.buttonEJERCICIO5.Name = "buttonEJERCICIO5";
             this.buttonEJERCICIO5.Size = new System.Drawing.Size(96, 40);
             this.buttonEJERCICIO5.TabIndex = 13;
@@ -189,7 +195,7 @@ namespace Lab.EF.UI
             // 
             // buttonEJERCICIO6
             // 
-            this.buttonEJERCICIO6.Location = new System.Drawing.Point(605, 222);
+            this.buttonEJERCICIO6.Location = new System.Drawing.Point(121, 303);
             this.buttonEJERCICIO6.Name = "buttonEJERCICIO6";
             this.buttonEJERCICIO6.Size = new System.Drawing.Size(86, 41);
             this.buttonEJERCICIO6.TabIndex = 14;
@@ -199,7 +205,7 @@ namespace Lab.EF.UI
             // 
             // buttonEJERCICIO7
             // 
-            this.buttonEJERCICIO7.Location = new System.Drawing.Point(719, 223);
+            this.buttonEJERCICIO7.Location = new System.Drawing.Point(280, 303);
             this.buttonEJERCICIO7.Name = "buttonEJERCICIO7";
             this.buttonEJERCICIO7.Size = new System.Drawing.Size(96, 40);
             this.buttonEJERCICIO7.TabIndex = 15;
@@ -207,11 +213,77 @@ namespace Lab.EF.UI
             this.buttonEJERCICIO7.UseVisualStyleBackColor = true;
             this.buttonEJERCICIO7.Click += new System.EventHandler(this.buttonEJERCICIO7_Click);
             // 
+            // buttonEJERCICIO8
+            // 
+            this.buttonEJERCICIO8.Location = new System.Drawing.Point(42, 392);
+            this.buttonEJERCICIO8.Name = "buttonEJERCICIO8";
+            this.buttonEJERCICIO8.Size = new System.Drawing.Size(87, 39);
+            this.buttonEJERCICIO8.TabIndex = 16;
+            this.buttonEJERCICIO8.Text = "EJERCICIO8";
+            this.buttonEJERCICIO8.UseVisualStyleBackColor = true;
+            this.buttonEJERCICIO8.Click += new System.EventHandler(this.buttonEJERCICIO8_Click);
+            // 
+            // buttonEJERCICIO9
+            // 
+            this.buttonEJERCICIO9.Location = new System.Drawing.Point(161, 392);
+            this.buttonEJERCICIO9.Name = "buttonEJERCICIO9";
+            this.buttonEJERCICIO9.Size = new System.Drawing.Size(90, 39);
+            this.buttonEJERCICIO9.TabIndex = 17;
+            this.buttonEJERCICIO9.Text = "EJERCICIO9";
+            this.buttonEJERCICIO9.UseVisualStyleBackColor = true;
+            this.buttonEJERCICIO9.Click += new System.EventHandler(this.buttonEJERCICIO9_Click);
+            // 
+            // buttonEJERCICIO10
+            // 
+            this.buttonEJERCICIO10.Location = new System.Drawing.Point(280, 392);
+            this.buttonEJERCICIO10.Name = "buttonEJERCICIO10";
+            this.buttonEJERCICIO10.Size = new System.Drawing.Size(96, 39);
+            this.buttonEJERCICIO10.TabIndex = 18;
+            this.buttonEJERCICIO10.Text = "EJERCICIO10";
+            this.buttonEJERCICIO10.UseVisualStyleBackColor = true;
+            this.buttonEJERCICIO10.Click += new System.EventHandler(this.buttonEJERCICIO10_Click);
+            // 
+            // buttonEJERCICIO11
+            // 
+            this.buttonEJERCICIO11.Location = new System.Drawing.Point(412, 392);
+            this.buttonEJERCICIO11.Name = "buttonEJERCICIO11";
+            this.buttonEJERCICIO11.Size = new System.Drawing.Size(98, 39);
+            this.buttonEJERCICIO11.TabIndex = 19;
+            this.buttonEJERCICIO11.Text = "EJERCICIO11";
+            this.buttonEJERCICIO11.UseVisualStyleBackColor = true;
+            this.buttonEJERCICIO11.Click += new System.EventHandler(this.buttonEJERCICIO11_Click);
+            // 
+            // buttonEJERCICIO12
+            // 
+            this.buttonEJERCICIO12.Location = new System.Drawing.Point(547, 392);
+            this.buttonEJERCICIO12.Name = "buttonEJERCICIO12";
+            this.buttonEJERCICIO12.Size = new System.Drawing.Size(107, 39);
+            this.buttonEJERCICIO12.TabIndex = 20;
+            this.buttonEJERCICIO12.Text = "EJERCICIO12";
+            this.buttonEJERCICIO12.UseVisualStyleBackColor = true;
+            this.buttonEJERCICIO12.Click += new System.EventHandler(this.buttonEJERCICIO12_Click);
+            // 
+            // buttonEJERCICIO13
+            // 
+            this.buttonEJERCICIO13.Location = new System.Drawing.Point(687, 392);
+            this.buttonEJERCICIO13.Name = "buttonEJERCICIO13";
+            this.buttonEJERCICIO13.Size = new System.Drawing.Size(103, 39);
+            this.buttonEJERCICIO13.TabIndex = 21;
+            this.buttonEJERCICIO13.Text = "EJERCICIO13";
+            this.buttonEJERCICIO13.UseVisualStyleBackColor = true;
+            this.buttonEJERCICIO13.Click += new System.EventHandler(this.buttonEJERCICIO13_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 560);
+            this.ClientSize = new System.Drawing.Size(802, 560);
+            this.Controls.Add(this.buttonEJERCICIO13);
+            this.Controls.Add(this.buttonEJERCICIO12);
+            this.Controls.Add(this.buttonEJERCICIO11);
+            this.Controls.Add(this.buttonEJERCICIO10);
+            this.Controls.Add(this.buttonEJERCICIO9);
+            this.Controls.Add(this.buttonEJERCICIO8);
             this.Controls.Add(this.buttonEJERCICIO7);
             this.Controls.Add(this.buttonEJERCICIO6);
             this.Controls.Add(this.buttonEJERCICIO5);
@@ -254,6 +326,12 @@ namespace Lab.EF.UI
         private System.Windows.Forms.Button buttonEJERCICIO5;
         private System.Windows.Forms.Button buttonEJERCICIO6;
         private System.Windows.Forms.Button buttonEJERCICIO7;
+        private System.Windows.Forms.Button buttonEJERCICIO8;
+        private System.Windows.Forms.Button buttonEJERCICIO9;
+        private System.Windows.Forms.Button buttonEJERCICIO10;
+        private System.Windows.Forms.Button buttonEJERCICIO11;
+        private System.Windows.Forms.Button buttonEJERCICIO12;
+        private System.Windows.Forms.Button buttonEJERCICIO13;
     }
 }
 

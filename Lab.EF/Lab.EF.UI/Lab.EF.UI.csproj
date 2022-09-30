@@ -127,6 +127,30 @@
     <Compile Include="Views\Linq\FormEJERCICIO1.Designer.cs">
       <DependentUpon>FormEJERCICIO1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO10.Designer.cs">
+      <DependentUpon>FormEJERCICIO10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO11.Designer.cs">
+      <DependentUpon>FormEJERCICIO11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO12.Designer.cs">
+      <DependentUpon>FormEJERCICIO12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO13.Designer.cs">
+      <DependentUpon>FormEJERCICIO13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Linq\FormEJERCICIO2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +186,18 @@
     </Compile>
     <Compile Include="Views\Linq\FormEJERCICIO7.Designer.cs">
       <DependentUpon>FormEJERCICIO7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO8.Designer.cs">
+      <DependentUpon>FormEJERCICIO8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Linq\FormEJERCICIO9.Designer.cs">
+      <DependentUpon>FormEJERCICIO9.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\OrderDetails\FormOrderDetails.cs">
       <SubType>Form</SubType>
@@ -255,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Linq\FormEJERCICIO7.resx">
       <DependentUpon>FormEJERCICIO7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO8.resx">
+      <DependentUpon>FormEJERCICIO8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\OrderDetails\FormOrderDetails.resx">
       <DependentUpon>FormOrderDetails.cs</DependentUpon>
