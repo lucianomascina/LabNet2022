@@ -62,5 +62,14 @@ namespace Lab.EF.Logic.Repositories
 
             return query;
         }
+
+        public List<Products> GetAllOrderedByName()
+        {
+            var query = from products in _context.Products
+                        orderby products.ProductName 
+                        select products;
+
+            return query.ToList();
+        }
     }
 }

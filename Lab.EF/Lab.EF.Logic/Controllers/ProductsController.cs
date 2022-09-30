@@ -66,7 +66,6 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
-
         public Products GetFirstOrNull()
         {
             try
@@ -76,6 +75,21 @@ namespace Lab.EF.Logic.Controllers
                 return product;
             }
             catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Products> GetAllOrderedByName()
+        {
+            List<Products> productsList = null;
+
+            try
+            {
+                productsList = _productsLogic.GetAllOrderedByName();
+                return productsList;
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

@@ -295,6 +295,9 @@
     <EmbeddedResource Include="Views\Linq\FormEJERCICIO8.resx">
       <DependentUpon>FormEJERCICIO8.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Linq\FormEJERCICIO9.resx">
+      <DependentUpon>FormEJERCICIO9.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\OrderDetails\FormOrderDetails.resx">
       <DependentUpon>FormOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
