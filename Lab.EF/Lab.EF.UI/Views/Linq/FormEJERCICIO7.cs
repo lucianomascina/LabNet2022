@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,25 @@ namespace Lab.EF.UI.Views.Linq
         public FormEJERCICIO7()
         {
             InitializeComponent();
+        }
+
+        private OrdersController _ordersController = new OrdersController();
+        private void FormEJERCICIO7_Load(object sender, EventArgs e)
+        {
+            FillDataGrid();
+        }
+
+        private void FillDataGrid()
+        {
+            try
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = _ordersController.GetWhereCustomersRegionWA();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

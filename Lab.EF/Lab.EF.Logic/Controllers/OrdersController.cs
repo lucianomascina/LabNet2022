@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Entities;
+using Lab.EF.Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class OrdersController : IController<Orders>
     {
-        private ILogic<Orders> _ordersLogic = new OrdersLogic();
+        private OrdersLogic _ordersLogic = new OrdersLogic();
 
         public List<Orders> GetAll()
         {
@@ -41,6 +42,23 @@ namespace Lab.EF.Logic.Controllers
         public Orders GetById(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public List<OrdersViewModel> GetWhereCustomersRegionWA()
+        {
+            List<OrdersViewModel> ordersList = null;
+
+            try
+            {
+                ordersList = _ordersLogic.GetWhereCustomersRegionWA();
+                return ordersList;
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }
