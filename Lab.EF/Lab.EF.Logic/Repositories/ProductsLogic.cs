@@ -71,5 +71,12 @@ namespace Lab.EF.Logic.Repositories
 
             return query.ToList();
         }
+
+        public List<Products> GetAllOrderedByUnits()
+        {
+            var query = _context.Products.OrderByDescending(p => p.UnitsInStock);
+
+            return query.ToList();
+        }
     }
 }

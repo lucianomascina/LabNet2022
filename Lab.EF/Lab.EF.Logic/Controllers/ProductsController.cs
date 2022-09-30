@@ -94,5 +94,20 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
+
+        public List<Products> GetAllOrderedByUnits()
+        {
+            List<Products> productsList = null;
+
+            try
+            {
+                productsList = _productsLogic.GetAllOrderedByUnits();
+                return productsList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
