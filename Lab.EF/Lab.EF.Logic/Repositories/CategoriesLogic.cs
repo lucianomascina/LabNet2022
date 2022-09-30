@@ -53,6 +53,11 @@ namespace Lab.EF.Logic
             return  _context.Categories.Find(id);
         }
 
+        /*public List<Categories> GetAllHaveProducts()
+        {
+            var query = 
 
+            return query;
+        }*/
     }
 }

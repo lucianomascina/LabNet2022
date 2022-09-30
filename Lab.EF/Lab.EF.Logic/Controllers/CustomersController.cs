@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Entities;
+using Lab.EF.Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -104,6 +105,21 @@ namespace Lab.EF.Logic.Controllers
             try
             {
                 customersList = _customersLogic.GetTop3RegionWA();
+                return customersList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<CustomersViewModel> GetAllCountOrders()
+        {
+            List<CustomersViewModel> customersList = null;
+
+            try
+            {
+                customersList = _customersLogic.GetAllCountOrders();
                 return customersList;
             }
             catch (Exception ex)

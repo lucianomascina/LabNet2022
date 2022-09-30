@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.EF.Logic.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,25 @@ namespace Lab.EF.UI.Views.Linq
         public FormEJERCICIO13()
         {
             InitializeComponent();
+        }
+
+        private CustomersController _customersController = new CustomersController();
+        private void FormEJERCICIO13_Load(object sender, EventArgs e)
+        {
+            Fill();
+        }
+
+        public void Fill()
+        {
+            try
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = _customersController.GetAllCountOrders();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

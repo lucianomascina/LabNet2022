@@ -10,7 +10,7 @@ namespace Lab.EF.Logic.Controllers
 {
     public class CategoriesController : IController<Categories>
     {
-        private ILogic<Categories> _categoriesLogic = new CategoriesLogic();
+        private CategoriesLogic _categoriesLogic = new CategoriesLogic();
 
         public List<Categories> GetAll()
         {
@@ -94,5 +94,22 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
+
+        /*public List<Categories> GetAllHaveProducts()
+        {
+            List<Categories> categoriesList = null;
+
+            try
+            {
+                categoriesList = _categoriesLogic.GetAllHaveProducts();
+                
+                return categoriesList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }*/
     }
 }

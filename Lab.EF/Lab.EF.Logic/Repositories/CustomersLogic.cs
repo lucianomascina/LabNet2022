@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Entities;
+using Lab.EF.Entities.ViewModels;
 using Lab.EF.Logic.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -71,6 +72,20 @@ namespace Lab.EF.Logic
             var query = _context.Customers.Where(c => c.Region == "WA").Take(3).ToList();
 
             return query;
+        }
+
+        public List<CustomersViewModel> GetAllCountOrders()
+        {
+            var query = _context.Orders.GroupBy(o => o.CustomerID)
+                        .Select(c => new CustomersViewModel
+                        {
+                            CustomerId = c.Key,
+ 
+                            CantOrders = c.Count()
+                             
+                        }); 
+
+            return query.ToList();
         }
     }
 }

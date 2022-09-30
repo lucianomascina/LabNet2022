@@ -277,7 +277,7 @@ namespace Lab.EF.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 560);
+            this.ClientSize = new System.Drawing.Size(819, 475);
             this.Controls.Add(this.buttonEJERCICIO13);
             this.Controls.Add(this.buttonEJERCICIO12);
             this.Controls.Add(this.buttonEJERCICIO11);
