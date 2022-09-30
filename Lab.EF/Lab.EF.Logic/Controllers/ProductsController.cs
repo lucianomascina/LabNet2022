@@ -67,5 +67,18 @@ namespace Lab.EF.Logic.Controllers
             }
         }
 
+        public Products GetFirstOrNull()
+        {
+            try
+            {
+                var product = _productsLogic.GetFirstOrNull();
+
+                return product;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

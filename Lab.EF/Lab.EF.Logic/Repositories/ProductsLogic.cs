@@ -55,5 +55,12 @@ namespace Lab.EF.Logic.Repositories
             var query = _context.Products.Where(p => p.UnitsInStock > 0 && p.UnitPrice > 3).ToList();
             return query;
         }
+
+        public Products GetFirstOrNull()
+        {
+            var query = _context.Products.FirstOrDefault(p => p.ProductID == 789);
+
+            return query;
+        }
     }
 }
