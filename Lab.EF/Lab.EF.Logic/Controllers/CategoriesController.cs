@@ -71,7 +71,7 @@ namespace Lab.EF.Logic.Controllers
                 message = "categoria borrada correctamente";
 
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
                 message = "no es posible eliminar la categoria, ya que se encuentra asociada a otra entidad";
             }

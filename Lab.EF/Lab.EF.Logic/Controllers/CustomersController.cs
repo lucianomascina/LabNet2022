@@ -82,5 +82,19 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
+        public List<string> GetAllNames()
+        {
+            List<string> customersList = null;
+
+            try
+            {
+                customersList = _customersLogic.GetAllNames();
+                return customersList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

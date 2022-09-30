@@ -56,5 +56,14 @@ namespace Lab.EF.Logic
 
             return query.ToList();
         }
+
+        public List<string> GetAllNames()
+        {
+            var query = from customers in _context.Customers
+                        orderby customers.ContactName
+                        select customers.ContactName;
+
+            return query.ToList();
+        }
     }
 }
