@@ -109,5 +109,18 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
         }
+
+        public Products GetFirstElement()
+        {
+            try
+            {
+                var product = _productsLogic.GetFirstElement();
+                return product;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

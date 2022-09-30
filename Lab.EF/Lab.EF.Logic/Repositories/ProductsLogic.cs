@@ -78,5 +78,13 @@ namespace Lab.EF.Logic.Repositories
 
             return query.ToList();
         }
+
+        public Products GetFirstElement()
+        {
+            var query = _context.Products.First();
+
+            return query;
+                        
+        }
     }
 }
