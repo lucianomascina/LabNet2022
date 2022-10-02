@@ -1,5 +1,6 @@
 ﻿using Lab.EF.Data;
 using Lab.EF.Entities;
+using Lab.EF.Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -52,12 +53,20 @@ namespace Lab.EF.Logic
         {
             return  _context.Categories.Find(id);
         }
-
-        /*public List<Categories> GetAllHaveProducts()
+        public List<CategoriesViewModel> GetAllWithProducts()
         {
-            var query = 
+            var query = from categories in _context.Categories
+                        join products in _context.Products
+                        on categories.CategoryID equals products.CategoryID
+                        select new CategoriesViewModel
+                        {
+                            CategoryId = categories.CategoryID,
+                            CategoryName = categories.CategoryName,
+                            ProductId = products.ProductID,
+                            ProductName = products.ProductName 
+                        };
 
-            return query;
-        }*/
+            return query.ToList();
+        }
     }
 }

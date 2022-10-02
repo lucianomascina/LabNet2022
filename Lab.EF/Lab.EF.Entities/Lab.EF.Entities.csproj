@@ -62,6 +62,7 @@
     <Compile Include="Models\Shippers.cs" />
     <Compile Include="Models\Suppliers.cs" />
     <Compile Include="Models\Territories.cs" />
+    <Compile Include="ViewModels\CategoriesViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\OrdersViewModel.cs" />
   </ItemGroup>

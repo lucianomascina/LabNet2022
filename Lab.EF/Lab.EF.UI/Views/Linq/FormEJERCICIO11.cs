@@ -28,8 +28,8 @@ namespace Lab.EF.UI.Views.Linq
             try
             {
                 dataGridView1.DataSource = null;
-                //dataGridView1.DataSource = _categoriesController.GetAllHaveProducts();
-                dataGridView1.Columns["Picture"].Visible = false;
+                dataGridView1.DataSource = _categoriesController.GetAllWithProducts();
+               
 
             }
             catch(Exception ex)

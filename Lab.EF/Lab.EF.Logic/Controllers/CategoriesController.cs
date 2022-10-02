@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Entities;
+using Lab.EF.Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
@@ -95,13 +96,13 @@ namespace Lab.EF.Logic.Controllers
             }
         }
 
-        /*public List<Categories> GetAllHaveProducts()
+        public List<CategoriesViewModel> GetAllWithProducts()
         {
-            List<Categories> categoriesList = null;
+            List<CategoriesViewModel> categoriesList = null;
 
             try
             {
-                categoriesList = _categoriesLogic.GetAllHaveProducts();
+                categoriesList = _categoriesLogic.GetAllWithProducts();
                 
                 return categoriesList;
             }
@@ -110,6 +111,6 @@ namespace Lab.EF.Logic.Controllers
                 throw ex;
             }
 
-        }*/
+        }
     }
 }

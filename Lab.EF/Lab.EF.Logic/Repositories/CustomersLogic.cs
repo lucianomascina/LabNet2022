@@ -80,9 +80,7 @@ namespace Lab.EF.Logic
                         .Select(c => new CustomersViewModel
                         {
                             CustomerId = c.Key,
- 
                             CantOrders = c.Count()
-                             
                         }); 
 
             return query.ToList();

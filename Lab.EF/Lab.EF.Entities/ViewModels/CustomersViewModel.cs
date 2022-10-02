@@ -9,7 +9,6 @@ namespace Lab.EF.Entities.ViewModels
     public class CustomersViewModel
     {
         public string CustomerId { get; set; }
-        //public string CustomerName { get; set; }
         public int CantOrders { get; set; }
     }
 }
