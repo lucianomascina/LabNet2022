@@ -10,9 +10,9 @@ namespace Lab.EF.Logic
 {
     public class CustomersDemographicsLogic : BaseLogic<CustomerDemographics>
     {
-        public override List<CustomerDemographics> GetAll()
+        public override async Task<List<CustomerDemographics>> GetAll()
         {
-            return  _context.CustomerDemographics.ToList();
+            return await _context.CustomerDemographics.ToListAsync();
         }
         public override void Add(CustomerDemographics customerDemographic)
         {
@@ -37,9 +37,9 @@ namespace Lab.EF.Logic
             _context.SaveChanges();
 
         }
-        public override CustomerDemographics GetById(int id)
+        public override async Task<CustomerDemographics> GetById(int id)
         {
-            return  _context.CustomerDemographics.Find(id);
+            return await  _context.CustomerDemographics.FindAsync(id);
         }
     }
 }

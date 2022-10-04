@@ -20,15 +20,15 @@ namespace Lab.EF.Logic
             throw new NotImplementedException();
         }
 
-        public override List<Shippers> GetAll()
+        public override async Task<List<Shippers>> GetAll()
         {
 
-            return _context.Shippers.ToList();
+            return await _context.Shippers.ToListAsync();
         }
 
-        public override Shippers GetById(int id)
+        public override async Task<Shippers> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Shippers.FindAsync(id);
         }
 
         public override void Update(Shippers entity)

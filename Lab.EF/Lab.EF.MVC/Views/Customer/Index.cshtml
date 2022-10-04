@@ -1,0 +1,77 @@
+﻿@model  List<Lab.EF.MVC.Models.CustomerView>
+
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>Customers</h2>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th>
+                Customer Id
+            </th>
+            <th>
+               Company Name
+            </th>
+            <th>
+              Contact Name
+            </th>
+            <th>
+               Contact Title
+            </th>
+            <th>
+               Address
+            </th>
+            <th>
+               City
+            </th>
+            <th>
+                Region
+            </th>
+            <th>
+                Country
+            </th>
+            <th>
+                Phone
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

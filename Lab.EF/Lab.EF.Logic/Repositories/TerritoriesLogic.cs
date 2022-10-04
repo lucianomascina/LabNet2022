@@ -20,15 +20,15 @@ namespace Lab.EF.Logic
             throw new NotImplementedException();
         }
 
-        public override List<Territories> GetAll()
+        public override async Task<List<Territories>> GetAll()
         {
 
-            return _context.Territories.ToList();
+            return await _context.Territories.ToListAsync();
         }
 
-        public override Territories GetById(int id)
+        public override async Task<Territories> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Territories.FindAsync(id);
         }
 
         public override void Update(Territories entity)

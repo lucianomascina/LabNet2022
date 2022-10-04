@@ -17,8 +17,8 @@ namespace Lab.EF.Logic
 
         public abstract void Add(T entity);
         public abstract void Delete(int id);
-        public abstract List<T> GetAll();
-        public abstract T GetById(int id);
+        public abstract Task<List<T>> GetAll();
+        public abstract Task<T> GetById(int id);
         public abstract void Update(T entity);
   
     }

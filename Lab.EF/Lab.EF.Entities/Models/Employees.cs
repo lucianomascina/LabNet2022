@@ -46,11 +46,11 @@ namespace Lab.EF.Entities
         [Key]
         public int EmployeeID { get; set; }
 
-        [Required(ErrorMessage = "debe ingresar un apellido de hasta 20 letras")]
+        [Required]
         [StringLength(20)]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "debe ingresar un nombre de hasta 10 letras")]
+        [Required]
         [StringLength(10)]
         public string FirstName { get; set; }
 

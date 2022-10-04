@@ -21,9 +21,9 @@ namespace Lab.EF.Logic
             
         }
 
-        public override List<Categories> GetAll()
+        public override async Task<List<Categories>> GetAll()
         {
-            return  _context.Categories.ToList();
+            return await _context.Categories.ToListAsync();
         }
         public override void Add(Categories category)
         {
@@ -48,9 +48,9 @@ namespace Lab.EF.Logic
             _context.SaveChanges();
 
         }
-        public override Categories GetById(int id)
+        public override async Task<Categories> GetById(int id)
         {
-            return  _context.Categories.Find(id);
+            return  await _context.Categories.FindAsync(id);
         }
     }
 }
