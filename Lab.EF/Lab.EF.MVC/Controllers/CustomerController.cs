@@ -12,7 +12,7 @@ namespace Lab.EF.MVC.Controllers
 {
     public class CustomerController : Controller
     {
-        private ILogic<Customers> _customersLogic = new CustomersLogic();
+        private CustomersLogic _customersLogic = new CustomersLogic();
        
         public async Task<ActionResult> Index()
         {
@@ -84,12 +84,12 @@ namespace Lab.EF.MVC.Controllers
 
         }
 
-        [HttpDelete]
-        public ActionResult Delete(int id)
+        //[HttpDelete]
+        public ActionResult Delete(string id)
         {
             try
             {
-                _customersLogic.Delete(id);
+                _customersLogic.DeleteByString(id);
 
                 return RedirectToAction("Index");
             }

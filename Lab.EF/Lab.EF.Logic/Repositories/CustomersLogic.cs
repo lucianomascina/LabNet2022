@@ -20,7 +20,7 @@ namespace Lab.EF.Logic
 
             _context.SaveChanges();
         }
-        public override void Delete(int id)
+        public void DeleteByString(string id)
         {
             var customerToDelete = _context.Customers.Find(id);
 
@@ -42,6 +42,9 @@ namespace Lab.EF.Logic
             return await _context.Customers.FindAsync(id);
         }
 
-
+        public override void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
