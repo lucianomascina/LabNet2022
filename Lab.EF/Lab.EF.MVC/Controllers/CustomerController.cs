@@ -99,5 +99,45 @@ namespace Lab.EF.MVC.Controllers
             }
         }
 
+        public ActionResult Edit()
+        {
+
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Edit(CustomerView customerView)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Customers customer = new Customers
+                    {
+                        CustomerID = customerView.CustomerID,
+                        Address = customerView.Address,
+                        Phone = customerView.Phone,
+                        City = customerView.City,
+                        CompanyName = customerView.CompanyName,
+                        ContactName = customerView.ContactName,
+                        ContactTitle = customerView.ContactTitle,
+                        Country = customerView.Country,
+                        Region = customerView.Region
+                    };
+
+                    _customersLogic.Update(customer);
+
+                    return RedirectToAction("Index");
+                }
+                return View();
+
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+
+        }
     }
 }

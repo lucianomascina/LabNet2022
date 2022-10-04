@@ -1,17 +1,13 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "Edit";
 }
 
-<!DOCTYPE html>
+<h2>Edit Customer</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    
-    </div>
-</body>
-</html>
+<hr />
+
+@using (Html.BeginForm("Edit", "Customer", FormMethod.Post))
+{
+    @Html.Partial("_Customers")
+}
+

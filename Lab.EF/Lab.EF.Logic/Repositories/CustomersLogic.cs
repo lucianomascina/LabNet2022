@@ -32,7 +32,7 @@ namespace Lab.EF.Logic
         {
             var customerToUpdate = _context.Customers.Find(customer.CustomerID);
 
-          
+            
 
             _context.SaveChanges();
 
