@@ -16,33 +16,6 @@ namespace Lab.EF.Entities
             Territories = new HashSet<Territories>();
         }
 
-        public Employees(string firstName, string lastName, string title,DateTime birthDate,
-                        DateTime hireDate,string address,string city,string homePhone)
-        {
-            FirstName = firstName;            
-            LastName = lastName;
-            Title = title;
-            BirthDate = birthDate;
-            HireDate = hireDate;
-            Address = address;
-            City = city;
-            HomePhone = homePhone;
-        }
-
-        public Employees(int id,string firstName, string lastName, string title, DateTime birthDate,
-                        DateTime hireDate, string address, string city,string homePhone)
-        {
-            EmployeeID = id;
-            FirstName = firstName;
-            LastName = lastName;
-            Title = title;
-            BirthDate = birthDate;
-            HireDate = hireDate;
-            Address = address;
-            City = city;
-            HomePhone = homePhone;
-        }
-
         [Key]
         public int EmployeeID { get; set; }
 

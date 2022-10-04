@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,9 +8,10 @@ namespace Lab.EF.MVC.Models
 {
     public class CustomerView
     {
+        [Required(ErrorMessage = "debe ingresar el id")]
         public string CustomerID { get; set; }
 
-       
+        [Required(ErrorMessage = "debe ingresar el nombre de la compañia")]
         public string CompanyName { get; set; }
 
      
