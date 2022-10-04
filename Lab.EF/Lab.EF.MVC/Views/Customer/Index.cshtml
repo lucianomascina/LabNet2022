@@ -80,7 +80,8 @@
                                 new { @class = "btn btn-danger" })
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "Customer", new { @class = "btn btn-primary" })
+                @Html.ActionLink("Edit", "Edit", "Customer",new { id = item.CustomerID},
+                                new { @class = "btn btn-primary" })
             </td>
         </tr>
         }

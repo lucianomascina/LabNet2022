@@ -99,12 +99,34 @@ namespace Lab.EF.MVC.Controllers
             }
         }
 
-        public ActionResult Edit()
+        public async Task<ActionResult> Edit(string id)
         {
+            try
+            {
+                var customer = await _customersLogic.GetByIdString(id);
 
-            return View();
+                var customerView = new CustomerView
+                {
+                    CustomerID = customer.CustomerID,
+                    Address = customer.Address,
+                    City = customer.City,
+                    CompanyName = customer.CompanyName,
+                    ContactName = customer.ContactName,
+                    ContactTitle = customer.ContactTitle,
+                    Country = customer.Country,
+                    Phone = customer.Phone,
+                    Region = customer.Region
+                };
+
+                return View(customerView);
+
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+
         }
-
 
         [HttpPost]
         public ActionResult Edit(CustomerView customerView)

@@ -32,17 +32,29 @@ namespace Lab.EF.Logic
         {
             var customerToUpdate = _context.Customers.Find(customer.CustomerID);
 
-            
+            customerToUpdate.CompanyName = customer.CompanyName;
+            customerToUpdate.ContactName = customer.ContactName;
+            customerToUpdate.ContactTitle = customer.ContactTitle;
+            customerToUpdate.Address = customer.Address;
+            customerToUpdate.City = customer.City;
+            customerToUpdate.Region = customer.Region;
+            customerToUpdate.Country = customer.Country;
+            customerToUpdate.Phone = customer.Phone;
 
             _context.SaveChanges();
 
         }
-        public override async Task<Customers> GetById(int id)
+        public async Task<Customers> GetByIdString(string id)
         {
             return await _context.Customers.FindAsync(id);
         }
 
         public override void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task<Customers> GetById(int id)
         {
             throw new NotImplementedException();
         }
