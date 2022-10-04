@@ -75,7 +75,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
-
+            <td>
+                @Html.ActionLink("Delete", "Delete",new { id = item.CustomerID} ,
+                                new { @class = "btn btn-danger"})
+            </td>
         </tr>
         }
     </tbody>

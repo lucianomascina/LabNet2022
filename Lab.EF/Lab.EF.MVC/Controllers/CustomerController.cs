@@ -16,23 +16,31 @@ namespace Lab.EF.MVC.Controllers
        
         public async Task<ActionResult> Index()
         {
-            List<Customers> customers = await _customersLogic.GetAll();
-
-            List<CustomerView> customersViews = customers.Select(c => new CustomerView
+            try
             {
-                CustomerID = c.CustomerID,
-                Address = c.Address,
-                Phone = c.Phone,
-                City = c.City,
-                CompanyName = c.CompanyName,
-                ContactName = c.ContactName,
-                ContactTitle = c.ContactTitle,
-                Country = c.Country,
-                Region = c.Region
-                 
-            }).ToList();
+                List<Customers> customers = await _customersLogic.GetAll();
 
-            return View(customersViews);
+                List<CustomerView> customersViews = customers.Select(c => new CustomerView
+                {
+                    CustomerID = c.CustomerID,
+                    Address = c.Address,
+                    Phone = c.Phone,
+                    City = c.City,
+                    CompanyName = c.CompanyName,
+                    ContactName = c.ContactName,
+                    ContactTitle = c.ContactTitle,
+                    Country = c.Country,
+                    Region = c.Region
+
+                }).ToList();
+
+                return View(customersViews);
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("Index", "Error");
+            }
+           
         }
 
         public ActionResult Create()
@@ -74,7 +82,21 @@ namespace Lab.EF.MVC.Controllers
                 return RedirectToAction("Index","Error");
             }
 
-           
+        }
+
+        [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                _customersLogic.Delete(id);
+
+                return RedirectToAction("Index");
+            }
+            catch(Exception ex)
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
 
     }
