@@ -44,39 +44,39 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var employee in Model)
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.EmployeeID)
+                @Html.DisplayFor(modelItem => employee.EmployeeID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(modelItem => employee.LastName)
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => employee.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => employee.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BirthDate)
+                @Html.DisplayFor(modelItem => employee.BirthDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HireDate)
+                @Html.DisplayFor(modelItem => employee.HireDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.City)
+                @Html.DisplayFor(modelItem => employee.City)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Region)
+                @Html.DisplayFor(modelItem => employee.Region)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HomePhone)
+                @Html.DisplayFor(modelItem => employee.HomePhone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ReportsTo)
+                @Html.DisplayFor(modelItem => employee.ReportsTo)
             </td>
         </tr>
         }

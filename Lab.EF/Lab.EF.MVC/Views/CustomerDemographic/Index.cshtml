@@ -21,14 +21,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var customerDemographic in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CustomerTypeID)
+                    @Html.DisplayFor(modelItem => customerDemographic.CustomerTypeID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CustomerDesc)
+                    @Html.DisplayFor(modelItem => customerDemographic.CustomerDesc)
                 </td>
             </tr>
         }

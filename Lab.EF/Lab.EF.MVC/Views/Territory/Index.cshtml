@@ -24,18 +24,18 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var territory in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.TerritoryID)
+                    @Html.DisplayFor(modelItem => territory.TerritoryID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.TerritoryDescription)
+                    @Html.DisplayFor(modelItem => territory.TerritoryDescription)
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.RegionID)
+                    @Html.DisplayFor(modelItem => territory.RegionID)
                 </td>
           
             </tr>

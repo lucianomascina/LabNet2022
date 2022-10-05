@@ -36,30 +36,30 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var product in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ProductID)
+                    @Html.DisplayFor(modelItem => product.ProductID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ProductName)
+                    @Html.DisplayFor(modelItem => product.ProductName)
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.SupplierID)
+                    @Html.DisplayFor(modelItem => product.SupplierID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CategoryID)
+                    @Html.DisplayFor(modelItem => product.CategoryID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.QuantityPerUnit)
+                    @Html.DisplayFor(modelItem => product.QuantityPerUnit)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                    @Html.DisplayFor(modelItem => product.UnitPrice)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                    @Html.DisplayFor(modelItem => product.UnitsInStock)
                 </td>
               
             </tr>

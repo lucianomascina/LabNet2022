@@ -24,18 +24,18 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var shipper in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ShipperID)
+                    @Html.DisplayFor(modelItem => shipper.ShipperID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CompanyName)
+                    @Html.DisplayFor(modelItem => shipper.CompanyName)
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.Phone)
+                    @Html.DisplayFor(modelItem => shipper.Phone)
                 </td>
 
             </tr>

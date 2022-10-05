@@ -32,7 +32,7 @@ namespace Lab.EF.Entities
 
         [StringLength(25)]
         public string TitleOfCourtesy { get; set; }
-
+        
         public DateTime? BirthDate { get; set; }
 
         public DateTime? HireDate { get; set; }

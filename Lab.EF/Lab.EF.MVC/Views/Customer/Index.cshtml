@@ -47,43 +47,43 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var customer in Model)
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CustomerID)
+                @Html.DisplayFor(modelItem => customer.CustomerID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CompanyName)
+                @Html.DisplayFor(modelItem => customer.CompanyName)
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.ContactName)
+                @Html.DisplayFor(modelItem => customer.ContactName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ContactTitle)
+                @Html.DisplayFor(modelItem => customer.ContactTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @Html.DisplayFor(modelItem => customer.Address)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.City)
+                @Html.DisplayFor(modelItem => customer.City)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Region)
+                @Html.DisplayFor(modelItem => customer.Region)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Country)
+                @Html.DisplayFor(modelItem => customer.Country)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Phone)
+                @Html.DisplayFor(modelItem => customer.Phone)
             </td>
             <td>
-                @Html.ActionLink("Delete", "Delete", "Customer", new { id = item.CustomerID },
+                @Html.ActionLink("Delete", "Delete", "Customer", new { id = customer.CustomerID },
                                 new { @class = "btn btn-danger" })
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "Customer",new { id = item.CustomerID},
+                @Html.ActionLink("Edit", "Edit", "Customer",new { id = customer.CustomerID},
                                 new { @class = "btn btn-primary" })
             </td>
         </tr>

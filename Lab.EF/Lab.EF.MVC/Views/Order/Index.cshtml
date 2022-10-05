@@ -47,42 +47,42 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var order in Model)
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.OrderID)
+                @Html.DisplayFor(modelItem => order.OrderID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CustomerID)
+                @Html.DisplayFor(modelItem => order.CustomerID)
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.EmployeeID)
+                @Html.DisplayFor(modelItem => order.EmployeeID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OrderDate)
+                @Html.DisplayFor(modelItem => order.OrderDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RequiredDate)
+                @Html.DisplayFor(modelItem => order.RequiredDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ShippedDate)
+                @Html.DisplayFor(modelItem => order.ShippedDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ShipVia)
+                @Html.DisplayFor(modelItem => order.ShipVia)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Freight)
+                @Html.DisplayFor(modelItem => order.Freight)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ShipName)
+                @Html.DisplayFor(modelItem => order.ShipName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ShipCity)
+                @Html.DisplayFor(modelItem => order.ShipCity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ShipCountry)
+                @Html.DisplayFor(modelItem => order.ShipCountry)
             </td>
         </tr>
         }

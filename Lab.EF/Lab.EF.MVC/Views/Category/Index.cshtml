@@ -27,21 +27,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var category in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CategoryID)
+                    @Html.DisplayFor(modelItem => category.CategoryID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CategoryName)
+                    @Html.DisplayFor(modelItem => category.CategoryName)
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.Description)
+                    @Html.DisplayFor(modelItem => category.Description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Picture)
+                    @Html.DisplayFor(modelItem => category.Picture)
                 </td>
             </tr>
         }

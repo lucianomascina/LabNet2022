@@ -38,33 +38,33 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var supplier in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.SupplierID)
+                    @Html.DisplayFor(modelItem => supplier.SupplierID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CompanyName)
+                    @Html.DisplayFor(modelItem => supplier.CompanyName)
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.ContactName)
+                    @Html.DisplayFor(modelItem => supplier.ContactName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ContactTitle)
+                    @Html.DisplayFor(modelItem => supplier.ContactTitle)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Address)
+                    @Html.DisplayFor(modelItem => supplier.Address)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.City)
+                    @Html.DisplayFor(modelItem => supplier.City)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Country)
+                    @Html.DisplayFor(modelItem => supplier.Country)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Phone)
+                    @Html.DisplayFor(modelItem => supplier.Phone)
                 </td>
             </tr>
         }
