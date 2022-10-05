@@ -57,6 +57,8 @@
     <Compile Include="Repositories\OrderDetailsLogic.cs" />
     <Compile Include="Repositories\OrdersLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductsLogic.cs" />
+    <Compile Include="Repositories\RegionsLogic.cs" />
     <Compile Include="Repositories\ShippersLogic.cs" />
     <Compile Include="Repositories\SuppliersLogic.cs" />
     <Compile Include="Repositories\TerritoriesLogic.cs" />

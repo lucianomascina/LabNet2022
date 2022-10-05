@@ -126,13 +126,33 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CustomerDemographicController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderDetailController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RegionController.cs" />
+    <Compile Include="Controllers\ShipperController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
+    <Compile Include="Controllers\TerritoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryView.cs" />
+    <Compile Include="Models\CustomerDemographicView.cs" />
     <Compile Include="Models\CustomerView.cs" />
+    <Compile Include="Models\EmployeeView.cs" />
+    <Compile Include="Models\OrderDetailView.cs" />
+    <Compile Include="Models\OrderView.cs" />
+    <Compile Include="Models\ProductView.cs" />
+    <Compile Include="Models\RegionView.cs" />
+    <Compile Include="Models\ShipperView.cs" />
+    <Compile Include="Models\SupplierView.cs" />
+    <Compile Include="Models\TerritoryView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,8 +188,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Create.cshtml" />
@@ -177,6 +195,16 @@
     <Content Include="Views\Customer\Delete.cshtml" />
     <Content Include="Views\Shared\_Customers.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\CustomerDemographic\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\OrderDetail\Index.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Region\Index.cshtml" />
+    <Content Include="Views\Shipper\Index.cshtml" />
+    <Content Include="Views\Supplier\Index.cshtml" />
+    <Content Include="Views\Territory\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
