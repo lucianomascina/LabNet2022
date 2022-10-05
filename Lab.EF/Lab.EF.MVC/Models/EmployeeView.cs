@@ -12,7 +12,6 @@ namespace Lab.EF.MVC.Models
      
         public string LastName { get; set; }
 
-    
         public string FirstName { get; set; }
 
         public string Title { get; set; }

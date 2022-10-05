@@ -1,17 +1,36 @@
-﻿
+﻿@model List<Lab.EF.MVC.Models.CustomerDemographicView>
+
 @{
-    Layout = null;
+    ViewBag.Title = "Customer Demographics";
 }
 
-<!DOCTYPE html>
+<h2>Customer Demographics</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<hr />
+
+<table class="table table-hover">
+    <thead>
+        <tr class="info">
+            <th>
+                Customer Type ID
+            </th>
+            <th>
+                Customer Description
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerTypeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerDesc)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

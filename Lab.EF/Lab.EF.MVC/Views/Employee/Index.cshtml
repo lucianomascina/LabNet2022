@@ -1,17 +1,84 @@
-﻿
+﻿@model List<Lab.EF.MVC.Models.EmployeeView>
+
 @{
-    Layout = null;
+    ViewBag.Title = "Employees";
 }
 
-<!DOCTYPE html>
+<h2>Employees</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<hr />
+
+<table class="table table-hover">
+    <thead>
+        <tr class="info">
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Birth Date
+            </th>
+            <th>
+                Hire Date
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                Region
+            </th>
+            <th>
+                Home Phone
+            </th>
+            <th>
+                Reports To
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HireDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportsTo)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,17 +1,37 @@
-﻿
+﻿@model List<Lab.EF.MVC.Models.RegionView>
+
 @{
-    Layout = null;
+    ViewBag.Title = "Regions";
 }
 
-<!DOCTYPE html>
+<h2>Regions</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<hr />
+
+<table class="table table-hover">
+    <thead>
+        <tr class="info">
+            <th>
+                Region ID
+            </th>
+            <th>
+                Region Description
+            </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegionDescription)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
