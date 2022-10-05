@@ -19,9 +19,13 @@ namespace Lab.EF.MVC.Controllers
             {
                 List<Order_Details> orderDetails = await _orderDetailsLogic.GetAll();
 
-                List<OrderDetailView> orderDetailsViews = orderDetails.Select(c => new OrderDetailView
+                List<OrderDetailView> orderDetailsViews = orderDetails.Select(o => new OrderDetailView
                 {
-                       
+                    OrderID = o.OrderID,
+                    ProductID = o.ProductID,
+                    Discount = o.Discount,
+                    Quantity = o.Quantity,
+                    UnitPrice = o.UnitPrice 
 
                 }).ToList();
 

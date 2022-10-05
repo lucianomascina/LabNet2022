@@ -1,1 +1,56 @@
-﻿
+﻿@model List<Lab.EF.MVC.Models.OrderDetailView>
+
+@{
+    ViewBag.Title = "Orders Details";
+}
+
+<h2>Orders Details</h2>
+
+<hr />
+
+<table class="table table-hover">
+    <thead>
+        <tr class="info">
+            <th>
+                Order ID
+            </th>
+            <th>
+                Product ID
+            </th>
+            <th>
+                Unit Price
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Discount
+            </th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var orderDetail in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => orderDetail.OrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => orderDetail.ProductID)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => orderDetail.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => orderDetail.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => orderDetail.Discount)
+                </td>
+           
+            </tr>
+        }
+    </tbody>
+</table>
