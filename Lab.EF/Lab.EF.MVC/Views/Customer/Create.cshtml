@@ -4,13 +4,13 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create Customer</h2>
+<h2 class="text-center">Create Customer</h2>
 
 <hr />
 
 @using (Html.BeginForm("Create", "Customer", FormMethod.Post))
 {
-    
+
     @Html.Partial("_Customers")
 }
 

@@ -1,0 +1,16 @@
+﻿@model Lab.EF.MVC.Models.CategoryView
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="text-center">Create Category</h2>
+
+<hr />
+
+@using (Html.BeginForm("Create", "Category", FormMethod.Post))
+{
+
+    @Html.Partial("_Categories")
+}
+

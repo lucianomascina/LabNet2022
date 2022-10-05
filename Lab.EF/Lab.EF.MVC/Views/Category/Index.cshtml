@@ -4,13 +4,17 @@
     ViewBag.Title = "Categories";
 }
 
-<h2>Categories</h2>
+<h2 class="text-center">Categories</h2>
+
+<div>
+    @Html.ActionLink("Create", "Create", "Category", new { @class = "btn btn-success"})
+</div>
 
 <hr />
 
-<table class="table table-hover">
+<table class="table table-hover ">
     <thead>
-        <tr class="info">
+        <tr class="active">
             <th>
                  Category ID
             </th>
@@ -29,21 +33,30 @@
     <tbody>
         @foreach (var category in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => category.CategoryID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => category.CategoryName)
-                </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => category.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => category.CategoryName)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => category.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => category.Picture)
-                </td>
-            </tr>
+            <td>
+                @Html.DisplayFor(modelItem => category.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => category.Picture)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", "Customer", new { id = category.CategoryID },
+                                new { @class = "btn btn-danger" })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Customer", new { id = category.CategoryID },
+                                new { @class = "btn btn-primary" })
+            </td>
+
+        </tr>
         }
     </tbody>
 </table>
