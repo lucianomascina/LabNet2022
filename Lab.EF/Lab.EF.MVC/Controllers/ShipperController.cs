@@ -35,27 +35,6 @@ namespace Lab.EF.MVC.Controllers
             return Json(shippersViews,JsonRequestBehavior.AllowGet);
         }
         
-        /*public async Task<ActionResult> Index()
-        {
-            try
-            {
-                List<Shippers> shippers = await _shippersLogic.GetAll();
-
-                List<ShipperView> shippersViews = shippers.Select(s => new ShipperView
-                {
-                    ShipperID = s.ShipperID,
-                    CompanyName = s.CompanyName,
-                    Phone = s.Phone
-
-                }).ToList();
-
-                return View(shippersViews);
-            }
-            catch (Exception ex)
-            {
-                return RedirectToAction("Index", "Error");
-            }
-
-        }*/
+      
     }
 }

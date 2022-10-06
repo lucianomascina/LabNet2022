@@ -13,34 +13,35 @@ namespace Lab.EF.MVC.Controllers
     public class EmployeeController : Controller
     {
         private ILogic<Employees> _employeesLogic = new EmployeesLogic();
-        public async Task<ActionResult> Index()
+
+        public ActionResult Index()
         {
-            try
-            {
-                List<Employees> employees = await _employeesLogic.GetAll();
-
-                List<EmployeeView> employeesViews = employees.Select(e => new EmployeeView
-                {
-                    EmployeeID = e.EmployeeID,
-                    BirthDate = e.BirthDate,
-                    City = e.City,
-                    FirstName = e.FirstName,
-                    HireDate = e.HireDate,
-                    HomePhone = e.HomePhone,
-                    LastName = e.LastName,
-                    Region = e.Region,
-                    ReportsTo = e.ReportsTo,
-                    Title = e.Title 
-
-                }).ToList();
-
-                return View(employeesViews);
-            }
-            catch (Exception ex)
-            {
-                return RedirectToAction("Index", "Error");
-            }
-
+            return View();
         }
+
+        [HttpGet]
+        public async Task<JsonResult> GetAll()
+        {
+            List<Employees> employees = await _employeesLogic.GetAll();
+
+            List<EmployeeView> employeesViews = employees.Select(e => new EmployeeView
+            {
+                EmployeeID = e.EmployeeID,
+                BirthDate = e.BirthDate,
+                City = e.City,
+                FirstName = e.FirstName,
+                HireDate = e.HireDate,
+                HomePhone = e.HomePhone,
+                LastName = e.LastName,
+                Region = e.Region,
+                ReportsTo = e.ReportsTo,
+                Title = e.Title
+
+            }).ToList();
+
+            return Json(employeesViews, JsonRequestBehavior.AllowGet);
+        }
+      
+        
     }
 }
