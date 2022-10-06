@@ -1,25 +1,23 @@
 ﻿@model Lab.EF.MVC.Models.CategoryView
 
 <div class="container">
+    <div class="col-md-offset-4">
 
-    <div class="form-group">
-        @Html.LabelFor(c => c.CategoryName, new { @class = "control-label" })
-        @Html.TextBoxFor(c => c.CategoryName, new { @class = "form-control", maxlength = "15" })
-        @Html.ValidationMessageFor(c => c.CategoryName, "", new { @class = "text-danger " })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(c => c.Description, new { @class = "control-label" })
-        @Html.TextBoxFor(c => c.Description, new { @class = "form-control", maxlength = "30" })
-        @Html.ValidationMessageFor(c => c.Description)
-    </div>
-   
-    <div class="row">
-        <div class="col-md-2">
-            <input type="submit" class="btn btn-lg btn-success" value="Save">
+        <div class="form-group">
+            @Html.LabelFor(c => c.CategoryName, new { @class = "control-label" })
+            @Html.TextBoxFor(c => c.CategoryName, new { @class = "form-control input-lg", maxlength = "15" })
+            @Html.ValidationMessageFor(c => c.CategoryName, "", new { @class = "text-danger " })
         </div>
-        <div class="col-md-2">
-            @Html.ActionLink("Back", "Index", "Category", new { @class = "btn btn-lg btn-danger" })
+        <div class="form-group">
+            @Html.LabelFor(c => c.Description, new { @class = "control-label" })
+            @Html.TextBoxFor(c => c.Description, new { @class = "form-control input-lg", maxlength = "30" })
+            @Html.ValidationMessageFor(c => c.Description)
         </div>
+          
+        <input type="submit" class="btn btn-lg btn-success" value="Save">
+          
+         @Html.ActionLink("Back", "Index", "Category", new { @class = "btn btn-lg btn-danger" })
+         
     </div>
    
 </div>

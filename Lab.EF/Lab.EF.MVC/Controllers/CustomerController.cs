@@ -3,6 +3,7 @@ using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -92,6 +93,10 @@ namespace Lab.EF.MVC.Controllers
                 _customersLogic.DeleteByString(id);
 
                 return RedirectToAction("Index");
+            }
+            catch(DbUpdateException ex)
+            {
+                return RedirectToAction("DeleteCustomer","Error");
             }
             catch(Exception ex)
             {
