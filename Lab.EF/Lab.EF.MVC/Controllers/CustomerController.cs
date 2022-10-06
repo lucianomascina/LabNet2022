@@ -133,6 +133,7 @@ namespace Lab.EF.MVC.Controllers
 
         }
 
+        //[HhtpPut]
         [HttpPost]
         public ActionResult Edit(CustomerView customerView)
         {

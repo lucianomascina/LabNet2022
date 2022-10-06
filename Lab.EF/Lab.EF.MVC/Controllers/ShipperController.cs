@@ -13,7 +13,29 @@ namespace Lab.EF.MVC.Controllers
     public class ShipperController : Controller
     {
         private ILogic<Shippers> _shippersLogic = new ShippersLogic();
-        public async Task<ActionResult> Index()
+       
+        public ActionResult Index()
+        {
+            return View();
+        }
+        
+        [HttpGet]
+        public  async Task<JsonResult> GetAll()
+        {
+            List<Shippers> shippers =  await _shippersLogic.GetAll();
+
+            var shippersViews =  shippers.Select(s => new ShipperView
+            {
+                ShipperID = s.ShipperID,
+                CompanyName = s.CompanyName,
+                Phone = s.Phone
+
+            }).ToList();
+
+            return Json(shippersViews,JsonRequestBehavior.AllowGet);
+        }
+        
+        /*public async Task<ActionResult> Index()
         {
             try
             {
@@ -34,6 +56,6 @@ namespace Lab.EF.MVC.Controllers
                 return RedirectToAction("Index", "Error");
             }
 
-        }
+        }*/
     }
 }

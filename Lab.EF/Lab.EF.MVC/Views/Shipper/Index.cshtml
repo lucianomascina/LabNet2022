@@ -6,6 +6,8 @@
 
 <h2 class="text-center">Shippers</h2>
 
+<button class="btn btn-primary btn-lg" id="getAll">Get All</button>
+
 <hr />
 
 <table class="table table-hover">
@@ -20,25 +22,39 @@
             <th>
                 Phone
             </th>
-       
+
         </tr>
     </thead>
-    <tbody>
-        @foreach (var shipper in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => shipper.ShipperID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => shipper.CompanyName)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => shipper.Phone)
-                </td>
-
-            </tr>
-        }
+    <tbody id="shippers">
     </tbody>
 </table>
+
+<script src="/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function () {
+        function GetShippers() {
+            $.ajax({
+                url: "/Shipper/GetAll",
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                data: "{}",
+                dataType: "json",
+                success: function (data) {
+                    var row = "";
+                    $.each(data, function (index, item) {
+                        row += "<tr><td>" + item.ShipperID + "</td><td>" + item.CompanyName + "</td><td>" + item.Phone + "</td></tr>";
+                    });
+                    $("#shippers").html(row);
+                },
+                error: function (result) {
+                    alert("Error");
+                },
+            });
+        };
+
+        $('#getAll').click(function () {
+            GetShippers();
+        });
+    });
+   
+</script>
