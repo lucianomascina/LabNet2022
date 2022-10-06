@@ -24,7 +24,7 @@ namespace Lab.EF.MVC.Controllers
                      CategoryID = c.CategoryID,
                      CategoryName = c.CategoryName,
                      Description = c.Description,
-                     Picture = c.Picture 
+                     
 
                 }).ToList();
 
@@ -56,7 +56,7 @@ namespace Lab.EF.MVC.Controllers
                          CategoryID = categoryView.CategoryID,
                          CategoryName = categoryView.CategoryName,
                          Description = categoryView.Description,
-                         Picture = categoryView.Picture   
+                         
                     };
 
                     _categoriesLogic.Add(category);
@@ -99,7 +99,7 @@ namespace Lab.EF.MVC.Controllers
                      CategoryID = category.CategoryID,
                      CategoryName = category.CategoryName,
                      Description = category.Description,
-                     Picture = category.Picture
+                    
                 };
 
                 return View(categoryView);
@@ -124,7 +124,7 @@ namespace Lab.EF.MVC.Controllers
                          CategoryID = categoryView.CategoryID,
                          CategoryName = categoryView.CategoryName,
                          Description = categoryView.Description,
-                         Picture = categoryView.Picture 
+                        
                     };
 
                     _categoriesLogic.Update(category);

@@ -7,7 +7,7 @@
 <h2 class="text-center">Categories</h2>
 
 <div>
-    @Html.ActionLink("Create", "Create", "Category", new { @class = "btn btn-success"})
+    @Html.ActionLink("Create", "Create", "Category", new { @class = "btn btn-lg btn-success"})
 </div>
 
 <hr />
@@ -24,10 +24,7 @@
             <th>
                  Description
             </th>
-            <th>
-                 Picture
-            </th>
-            
+          
         </tr>
     </thead>
     <tbody>
@@ -44,15 +41,13 @@
             <td>
                 @Html.DisplayFor(modelItem => category.Description)
             </td>
+    
             <td>
-                @Html.DisplayFor(modelItem => category.Picture)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", "Customer", new { id = category.CategoryID },
+                @Html.ActionLink("Delete", "Delete", "Category", new { id = category.CategoryID },
                                 new { @class = "btn btn-danger" })
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "Customer", new { id = category.CategoryID },
+                @Html.ActionLink("Edit", "Edit", "Category", new { id = category.CategoryID },
                                 new { @class = "btn btn-primary" })
             </td>
 

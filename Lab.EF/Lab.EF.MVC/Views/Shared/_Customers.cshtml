@@ -46,8 +46,13 @@
         @Html.TextBoxFor(c => c.Phone, new { @class = "form-control", maxlength = "24" })
         @Html.ValidationMessageFor(c => c.Phone)
     </div>
-    <input type="submit" class="btn btn-success" value="Save">
-    <div>
-        @Html.ActionLink("Back", "Index", "Customer", new { @class = "btn btn-danger" })
+    <div class="row">
+        <div class="col-md-2">
+            <input type="submit" class="btn btn-lg btn-success" value="Save">
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Back", "Index", "Customer", new { @class = "btn btn-lg btn-danger" })
+        </div>
     </div>
+   
 </div>
