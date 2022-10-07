@@ -13,7 +13,7 @@ namespace Lab.EF.MVC.Controllers
 {
     public class EmployeeController : Controller
     {
-        private IService<Employees> _employeesService = new EmployeeService();
+        private IService<Employees> _employeeService = new EmployeeService();
 
         public ActionResult Index()
         {
@@ -23,7 +23,7 @@ namespace Lab.EF.MVC.Controllers
         [HttpGet]
         public async Task<JsonResult> GetAll()
         {
-            List<Employees> employees = await _employeesService.GetAll();
+            List<Employees> employees = await _employeeService.GetAll();
 
             List<EmployeeView> employeesViews = employees.Select(e => new EmployeeView
             {

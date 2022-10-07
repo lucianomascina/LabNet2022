@@ -13,12 +13,12 @@ namespace Lab.EF.MVC.Controllers
 {
     public class OrderController : Controller
     {
-        private IService<Orders> _ordersService = new OrderService();
+        private IService<Orders> _orderService = new OrderService();
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<Orders> orders = await _ordersService.GetAll();
+                List<Orders> orders = await _orderService.GetAll();
 
                 List<OrderView> ordersViews = orders.Select(o => new OrderView
                 {

@@ -13,13 +13,13 @@ namespace Lab.EF.MVC.Controllers
 {
     public class CustomerDemographicController : Controller
     {
-        private IService<CustomerDemographics> _customerDemographicsService = new CustomerDemographicService();
+        private IService<CustomerDemographics> _customerDemographicService = new CustomerDemographicService();
 
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<CustomerDemographics> customerDemographics = await _customerDemographicsService.GetAll();
+                List<CustomerDemographics> customerDemographics = await _customerDemographicService.GetAll();
 
                 List<CustomerDemographicView> customerDemographicsViews = customerDemographics.Select(c => new CustomerDemographicView
                 {
