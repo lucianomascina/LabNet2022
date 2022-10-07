@@ -23,5 +23,13 @@ namespace Lab.EF.MVC.Controllers
         {
             return View();
         }
+
+        public ActionResult DeleteProduct()
+        {
+            return View();
+        }
+
+
+
     }
 }
