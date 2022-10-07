@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +13,13 @@ namespace Lab.EF.MVC.Controllers
 {
     public class CustomerDemographicController : Controller
     {
-        private ILogic<CustomerDemographics> _customersDemographicsLogic = new CustomersDemographicsLogic();
+        private IService<CustomerDemographics> _customerDemographicsService = new CustomerDemographicService();
 
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<CustomerDemographics> customerDemographics = await _customersDemographicsLogic.GetAll();
+                List<CustomerDemographics> customerDemographics = await _customerDemographicsService.GetAll();
 
                 List<CustomerDemographicView> customerDemographicsViews = customerDemographics.Select(c => new CustomerDemographicView
                 {

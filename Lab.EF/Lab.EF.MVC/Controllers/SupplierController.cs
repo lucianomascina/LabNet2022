@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,12 @@ namespace Lab.EF.MVC.Controllers
 {
     public class SupplierController : Controller
     {
-        private ILogic<Suppliers> _suppliersLogic = new SuppliersLogic();
+        private IService<Suppliers> _supplierService = new SupplierService();
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<Suppliers> suppliers = await _suppliersLogic.GetAll();
+                List<Suppliers> suppliers = await _supplierService.GetAll();
 
                 List<SupplierView> suppliersViews = suppliers.Select(s => new SupplierView
                 {

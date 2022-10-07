@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,12 @@ namespace Lab.EF.MVC.Controllers
 {
     public class TerritoryController : Controller
     {
-        private ILogic<Territories> _territoriesLogic = new TerritoriesLogic();
+        private IService<Territories> _territoryService = new TerritoryService();
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<Territories> territories = await _territoriesLogic.GetAll();
+                List<Territories> territories = await _territoryService.GetAll();
 
                 List<TerritoryView> territoriesViews = territories.Select(t => new TerritoryView
                 {

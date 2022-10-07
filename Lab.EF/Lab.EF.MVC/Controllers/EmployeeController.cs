@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Lab.EF.MVC.Controllers
 {
     public class EmployeeController : Controller
     {
-        private ILogic<Employees> _employeesLogic = new EmployeesLogic();
+        private IService<Employees> _employeesService = new EmployeeService();
 
         public ActionResult Index()
         {
@@ -22,7 +23,7 @@ namespace Lab.EF.MVC.Controllers
         [HttpGet]
         public async Task<JsonResult> GetAll()
         {
-            List<Employees> employees = await _employeesLogic.GetAll();
+            List<Employees> employees = await _employeesService.GetAll();
 
             List<EmployeeView> employeesViews = employees.Select(e => new EmployeeView
             {

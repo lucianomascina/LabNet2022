@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,12 @@ namespace Lab.EF.MVC.Controllers
 {
     public class OrderDetailController : Controller
     {
-        private ILogic<Order_Details> _orderDetailsLogic = new OrderDetailsLogic();
+        private IService<Order_Details> _orderDetailsService = new OrderDetailService();
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<Order_Details> orderDetails = await _orderDetailsLogic.GetAll();
+                List<Order_Details> orderDetails = await _orderDetailsService.GetAll();
 
                 List<OrderDetailView> orderDetailsViews = orderDetails.Select(o => new OrderDetailView
                 {

@@ -2,6 +2,7 @@
 using Lab.EF.Logic;
 using Lab.EF.Logic.Repositories;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,12 @@ namespace Lab.EF.MVC.Controllers
 {
     public class RegionController : Controller
     {
-        private ILogic<Region> _regionsLogic = new RegionsLogic();
+        private IService<Region> _regionService = new RegionService();
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<Region> regions = await _regionsLogic.GetAll();
+                List<Region> regions = await _regionService.GetAll();
 
                 List<RegionView> regionsViews = regions.Select(r => new RegionView
                 {

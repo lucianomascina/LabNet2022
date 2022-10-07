@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,8 @@ namespace Lab.EF.MVC.Controllers
 {
     public class ShipperController : Controller
     {
-        private ILogic<Shippers> _shippersLogic = new ShippersLogic();
-       
+        private IService<Shippers> _shipperService = new ShipperService();
+
         public ActionResult Index()
         {
             return View();
@@ -22,7 +23,7 @@ namespace Lab.EF.MVC.Controllers
         [HttpGet]
         public  async Task<JsonResult> GetAll()
         {
-            List<Shippers> shippers =  await _shippersLogic.GetAll();
+            List<Shippers> shippers =  await _shipperService.GetAll();
 
             var shippersViews =  shippers.Select(s => new ShipperView
             {

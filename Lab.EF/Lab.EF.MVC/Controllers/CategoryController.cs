@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
@@ -13,12 +14,12 @@ namespace Lab.EF.MVC.Controllers
 {
     public class CategoryController : Controller
     {
-        private ILogic<Categories> _categoriesLogic = new CategoriesLogic();
+        private IService<Categories> _categoryService = new CategoryService();
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<Categories> categories = await _categoriesLogic.GetAll();
+                List<Categories> categories = await _categoryService.GetAll();
 
                 List<CategoryView> categoriesViews = categories.Select(c => new CategoryView
                 {
@@ -60,7 +61,7 @@ namespace Lab.EF.MVC.Controllers
                          
                     };
 
-                    _categoriesLogic.Add(category);
+                    _categoryService.Add(category);
 
                     return RedirectToAction("Index");
                 }
@@ -79,7 +80,7 @@ namespace Lab.EF.MVC.Controllers
         {
             try
             {
-                _categoriesLogic.Delete(id);
+                _categoryService.Delete(id);
 
                 return RedirectToAction("Index");
             }
@@ -97,7 +98,7 @@ namespace Lab.EF.MVC.Controllers
         {
             try
             {
-                var category = await _categoriesLogic.GetById(id);
+                var category = await _categoryService.GetById(id);
 
                 var categoryView = new CategoryView
                 {
@@ -132,7 +133,7 @@ namespace Lab.EF.MVC.Controllers
                         
                     };
 
-                    _categoriesLogic.Update(category);
+                    _categoryService.Update(category);
 
                     return RedirectToAction("Index");
                 }

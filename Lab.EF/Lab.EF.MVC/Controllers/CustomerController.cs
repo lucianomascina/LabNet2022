@@ -1,6 +1,7 @@
 ﻿using Lab.EF.Entities;
 using Lab.EF.Logic;
 using Lab.EF.MVC.Models;
+using Lab.EF.Services;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
@@ -13,13 +14,13 @@ namespace Lab.EF.MVC.Controllers
 {
     public class CustomerController : Controller
     {
-        private CustomersLogic _customersLogic = new CustomersLogic();
-       
+        private CustomerService _customerService = new CustomerService();
+
         public async Task<ActionResult> Index()
         {
             try
             {
-                List<Customers> customers = await _customersLogic.GetAll();
+                List<Customers> customers = await _customerService.GetAll();
 
                 List<CustomerView> customersViews = customers.Select(c => new CustomerView
                 {
@@ -71,7 +72,7 @@ namespace Lab.EF.MVC.Controllers
                         Region = customerView.Region
                     };
 
-                    _customersLogic.Add(customer);
+                    _customerService.Add(customer);
 
                     return RedirectToAction("Index");
                 }
@@ -90,7 +91,7 @@ namespace Lab.EF.MVC.Controllers
         {
             try
             {
-                _customersLogic.DeleteByString(id);
+                _customerService.DeleteByString(id);
 
                 return RedirectToAction("Index");
             }
@@ -108,7 +109,7 @@ namespace Lab.EF.MVC.Controllers
         {
             try
             {
-                var customer = await _customersLogic.GetByIdString(id);
+                var customer = await _customerService.GetByIdString(id);
 
                 var customerView = new CustomerView
                 {
@@ -154,7 +155,7 @@ namespace Lab.EF.MVC.Controllers
                         Region = customerView.Region
                     };
 
-                    _customersLogic.Update(customer);
+                    _customerService.Update(customer);
 
                     return RedirectToAction("Index");
                 }

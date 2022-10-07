@@ -243,6 +243,10 @@
       <Project>{1f28cac5-e9a6-48fc-a4d0-734d0a8b6106}</Project>
       <Name>Lab.EF.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lab.EF.Services\Lab.EF.Services.csproj">
+      <Project>{77B74EF3-701C-441F-B687-6E32DBB13252}</Project>
+      <Name>Lab.EF.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
