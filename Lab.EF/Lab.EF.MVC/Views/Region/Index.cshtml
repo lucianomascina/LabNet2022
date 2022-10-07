@@ -6,6 +6,8 @@
 
 <h2 class="text-center">Regions</h2>
 
+<button class="btn btn-primary btn-lg" id="getAll">Get All</button>
+
 <hr />
 
 <table class="table table-hover">
@@ -17,21 +19,39 @@
             <th>
                 Region Description
             </th>
-           
+
         </tr>
     </thead>
-    <tbody>
-        @foreach (var region in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => region.RegionID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => region.RegionDescription)
-                </td>
-
-            </tr>
-        }
+    <tbody id="regions">
     </tbody>
 </table>
+
+<script src="/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function () {
+        function GetRegions() {
+            $.ajax({
+                url: "/Region/GetAll",
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                data: "{}",
+                dataType: "json",
+                success: function (data) {
+                    var row = "";
+                    $.each(data, function (index, item) {
+                        row += "<tr><td>" + item.RegionID + "</td><td>" + item.RegionDescription + "</td></tr>";
+                    });
+                    $("#regions").html(row);
+                },
+                error: function (result) {
+                    alert("Error");
+                },
+            });
+        };
+
+        $('#getAll').click(function () {
+            GetRegions();
+        });
+    });
+
+</script>

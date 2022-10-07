@@ -80,7 +80,7 @@
             </td>
             <td>
                 @Html.ActionLink("Delete", "Delete", "Customer", new { id = customer.CustomerID },
-                                new { @class = "btn btn-danger" })
+                                new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", "Customer",new { id = customer.CustomerID},

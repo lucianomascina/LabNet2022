@@ -24,7 +24,8 @@
             <th>
                  Description
             </th>
-          
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -44,7 +45,7 @@
     
             <td>
                 @Html.ActionLink("Delete", "Delete", "Category", new { id = category.CategoryID },
-                                new { @class = "btn btn-danger" })
+                                new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", "Category", new { id = category.CategoryID },
