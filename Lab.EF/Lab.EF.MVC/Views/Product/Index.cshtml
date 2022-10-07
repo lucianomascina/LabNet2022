@@ -6,6 +6,10 @@
 
 <h2 class="text-center">Products</h2>
 
+<div>
+    @Html.ActionLink("Create", "Create", "Product", new { @class = "btn btn-lg btn-success" })
+</div>
+
 <hr />
 
 <table class="table table-hover">
@@ -32,37 +36,45 @@
             <th>
                 Units In Stock
             </th>
-            
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var product in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => product.ProductID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => product.ProductName)
-                </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => product.ProductID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.ProductName)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => product.SupplierID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => product.CategoryID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => product.QuantityPerUnit)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => product.UnitPrice)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => product.UnitsInStock)
-                </td>
-              
-            </tr>
+            <td>
+                @Html.DisplayFor(modelItem => product.SupplierID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.QuantityPerUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => product.UnitsInStock)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", "Product", new { id = product.ProductID },
+                                new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Product", new { id = product.ProductID },
+                                new { @class = "btn btn-primary" })
+            </td>
+        </tr>
         }
     </tbody>
 </table>

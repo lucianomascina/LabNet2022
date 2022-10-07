@@ -42,7 +42,6 @@
             <td>
                 @Html.DisplayFor(modelItem => category.Description)
             </td>
-    
             <td>
                 @Html.ActionLink("Delete", "Delete", "Category", new { id = category.CategoryID },
                                 new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
@@ -51,7 +50,6 @@
                 @Html.ActionLink("Edit", "Edit", "Category", new { id = category.CategoryID },
                                 new { @class = "btn btn-primary" })
             </td>
-
         </tr>
         }
     </tbody>

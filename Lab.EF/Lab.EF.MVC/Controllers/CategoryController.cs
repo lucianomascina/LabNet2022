@@ -38,13 +38,11 @@ namespace Lab.EF.MVC.Controllers
             }
 
         }
-
         public ActionResult Create()
         {
 
             return View();
         }
-
 
         [HttpPost]
         public ActionResult Create(CategoryView  categoryView)

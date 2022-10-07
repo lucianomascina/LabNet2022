@@ -217,6 +217,10 @@
     <Content Include="Views\Shared\_Categories.cshtml" />
     <Content Include="Views\Error\DeleteCategory.cshtml" />
     <Content Include="Views\Error\DeleteCustomer.cshtml" />
+    <Content Include="Views\Shared\_Products.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Error\DeleteProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

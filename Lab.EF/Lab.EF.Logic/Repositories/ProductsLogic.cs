@@ -12,12 +12,17 @@ namespace Lab.EF.Logic.Repositories
     {
         public override void Add(Products entity)
         {
-            throw new NotImplementedException();
+            _context.Products.Add(entity);
+            _context.SaveChanges();
         }
 
         public override void Delete(int id)
         {
-            throw new NotImplementedException();
+            var productToDelete = _context.Products.Find(id);
+
+            _context.Products.Remove(productToDelete);
+
+            _context.SaveChanges();
         }
 
         public override async Task<List<Products>> GetAll()
@@ -25,14 +30,23 @@ namespace Lab.EF.Logic.Repositories
             return await _context.Products.ToListAsync();
         }
 
-        public override Task<Products> GetById(int id)
+        public override async Task<Products> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Products.FindAsync(id);
         }
 
         public override void Update(Products entity)
         {
-            throw new NotImplementedException();
+            var productToUpdate = _context.Products.Find(entity.ProductID);
+
+            productToUpdate.ProductName = entity.ProductName;
+            productToUpdate.CategoryID = entity.CategoryID;
+            productToUpdate.QuantityPerUnit = entity.QuantityPerUnit;
+            productToUpdate.UnitsInStock = entity.UnitsInStock;
+            productToUpdate.SupplierID = entity.SupplierID;
+            productToUpdate.UnitPrice = entity.UnitPrice;
+
+            _context.SaveChanges();
         }
     }
 }

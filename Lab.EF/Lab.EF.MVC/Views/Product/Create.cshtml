@@ -1,0 +1,15 @@
+﻿@model Lab.EF.MVC.Models.ProductView
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="text-center">Create Product</h2>
+
+<hr />
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post))
+{
+
+    @Html.Partial("_Products")
+}
