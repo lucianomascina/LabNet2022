@@ -67,7 +67,7 @@ namespace Lab.EF.MVC.Controllers
                     };
 
                     _productService.Add(product);
-
+                    TempData["message"] = "product created succesfully!";
                     return RedirectToAction("Index");
                 }
                 return View();
@@ -86,7 +86,7 @@ namespace Lab.EF.MVC.Controllers
             try
             {
                 _productService.Delete(id);
-
+                TempData["message"] = "product deleted succesfully!";
                 return RedirectToAction("Index");
             }
             catch (DbUpdateException ex)
@@ -147,7 +147,7 @@ namespace Lab.EF.MVC.Controllers
                     };
 
                     _productService.Update(product);
-
+                    TempData["message"] = "product edited succesfully!";
                     return RedirectToAction("Index");
                 }
                 return View();

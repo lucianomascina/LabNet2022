@@ -10,7 +10,16 @@
     <div>
         @Html.ActionLink("Create", "Create", "Category", new { @class = "btn btn-lg btn-success" })
     </div>
-</div><br />
+</div>
+<hr />
+
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-success ">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@TempData["message"]</strong>
+    </div>
+}
 
 <div class="row">
     <table class="table table-hover ">

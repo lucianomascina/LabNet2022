@@ -60,7 +60,7 @@ namespace Lab.EF.MVC.Controllers
                     };
 
                     _categoryService.Add(category);
-
+                    TempData["message"] = "category created succesfully!";
                     return RedirectToAction("Index");
                 }
                 return View();
@@ -79,7 +79,7 @@ namespace Lab.EF.MVC.Controllers
             try
             {
                 _categoryService.Delete(id);
-
+                TempData["message"] = "category deleted succesfully!";
                 return RedirectToAction("Index");
             }
             catch(DbUpdateException ex)
@@ -132,7 +132,7 @@ namespace Lab.EF.MVC.Controllers
                     };
 
                     _categoryService.Update(category);
-
+                    TempData["message"] = "category edited succesfully!";
                     return RedirectToAction("Index");
                 }
                 return View();

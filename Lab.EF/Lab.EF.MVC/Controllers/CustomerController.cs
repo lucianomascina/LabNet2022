@@ -73,7 +73,7 @@ namespace Lab.EF.MVC.Controllers
                     };
 
                     _customerService.Add(customer);
-
+                    TempData["message"] = "customer created succesfully!";
                     return RedirectToAction("Index");
                 }
                 return View();
@@ -92,7 +92,7 @@ namespace Lab.EF.MVC.Controllers
             try
             {
                 _customerService.DeleteByString(id);
-
+                TempData["message"] = "customer deleted succesfully!";
                 return RedirectToAction("Index");
             }
             catch(DbUpdateException ex)
@@ -156,7 +156,7 @@ namespace Lab.EF.MVC.Controllers
                     };
 
                     _customerService.Update(customer);
-
+                    TempData["message"] = "customer edited succesfully!";
                     return RedirectToAction("Index");
                 }
                 return View();

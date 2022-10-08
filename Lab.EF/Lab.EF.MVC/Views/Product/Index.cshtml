@@ -12,6 +12,14 @@
 
 <hr />
 
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-success ">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@TempData["message"]</strong>
+    </div>
+}
+
 <table class="table table-hover">
     <thead>
         <tr class="active">
@@ -43,38 +51,38 @@
     <tbody>
         @foreach (var product in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => product.ProductID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.ProductName)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => product.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.ProductName)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => product.SupplierID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.CategoryID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.QuantityPerUnit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.UnitPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => product.UnitsInStock)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", "Product", new { id = product.ProductID },
-                                new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", "Product", new { id = product.ProductID },
-                                new { @class = "btn btn-primary" })
-            </td>
-        </tr>
+                <td>
+                    @Html.DisplayFor(modelItem => product.SupplierID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.CategoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.QuantityPerUnit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => product.UnitsInStock)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", "Product", new { id = product.ProductID },
+                                    new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Product", new { id = product.ProductID },
+                                    new { @class = "btn btn-primary" })
+                </td>
+            </tr>
         }
     </tbody>
 </table>

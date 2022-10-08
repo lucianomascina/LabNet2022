@@ -7,11 +7,18 @@
 <h2 class="text-center text-primary">Customers</h2>
 
 <div>
-    @Html.ActionLink("Create", "Create", "Customer", new { @class = "btn btn-lg btn-success"})
+    @Html.ActionLink("Create", "Create", "Customer", new { @class = "btn btn-lg btn-success" })
 </div>
- 
+
 <hr />
 
+@if (TempData["message"] != null)
+{
+    <div class="alert alert-success ">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@TempData["message"]</strong>
+    </div>
+}
 <table class="table table-hover">
     <thead>
         <tr class="active">
@@ -19,19 +26,19 @@
                 Customer Id
             </th>
             <th>
-               Company Name
+                Company Name
             </th>
             <th>
-              Contact Name
+                Contact Name
             </th>
             <th>
-               Contact Title
+                Contact Title
             </th>
             <th>
-               Address
+                Address
             </th>
             <th>
-               City
+                City
             </th>
             <th>
                 Region
@@ -49,44 +56,44 @@
     <tbody>
         @foreach (var customer in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => customer.CustomerID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => customer.CompanyName)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.CustomerID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.CompanyName)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => customer.ContactName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => customer.ContactTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => customer.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => customer.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => customer.Region)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => customer.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => customer.Phone)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", "Customer", new { id = customer.CustomerID },
-                                new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", "Customer",new { id = customer.CustomerID},
-                                new { @class = "btn btn-primary" })
-            </td>
-        </tr>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.ContactName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.ContactTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.Region)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => customer.Phone)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", "Customer", new { id = customer.CustomerID },
+                                    new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Customer", new { id = customer.CustomerID },
+                                    new { @class = "btn btn-primary" })
+                </td>
+            </tr>
         }
     </tbody>
 </table>
