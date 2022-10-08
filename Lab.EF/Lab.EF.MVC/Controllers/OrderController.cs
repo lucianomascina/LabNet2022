@@ -14,14 +14,32 @@ namespace Lab.EF.MVC.Controllers
     public class OrderController : Controller
     {
         private IService<Orders> _orderService = new OrderService();
-        public async Task<ActionResult> Index()
-        {
-            try
-            {
-                List<Orders> orders = await _orderService.GetAll();
+        public string draw = "";
+        public string start = "";
+        public string length = "";
+        public int pageSize, skip, recordsTotal;
 
-                List<OrderView> ordersViews = orders.Select(o => new OrderView
-                {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> GetAll()
+        {
+            List<Orders> orders = await _orderService.GetAll();
+
+            var draw = Request.Form.GetValues("draw").FirstOrDefault();
+            var start = Request.Form.GetValues("start").FirstOrDefault();
+            var length = Request.Form.GetValues("length").FirstOrDefault();
+;
+
+            pageSize = length != null ? Convert.ToInt32(length) : 0;
+            skip = start != null ? Convert.ToInt32(start) : 0;
+            recordsTotal = 0;
+
+            List<OrderView> ordersViews = orders.Select(o => new OrderView
+            {
                       OrderID = o.OrderID,
                       CustomerID = o.CustomerID,
                       EmployeeID = o.EmployeeID,
@@ -34,15 +52,14 @@ namespace Lab.EF.MVC.Controllers
                       ShippedDate = o.ShippedDate,
                       ShipVia = o.ShipVia 
 
-                }).ToList();
+            }).ToList();
 
-                return View(ordersViews);
-            }
-            catch (Exception ex)
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            recordsTotal = ordersViews.Count();
+            ordersViews = ordersViews.Skip(skip).Take(pageSize).ToList();
 
+            return Json(new {draw = draw, recordsFiltered = recordsTotal, recordsTotal = recordsTotal,
+                            data = ordersViews});
+            
         }
     }
 }

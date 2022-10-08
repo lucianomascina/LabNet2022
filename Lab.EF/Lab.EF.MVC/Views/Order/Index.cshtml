@@ -8,7 +8,7 @@
 
 <hr />
 
-<table class="table table-hover">
+<table id="tabla" class="table-hover">
     <thead>
         <tr class="active">
             <th>
@@ -47,45 +47,40 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var order in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => order.OrderID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.CustomerID)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => order.EmployeeID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.OrderDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.RequiredDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.ShippedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.ShipVia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.Freight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.ShipName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.ShipCity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => order.ShipCountry)
-            </td>
-        </tr>
-        }
     </tbody>
 </table>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $("#tabla").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                "url": "@Url.Content("Order/GetAll")",
+                "type": "POST",
+                "datatype": "json"
+            },
+            "pageLength": 10,
+            "filter": false,
+            "responsivePriority": 1,
+            "data": null,
+            "columns": [
+                { "data": "OrderID", "name": "OrderID", "autoWidth": true },
+                { "data": "CustomerID", "name": "CustomerID", "autoWidth": true },
+                { "data": "EmployeeID", "name": "EmployeeID", "autoWidth": true },
+                { "data": "OrderDate", "name": "OrderDate", "autoWidth": true },
+                { "data": "RequiredDate", "name": "RequiredDate", "autoWidth": true },
+                { "data": "ShippedDate", "name": "ShippedDate", "autoWidth": true },
+                { "data": "ShipVia", "name": "ShipVia", "autoWidth": true },
+                { "data": "Freight", "name": "Freight", "autoWidth": true },
+                { "data": "ShipName", "name": "ShipName", "autoWidth": true },
+                { "data": "ShipCity", "name": "ShipCity", "autoWidth": true },
+                { "data": "ShipCountry", "name": "ShipCountry", "autoWidth": true },
+            ]
+               
+        });
+    })
+</script>
+} 
 

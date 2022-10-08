@@ -25,7 +25,7 @@
             <th>
                 Title
             </th>
-     
+
             <th>
                 City
             </th>
@@ -44,35 +44,37 @@
     </tbody>
 </table>
 
-<script src="/Scripts/jquery-3.4.1.js"></script>
-<script>
-    $(document).ready(function () {
-        function GetEmployees() {
-            $.ajax({
-                url: "/Employee/GetAll",
-                type: "GET",
-                contentType: "application/json; charset=utf-8",
-                data: "{}",
-                dataType: "json",
-                success: function (data) {
-                    var row = "";
-                    $.each(data, function (index, item) {
-                        row += "<tr><td>" + item.EmployeeID + "</td><td>" + item.LastName + "</td><td>"
-                            + item.FirstName + "</td><td>" + item.Title + "</td><td>" + item.City +
-                            "</td><td>" + item.Region + "</td><td>" + item.HomePhone + "</td><td>" +
-                            item.ReportsTo + "</td></tr>";
-                    });
-                    $("#employees").html(row);
-                },
-                error: function (result) {
-                    alert("Error");
-                },
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            function GetEmployees() {
+                $.ajax({
+                    url: "/Employee/GetAll",
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    data: "{}",
+                    dataType: "json",
+                    success: function (data) {
+                        var row = "";
+                        $.each(data, function (index, item) {
+                            row += "<tr><td>" + item.EmployeeID + "</td><td>" + item.LastName + "</td><td>"
+                                + item.FirstName + "</td><td>" + item.Title + "</td><td>" + item.City +
+                                "</td><td>" + item.Region + "</td><td>" + item.HomePhone + "</td><td>" +
+                                item.ReportsTo + "</td></tr>";
+                        });
+                        $("#employees").html(row);
+                    },
+                    error: function (result) {
+                        alert("Error");
+                    },
+                });
+            };
+
+            $('#getAll').click(function () {
+                GetEmployees();
             });
-        };
-
-        $('#getAll').click(function () {
-            GetEmployees();
         });
-    });
 
-</script>
+    </script>
+}
+
