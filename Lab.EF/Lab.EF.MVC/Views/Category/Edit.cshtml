@@ -4,13 +4,14 @@
     ViewBag.Title = "Edit";
 }
 
-<h2 class="text-center">Edit Category</h2>
+<h2 class="text-center text-primary">Edit Category</h2>
 
 <hr />
 
 @using (Html.BeginForm("Edit", "Category", FormMethod.Post))
 {
-   
     @Html.Hidden("CategoryID")
     @Html.Partial("_Categories")
 }
+
+

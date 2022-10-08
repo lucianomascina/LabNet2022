@@ -3,55 +3,58 @@
 @{
     ViewBag.Title = "Categories";
 }
+<div class="row">
+    <div>
+        <h2 class="text-center text-primary">Categories</h2>
+    </div>
+    <div>
+        @Html.ActionLink("Create", "Create", "Category", new { @class = "btn btn-lg btn-success" })
+    </div>
+</div><br />
 
-<h2 class="text-center">Categories</h2>
+<div class="row">
+    <table class="table table-hover ">
+        <thead>
+            <tr class="active">
+                <th>
+                    Category ID
+                </th>
+                <th>
+                    Category Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => category.CategoryID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => category.CategoryName)
+                    </td>
 
-<div>
-    @Html.ActionLink("Create", "Create", "Category", new { @class = "btn btn-lg btn-success"})
+                    <td>
+                        @Html.DisplayFor(modelItem => category.Description)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", "Category", new { id = category.CategoryID },
+                                        new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Category", new { id = category.CategoryID },
+                                        new { @class = "btn btn-primary" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
 
-<hr />
-
-<table class="table table-hover ">
-    <thead>
-        <tr class="active">
-            <th>
-                 Category ID
-            </th>
-            <th>
-                 Category Name
-            </th>
-            <th>
-                 Description
-            </th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var category in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => category.CategoryID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => category.CategoryName)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => category.Description)
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", "Category", new { id = category.CategoryID },
-                                new { @class = "btn btn-danger", onclick = "return confirm('seguro desea borrar?');" })
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", "Category", new { id = category.CategoryID },
-                                new { @class = "btn btn-primary" })
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
 
